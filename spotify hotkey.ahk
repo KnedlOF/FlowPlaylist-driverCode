@@ -1,0 +1,1 @@
+﻿!1::Run, python spotify_api.py, D:\Documents\code\Spotify_automatization

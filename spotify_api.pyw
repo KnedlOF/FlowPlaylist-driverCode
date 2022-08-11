@@ -7,7 +7,13 @@ import logging
 import argparse
 import sys
 
+parser = argparse.ArgumentParser()
+parser.add_argument("key", type=int)
 _key = 1
+
+logging.basicConfig(filename="spotify_auto_playlist.log",
+                    format="%(asctime)s: %(message)s", level=logging.INFO)
+logging.info('Alt+{} key pressed'.format(_key))
 
 try:
     with open("playlist_mapping.config", "rb") as f:
@@ -17,6 +23,9 @@ except Exception:
     logging.error(
         'Could not load playlist mappings. Please run "list_playlists.py" first to generate playlist mappings')
 
+if _key > len(pls):
+    logging.error('No mapping associated with Alt+{} key'.format(_key))
+    sys.exit(1)
 
 #authorization
 
