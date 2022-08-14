@@ -4,28 +4,17 @@ from secrets import client_id, client_secret
 import pickle
 import sys
 import logging
-import argparse
-import sys
 
-parser = argparse.ArgumentParser()
-parser.add_argument("key", type=int)
+
 _key = 1
-
-logging.basicConfig(filename="spotify_auto_playlist.log",
-                    format="%(asctime)s: %(message)s", level=logging.INFO)
-logging.info('Alt+{} key pressed'.format(_key))
 
 try:
     with open("playlist_mapping.config", "rb") as f:
         pls = pickle.load(f)
 except Exception:
     sys.exit(1)
-    logging.error(
-        'Could not load playlist mappings. Please run "list_playlists.py" first to generate playlist mappings')
+    
 
-if _key > len(pls):
-    logging.error('No mapping associated with Alt+{} key'.format(_key))
-    sys.exit(1)
 
 #authorization
 
@@ -97,3 +86,4 @@ else:
         sp.playlist_add_items(pls[_key - 1]['id'], [track_id])
     except Exception:
         logging.error('Could not add track to playlist !!!')
+

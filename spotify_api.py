@@ -4,8 +4,7 @@ from secrets import client_id, client_secret
 import pickle
 import sys
 import logging
-import argparse
-import sys
+
 
 _key = 1
 
@@ -14,8 +13,7 @@ try:
         pls = pickle.load(f)
 except Exception:
     sys.exit(1)
-    logging.error(
-        'Could not load playlist mappings. Please run "list_playlists.py" first to generate playlist mappings')
+    
 
 
 #authorization
@@ -24,7 +22,7 @@ redirect_uri = 'https://example.org/callback'
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
                                                client_secret=client_secret,
                                                redirect_uri=redirect_uri,
-                                               scope="playlist-read-collaborative playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing playlist-read-private"))
+                                               scope="playlist-read-collaborative playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing playlist-read-private user-modify-playback-state user-library-modify"))
 
 
 #checks if it is in playlist
@@ -83,8 +81,10 @@ else:
     logging.info('Adding track "{}"" to playlist "{}"'.format(
      track_name, pls[_key - 1]['name']))
     print('Track added')
+    
 
     try:
         sp.playlist_add_items(pls[_key - 1]['id'], [track_id])
     except Exception:
         logging.error('Could not add track to playlist !!!')
+
