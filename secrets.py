@@ -1,5 +1,4 @@
-#Blank template file
-#Add your data here
+
 
 client_id='30fc5780ad994f0a97d76e69fb0ded37'
 client_secret='cd9987c34fdc4d8a91ceac560a223aa7'
@@ -8,4 +7,5 @@ spotify_user_id = "	8sluo6nzp60un03m9xdgp7zsz"
 discover_weekly_id = "37i9dQZEVXcLkMpJscBdVZ?si=7a2144b867954c7c"
 refresh_token = "BQCP03KyYbj-Z4TmB1W2uFfiVf4ECEKfwlQ1qujUvisaOhAFkuuvFssg8olCE8bJa8kbB1pQwt7Es2aNVYBOYrpb1xAaPUYSrZYm5Vbd-4PyJT_hls9suJcMtU3sZSDT--mikEkerb97w7fgJC7SG0DqDxA_X2juR9Jel5GX6_LF__8sVM1zAVQSZHw_54LlpPMF6_NPLKMKIDaEJtFn6w9ONeE54fHowSZQKImPXle3asZ2WgocooOuTI90VLM"
 base_64 = ""
+
 

@@ -4,16 +4,10 @@ from secrets import client_id, client_secret
 import pickle
 import sys
 import logging
-
+from tkinter import messagebox
 
 _key = 1
 
-try:
-    with open("playlist_mapping.config", "rb") as f:
-        pls = pickle.load(f)
-except Exception:
-    sys.exit(1)
-    
 
 
 #authorization
@@ -26,7 +20,13 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
 
 
 #checks if it is in playlist
-playlist_id=('3qt42V60uqPEsvlIl6LvEc')
+try:             
+    with open('playlist_config.txt', "rb") as f:
+        dict=pickle.load(f)
+except:
+    messagebox.showerror('No playlist, detected. Please select playlist in app.')
+
+playlist_id=dict['id']
 username = 	('8sluo6nzp60un03m9xdgp7zsz')
 
 def getTrackIDs(username='8sluo6nzp60un03m9xdgp7zsz', playlist_id='3qt42V60uqPEsvlIl6LvEc'):
@@ -78,13 +78,11 @@ if track_id in track_ids:
 
 else:
 #adds song to playlist
-    logging.info('Adding track "{}"" to playlist "{}"'.format(
-     track_name, pls[_key - 1]['name']))
     print('Track added')
     
 
     try:
-        sp.playlist_add_items(pls[_key - 1]['id'], [track_id])
+        sp.playlist_add_items(playlist_id, [track_id])
     except Exception:
         logging.error('Could not add track to playlist !!!')
 
