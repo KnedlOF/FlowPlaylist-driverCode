@@ -2,7 +2,7 @@ import serial
 from like import *
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-from secrets import client_id, client_secret
+from client_secrets import client_id, client_secret
 
 serialport=serial.Serial('COM3', baudrate=9600, timeout=2)
 

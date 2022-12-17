@@ -1,7 +1,7 @@
 
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-from secrets import client_id, client_secret
+from client_secrets import client_id, client_secret
 import pickle
 import sys
 import logging

@@ -1,7 +1,7 @@
 from inspect import trace
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-from secrets import client_id, client_secret
+from client_secrets import client_id, client_secret
 import random
 
 redirect_uri = 'https://example.org/callback'
