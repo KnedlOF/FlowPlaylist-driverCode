@@ -1,7 +1,7 @@
 
 
-client_id='30fc5780ad994f0a97d76e69fb0ded37'
-client_secret='cd9987c34fdc4d8a91ceac560a223aa7'
+client_id="30fc5780ad994f0a97d76e69fb0ded37"
+client_secret="cd9987c34fdc4d8a91ceac560a223aa7"
 
 spotify_user_id = "	8sluo6nzp60un03m9xdgp7zsz"
 discover_weekly_id = "37i9dQZEVXcLkMpJscBdVZ?si=7a2144b867954c7c"
