@@ -71,7 +71,7 @@ try:
         dict=pickle.load(f)
         
 except:
-    dict="Select playlist"
+    dict = {'name': 'Select playlist'}
      
 #dropdown menu
 menu=StringVar()
