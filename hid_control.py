@@ -2,9 +2,13 @@
 from re import S
 import hid
 import time
+import struct
+
 from like import *
-from recommended import *
-from add_to_playlist import *
+from recommended import recommend
+from add_to_playlist import playlist
+from buttons_media import previous, next, pause
+
 
 # authorization
 redirect_uri = 'https://example.org/callback'
@@ -14,8 +18,12 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
                                                 scope="playlist-read-collaborative playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing playlist-read-private user-modify-playback-state user-library-modify"))
 
 
+timeout=1
+
+
 # default is TinyUSB (0xcafe), Adafruit (0x239a), RaspberryPi (0x2e8a), Espressif (0x303a) VID
 USB_VID = 0x2e8a
+
 
 #check for device
 def device_is_connected(vendor_id, product_id):
@@ -38,6 +46,11 @@ while True:
         #make device object
         dev = hid.Device(vendor_id, product_id)
         if dev:
+            new_volume=0
+            request_in_progress=False
+            previous_volume=0
+            str_out=b'\x00'
+            dev.write(str_out)
             while True:
                 # Get input from console and encode to UTF8 for array of chars.
                 # hid generic inout is single report therefore by HIDAPI requirement
@@ -55,8 +68,9 @@ while True:
                     prev_btn=str_in[3]
                     play_btn=str_in[4]
                     next_btn=str_in[5]
-                    volume=int(((str_in[6]+1)*100)/255)
-                    print("Received from HID Device:", str_in, '\n')
+                    volume=str_in[6]
+                    volume_change=str_in[7]
+                    print("Received from HID Device:", struct.unpack('<8B', str_in), '\n')
                     
                     if like_btn==1:
                         like()
@@ -64,11 +78,40 @@ while True:
                         recommend()
                     if playlist_btn==1:
                         playlist()
-                    if volume:
-                            volume_set = sp.volume(volume)
-                            print("Volume changed on: ")
-                            print(volume)
-                            
+                    if prev_btn==1:
+                        previous()
+                    if next_btn==1:
+                        next()
+                    if play_btn==1:
+                        pause()
+
+                    #for big volume changes it sends volume by 5
+                    if volume_change==1 and volume%5==0:
+                        new_volume=volume
+                        if not request_in_progress:
+                            request_in_progress=True
+                            try:
+                                volume_set = sp.volume(new_volume)
+                            except (spotipy.SpotifyException,TimeoutError) as e:
+                                print (str(e))
+                                time.sleep(3)
+                            print("Volume changed on: ", new_volume)
+                            previous_volume=volume
+                            request_in_progress=False
+                    #for small changes it sends volume by 1        
+                    elif volume_change==0 and new_volume!=volume:
+                        new_volume=volume
+                        if not request_in_progress:
+                            request_in_progress=True
+                            try:
+                                volume_set = sp.volume(new_volume)
+                            except (spotipy.SpotifyException,TimeoutError) as e:
+                                print (str(e))
+                                time.sleep(3)
+                            print("Volume changed on: ", new_volume)
+                            previous_volume=volume
+                            request_in_progress=False
+
                 #if device disconnects, it will try again once a second    
                 except hid.HIDException as e:
                     if "The device is not connected" in str(e):
