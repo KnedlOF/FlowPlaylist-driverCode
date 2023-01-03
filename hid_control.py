@@ -3,6 +3,7 @@ from re import S
 import hid
 import time
 import struct
+import threading
 
 from like import *
 from recommended import recommend
@@ -32,8 +33,32 @@ def device_is_connected(vendor_id, product_id):
             return True
     return False
 
+def get_song_info():
+#gets info about song
+    while True:
+            try:
+                track_info=sp.current_user_playing_track()
+                if track_info is None:
+                    print('Spotify not playing any tracks.')
 
+                track_name=track_info['item']['name']
+                artists=[]
+                for artist in track_info['item']['artists']:
+                    artists.append(artist['name'])
+                track_artists=", ".join(artists)
+                print(track_name)
+                print(track_artists)
+                str_out=b'\x00'
+                str_out+=track_artists.encode('utf-8')
+            
+                dev.write(str_out)  
+                time.sleep(5) 
+            except:
+                time.sleep(5)
 
+#parallel loop
+thread = threading.Thread(target=get_song_info)
+thread.start()
 #loop  
 while True:
 
@@ -51,8 +76,11 @@ while True:
             previous_volume=0
             str_out=b'\x00'
             dev.write(str_out)
+            
             while True:
-                # Get input from console and encode to UTF8 for array of chars.
+                
+                
+                # Get input from console and encode to UTF8 for array of chars.//
                 # hid generic inout is single report therefore by HIDAPI requirement
                 # it must be preceeded with 0x00 as dummy reportID
                 # str_out = b'\x00'
@@ -84,7 +112,7 @@ while True:
                         next()
                     if play_btn==1:
                         pause()
-
+                    
                     #for big volume changes it sends volume by 5
                     if volume_change==1 and volume%5==0:
                         new_volume=volume
@@ -123,5 +151,5 @@ while True:
                     else:
                         print (str(e))
                         break
-        
+
                     
