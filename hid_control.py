@@ -41,21 +41,46 @@ def get_song_info():
                 if track_info is None:
                     print('Spotify not playing any tracks.')
 
-                track_name=track_info['item']['name']
+                track_name=track_info['item']['name'][:46]
                 artists=[]
                 for artist in track_info['item']['artists']:
                     artists.append(artist['name'])
-                track_artists=", ".join(artists)
+                track_artists=", ".join(artists)[:46]
                 print(track_name)
                 print(track_artists)
-                str_out=b'\x00'
+                str_out=b'\x002'
                 str_out+=track_artists.encode('utf-8')
-            
-                dev.write(str_out)  
-                time.sleep(5) 
+                time.sleep(0.1)
+                dev.write(str_out)
+                str_out=b'\x003'
+                str_out+=track_name.encode('utf-8')
+                dev.write(str_out)    
+                time.sleep(2) 
             except:
-                time.sleep(5)
+                time.sleep(2)
+#gets info about song, just once, for when you skip songs
 
+def song_info_once():
+    try:
+        track_info=sp.current_user_playing_track()
+        if track_info is None:
+            print('Spotify not playing any tracks.')
+        track_name=track_info['item']['name'][:46]
+        artists=[]
+        for artist in track_info['item']['artists']:
+            artists.append(artist['name'])
+        track_artists=", ".join(artists)[:46]
+        print(track_name)
+        print(track_artists)
+        str_out=b'\x002'
+        str_out+=track_artists.encode('utf-8')
+        time.sleep(0.01)
+        dev.write(str_out)
+        str_out=b'\x003'
+        str_out+=track_name.encode('utf-8')
+        dev.write(str_out)    
+    except:
+        time.sleep(0.1)    
 #parallel loop
 thread = threading.Thread(target=get_song_info)
 thread.start()
@@ -74,7 +99,7 @@ while True:
             new_volume=0
             request_in_progress=False
             previous_volume=0
-            str_out=b'\x00'
+            str_out=b'\x001'
             dev.write(str_out)
             
             while True:
@@ -102,14 +127,18 @@ while True:
                     
                     if like_btn==1:
                         like()
+                        str_out=b'\x004'
+                        dev.write(like)
                     if recomm_btn==1:
                         recommend()
                     if playlist_btn==1:
                         playlist()
                     if prev_btn==1:
                         previous()
+                        song_info_once()
                     if next_btn==1:
                         next()
+                        song_info_once()
                     if play_btn==1:
                         pause()
                     
