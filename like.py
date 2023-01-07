@@ -2,6 +2,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from client_secrets import client_id, client_secret
 
+like_text=""
+
 def like():
     #authorization
     redirect_uri = 'https://example.org/callback'
@@ -27,7 +29,7 @@ def like():
 
     try:
         sp.current_user_saved_tracks_add([track_id])
-        print('Track added')
+        like_text="LIKED"
     except Exception:
-        print('Could not add track to playlist !!!')
+        like_text="Can't Like"
 
