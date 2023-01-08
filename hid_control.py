@@ -41,11 +41,15 @@ def get_song_info():
                 if track_info is None:
                     print('Spotify not playing any tracks.')
 
-                track_name=track_info['item']['name'][:46]
+                track_name=track_info['item']['name']
+                if len(track_name)>=46:
+                    track_name=track_name[:43]+'...'
                 artists=[]
                 for artist in track_info['item']['artists']:
                     artists.append(artist['name'])
-                track_artists=", ".join(artists)[:46]
+                track_artists=", ".join(artists)
+                if len(track_artists)>=46:
+                    track_artists=track_artists[:43]+'...'
                 print(track_name)
                 print(track_artists)
                 str_out=b'\x002'
@@ -65,11 +69,15 @@ def song_info_once():
         track_info=sp.current_user_playing_track()
         if track_info is None:
             print('Spotify not playing any tracks.')
-        track_name=track_info['item']['name'][:46]
+        track_name=track_info['item']['name']
+        if len(track_name)>=46:
+            track_name=track_name[:43]+'...'
         artists=[]
         for artist in track_info['item']['artists']:
             artists.append(artist['name'])
-        track_artists=", ".join(artists)[:46]
+        track_artists=", ".join(artists)
+        if len(track_artists)>=46:
+            track_artists=track_artists[:43]+'...'
         print(track_name)
         print(track_artists)
         str_out=b'\x002'
