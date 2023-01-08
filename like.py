@@ -2,7 +2,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from client_secrets import client_id, client_secret
 
-like_text=""
+
 
 def like():
     #authorization
@@ -29,7 +29,7 @@ def like():
 
     try:
         sp.current_user_saved_tracks_add([track_id])
-        like_text="LIKED"
+        return("LIKED")
     except Exception:
-        like_text="Can't Like"
+        return("Can't Like")
 

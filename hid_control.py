@@ -36,59 +36,39 @@ def device_is_connected(vendor_id, product_id):
 def get_song_info():
 #gets info about song
     while True:
-            try:
-                track_info=sp.current_user_playing_track()
-                if track_info is None:
-                    print('Spotify not playing any tracks.')
+        song_info_once(delay=2)
 
-                track_name=track_info['item']['name']
-                if len(track_name)>=46:
-                    track_name=track_name[:43]+'...'
-                artists=[]
-                for artist in track_info['item']['artists']:
-                    artists.append(artist['name'])
-                track_artists=", ".join(artists)
-                if len(track_artists)>=46:
-                    track_artists=track_artists[:43]+'...'
-                print(track_name)
-                print(track_artists)
-                str_out=b'\x002'
-                str_out+=track_artists.encode('utf-8')
-                time.sleep(0.1)
-                dev.write(str_out)
-                str_out=b'\x003'
-                str_out+=track_name.encode('utf-8')
-                dev.write(str_out)    
-                time.sleep(2) 
-            except:
-                time.sleep(2)
 #gets info about song, just once, for when you skip songs
-
-def song_info_once():
+def song_info_once(delay=0.1):
     try:
         track_info=sp.current_user_playing_track()
         if track_info is None:
             print('Spotify not playing any tracks.')
         track_name=track_info['item']['name']
+        #it cuts track name if it is longer than 46 characters
         if len(track_name)>=46:
             track_name=track_name[:43]+'...'
+
         artists=[]
         for artist in track_info['item']['artists']:
             artists.append(artist['name'])
         track_artists=", ".join(artists)
+
+        #it cuts artists name if it is longer than 46 characters
         if len(track_artists)>=46:
             track_artists=track_artists[:43]+'...'
+
         print(track_name)
         print(track_artists)
         str_out=b'\x002'
         str_out+=track_artists.encode('utf-8')
-        time.sleep(0.01)
         dev.write(str_out)
         str_out=b'\x003'
         str_out+=track_name.encode('utf-8')
-        dev.write(str_out)    
+        dev.write(str_out)  
+        time.sleep(delay)    
     except:
-        time.sleep(0.1)    
+        time.sleep(delay)    
 #parallel loop
 thread = threading.Thread(target=get_song_info)
 thread.start()
@@ -134,9 +114,10 @@ while True:
                     print("Received from HID Device:", struct.unpack('<8B', str_in), '\n')
                     
                     if like_btn==1:
-                        like()
+                        like_text=like()
                         str_out=b'\x004'
-                        dev.write(like)
+                        str_out+=like_text.encode('utf-8')
+                        dev.write(str_out)
                     if recomm_btn==1:
                         recommend()
                     if playlist_btn==1:
