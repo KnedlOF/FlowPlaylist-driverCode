@@ -24,10 +24,15 @@ def recommend():
     seed_tracks=[track_id]
 
     #gets recommendations
-    recommendations=sp.recommendations(seed_artists=None, seed_genres=None, seed_tracks=seed_tracks ,limit=3, country=None)
-    recommend_ids = [track['id'] for track in recommendations['tracks']]
-    
-    for item in recommendations['tracks']:
-            track_id=item['id']
-            sp.add_to_queue(track_id)
-            print(track_id +" added to queue.")
+
+    try:
+        recommendations=sp.recommendations(seed_artists=None, seed_genres=None, seed_tracks=seed_tracks ,limit=3, country=None)
+        recommend_ids = [track['id'] for track in recommendations['tracks']]
+        for item in recommendations['tracks']:
+                track_id=item['id']
+                sp.add_to_queue(track_id)
+                print(track_id +" added to queue.")
+        return ("Songs added")
+    except Exception:
+        return ("Can't add")
+

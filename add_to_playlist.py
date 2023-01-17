@@ -49,16 +49,16 @@ def playlist():
     print(track_ids)
 
     if track_id in track_ids:
-        print('Track already exists in this playlist.')
+        return('Already in playlist')
 
 
 
     else:
     #adds song to playlist
-        print('Track added')
         
 
         try:
             sp.playlist_add_items(playlist_id, [track_id])
+            return ("Track added")
         except Exception:
-            print('Could not add track to playlist !!!')
+            return('Could not add track to playlist !!!')

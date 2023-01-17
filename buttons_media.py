@@ -5,6 +5,7 @@ import subprocess
 import os
 from pynput.keyboard import Key, Controller
 import psutil
+import time
 
 # finds path to roaming and sets spotify path
 roaming_folder = os.environ["APPDATA"]
@@ -28,9 +29,9 @@ def previous():
     
     try:
         sp.previous_track()
-        print('Track skipped')
+        return('Track skipped')
     except Exception:
-        print('Could not skip track')
+        return('Could not skip track')
 
 def next():
     #authorization
@@ -42,9 +43,9 @@ def next():
     
     try:
         sp.next_track()
-        print('Track skipped')
+        return('Track skipped')
     except Exception:
-        print('Could not skip track')
+        return('Could not skip track')
 
 def pause():
     #authorization
@@ -67,6 +68,7 @@ def pause():
     except TypeError:
         subprocess.Popen(spotify_path)
         print(spotify_path)
+        time.sleep(0.5)
         keyboard.press(Key.media_play_pause)
         print("pressed")
         keyboard.release(Key.media_play_pause)
@@ -74,13 +76,13 @@ def pause():
     if isPlaying:
         try:
             sp.pause_playback()
-            print('Stopping')
+            return('Stoped')
         except Exception:
-            print('Could not stop')
+            return('Could not stop')
     else:
         try:
             sp.start_playback()
-            print('Playing')
+            return('Playing')
         except Exception:
-            print('Could not play')
+            return('Could not play')
     

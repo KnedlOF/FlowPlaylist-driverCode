@@ -119,17 +119,32 @@ while True:
                         str_out+=like_text.encode('utf-8')
                         dev.write(str_out)
                     if recomm_btn==1:
-                        recommend()
+                        recomm_text=recommend()
+                        str_out=b'\x004'
+                        str_out+=recomm_text.encode('utf-8')
+                        dev.write(str_out)
                     if playlist_btn==1:
-                        playlist()
+                        playlist_text=playlist()
+                        str_out=b'\x004'
+                        str_out+=playlist_text.encode('utf-8')
+                        dev.write(str_out)
                     if prev_btn==1:
-                        previous()
+                        prev_text=previous()
+                        str_out=b'\x004'
+                        str_out+=prev_text.encode('utf-8')
+                        dev.write(str_out)
                         song_info_once()
                     if next_btn==1:
-                        next()
+                        next_text=next()
+                        str_out=b'\x004'
+                        str_out+=next_text.encode('utf-8')
+                        dev.write(str_out)
                         song_info_once()
                     if play_btn==1:
-                        pause()
+                        pause_text=pause()
+                        str_out=b'\x004'
+                        str_out+=pause_text.encode('utf-8')
+                        dev.write(str_out)
                     
                     #for big volume changes it sends volume by 5
                     if volume_change==1 and volume%5==0:
