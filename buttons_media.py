@@ -4,8 +4,8 @@ from client_secrets import client_id, client_secret
 import subprocess
 import os
 from pynput.keyboard import Key, Controller
-import psutil
 import time
+import win32gui
 
 # finds path to roaming and sets spotify path
 roaming_folder = os.environ["APPDATA"]
@@ -55,15 +55,29 @@ def pause():
                                                 redirect_uri=redirect_uri,
                                                 scope="playlist-read-collaborative playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing playlist-read-private user-modify-playback-state user-library-modify"))\
     
+
     isPlaying=False
-    for proc in psutil.process_iter():
-        if proc.name() == "Spotify.exe":
-            # The Spotify process is already running, so we don't need to start it
-            break
+    def WindowExists(window_name):
+        try:
+            win32gui.FindWindow(None, window_name)
+            return True
+        except:
+            return False
+
+    def IsMinimized(window_name):
+        hwnd = win32gui.FindWindow(None, window_name)
+        if hwnd:
+            return win32gui.IsIconic(hwnd)
+        return False
+
+    if WindowExists("Spotify") and not IsMinimized("Spotify"):
+        pass
+    
     else:
         # The Spotify process is not running, so we start it
         subprocess.Popen(spotify_path)
     try:
+        
         isPlaying = sp.current_user_playing_track()[u'is_playing']
     except TypeError:
         subprocess.Popen(spotify_path)
