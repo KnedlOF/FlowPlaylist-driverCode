@@ -1,6 +1,4 @@
-import tkinter as tk
 from tkinter import *
-from tkinter import ttk
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from client_secrets import client_id, client_secret
@@ -11,10 +9,7 @@ app=Tk()
 
 #changes logo
 photo=PhotoImage(file="pic.png")
-app.iconphoto(False,photo)
-
-
-
+app.iconphoto(False,photo) 
 app.title('Spotify keyboard')
 app.geometry('700x350')
 
