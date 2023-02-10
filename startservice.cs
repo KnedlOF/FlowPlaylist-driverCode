@@ -46,14 +46,15 @@ namespace Spotify_automatization
         {
             try
             {
-                if (!process.HasExited)
-                {
-                    process.Kill();
-                }
+                    var processes = Process.GetProcessesByName("hid_control");
+            foreach (var process in processes)
+            {
+                process.Kill();
+            }
             }
             catch (Exception ex)
             {
-                // Handle the exception here
+                File.WriteAllText("error.log", ex.Message);
             }
         }
     }

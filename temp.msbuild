@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project DefaultTargets="Run" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+ <Target Name="Run">
+ <Exec Command="A:\Users\Mitja\AppData\Roaming\Spotify\Spotify.exe" />
+ </Target>
+</Project>
