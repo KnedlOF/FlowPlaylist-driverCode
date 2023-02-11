@@ -1,0 +1,3 @@
+INFO:root:Started
+INFO:root:Started
+ERROR:spotipy.client:HTTP Error for PUT to https://api.spotify.com/v1/me/player/pause with Params: {} returned 403 due to Player command failed: Restriction violated

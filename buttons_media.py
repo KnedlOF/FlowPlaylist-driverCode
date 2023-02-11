@@ -9,13 +9,18 @@ from pynput.keyboard import Key, Controller
 # import win32gui
 
 # finds path to roaming and sets spotify path
-roaming_folder = os.environ["APPDATA"]
-spotify_executable = "Spotify\\Spotify.exe"
-path = os.path.join(roaming_folder, spotify_executable)
+programdata_folder = os.environ["PROGRAMDATA"]+'\Spotify Keyboard'
 
-if os.path.exists(path):
-    spotify_path = path
-    print(spotify_path)
+if not os.path.exists(programdata_folder):
+    os.makedirs(programdata_folder)
+
+
+# spotify_executable = "Spotify\\Spotify.exe"
+# path = os.path.join(roaming_folder, spotify_executable)
+
+# if os.path.exists(path):
+#     spotify_path = path
+#     print(spotify_path)
 
 
 keyboard = Controller()
