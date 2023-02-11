@@ -1,18 +1,10 @@
 import spotipy
-from spotipy.oauth2 import SpotifyOAuth
-from client_secrets import client_id, client_secret
 # import subprocess
-import os
 import socket
-from pynput.keyboard import Key, Controller
+from pynput.keyboard import Controller
+from authorization import sp
 # import time
 # import win32gui
-
-# finds path to roaming and sets spotify path
-programdata_folder = os.environ["PROGRAMDATA"]+'\Spotify Keyboard'
-
-if not os.path.exists(programdata_folder):
-    os.makedirs(programdata_folder)
 
 
 # spotify_executable = "Spotify\\Spotify.exe"
@@ -27,12 +19,6 @@ keyboard = Controller()
 
 
 def previous():
-    # authorization
-    redirect_uri = 'https://example.org/callback'
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
-                                                   client_secret=client_secret,
-                                                   redirect_uri=redirect_uri,
-                                                   scope="playlist-read-collaborative playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing playlist-read-private user-modify-playback-state user-library-modify"))\
 
     try:
         sp.previous_track()
@@ -42,12 +28,6 @@ def previous():
 
 
 def next():
-    # authorization
-    redirect_uri = 'https://example.org/callback'
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
-                                                   client_secret=client_secret,
-                                                   redirect_uri=redirect_uri,
-                                                   scope="playlist-read-collaborative playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing playlist-read-private user-modify-playback-state user-library-modify"))\
 
     try:
         sp.next_track()
@@ -57,14 +37,6 @@ def next():
 
 
 def pause():
-    # authorization
-    redirect_uri = 'https://example.org/callback'
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
-                                                   client_secret=client_secret,
-                                                   redirect_uri=redirect_uri,
-                                                   scope="playlist-read-collaborative playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing playlist-read-private user-modify-playback-state user-library-modify"))\
-
-
     isPlaying = False
     device_name = socket.gethostname()
 
