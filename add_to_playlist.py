@@ -1,6 +1,6 @@
 import pickle
-from tkinter import messagebox
-from authorization import sp
+from authorization import sp, programdata_folder
+import logging
 
 
 def playlist():
@@ -10,11 +10,13 @@ def playlist():
     print(username)
     # checks if it is in playlist
     try:
-        with open('playlist_config.txt', "rb") as f:
+        with open(programdata_folder+"\playlist_config.txt", "rb") as f:
             dict = pickle.load(f)
-    except:
-        messagebox.showerror(
-            'No playlist, detected. Please select playlist in app.')
+    except FileNotFoundError as e:
+        logging.info(e)
+        return ("Choose playlist in app")
+    except Exception as e:
+        logging.info(e)
 
     playlist_id = dict['id']
 
@@ -30,7 +32,10 @@ def playlist():
     playlist = sp.user_playlist_tracks(
         username, playlist_id, fields=None, limit=1)
     total = playlist['total']
-    offset = total-100
+    if total > 100:
+        offset = total-100
+    else:
+        offset = None
     playlist = sp.user_playlist_tracks(
         username, playlist_id, fields=None, offset=offset, limit=100)
     track_ids = [track['track']['id'] for track in playlist['items']]

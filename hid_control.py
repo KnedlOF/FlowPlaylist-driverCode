@@ -10,13 +10,6 @@ import threading
 import struct
 import time
 import hid
-import logging
-
-# starts logging
-logging.basicConfig(
-    filename=programdata_folder+'\logs.log', level=logging.INFO)
-
-logging.info('Started')
 
 timeout = 1
 
@@ -150,8 +143,8 @@ while True:
                         str_out += pause_text.encode('utf-8')
                         dev.write(str_out)
 
-                    # for big volume changes it sends volume by 5
-                    if volume_change == 1 and volume % 5 == 0:
+                    # for big volume changes it sends volume by at least 5
+                    if volume_change == 1 and abs(volume-new_volume) >= 5:
                         new_volume = volume
                         if not request_in_progress:
                             request_in_progress = True

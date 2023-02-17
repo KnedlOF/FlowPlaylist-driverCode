@@ -1,21 +1,25 @@
 import spotipy
-# import subprocess
 import socket
-from pynput.keyboard import Controller
-from authorization import sp
-# import time
+import logging
+import pickle
+from authorization import sp, programdata_folder
+import os
 # import win32gui
+# import win32api
 
-
-# spotify_executable = "Spotify\\Spotify.exe"
-# path = os.path.join(roaming_folder, spotify_executable)
-
-# if os.path.exists(path):
-#     spotify_path = path
-#     print(spotify_path)
-
-
-keyboard = Controller()
+try:
+    with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+        dict = pickle.load(f)
+except Exception as e:
+    logging.info(e)
+spotify_path = None
+appdata = dict["appdata"]
+spotify_executable = "Spotify\\Spotify.exe"
+path = os.path.join(appdata, spotify_executable)
+logging.info(path)
+if os.path.exists(path):
+    spotify_path = path
+    print(spotify_path)
 
 
 def previous():
@@ -40,36 +44,20 @@ def pause():
     isPlaying = False
     device_name = socket.gethostname()
 
-    # def WindowExists(window_name):
-    #     try:
-    #         win32gui.FindWindow(None, window_name)
-    #         return True
-    #     except:
-    #         return False
-
-    # def IsMinimized(window_name):
-    #     hwnd = win32gui.FindWindow(None, window_name)
-    #     if hwnd:
-    #         return win32gui.IsIconic(hwnd)
-    #     return False
-
-    # if WindowExists("Spotify") and not IsMinimized("Spotify"):
+    # if win32gui.FindWindow(None, "Spotify"):
+    #     print("window exists")
     #     pass
 
-    # else:
+    # elif spotify_path != None:
     #     # The Spotify process is not running, so we start it
-    #     subprocess.Popen(spotify_path)
+    #     try:
+    #         win32api.ShellExecute(0, 'open', spotify_path, '', '', 1)
+    #     except Exception:
+    #         logging.info(Exception)
     try:
         isPlaying = sp.current_user_playing_track()[u'is_playing']
     except TypeError:
         print(Exception)
-
-        # subprocess.Popen(spotify_path)
-        # print(spotify_path)
-        # time.sleep(0.5)
-        # keyboard.press(Key.media_play_pause)
-        # print("pressed")
-        # keyboard.release(Key.media_play_pause)
 
     if isPlaying:
         try:

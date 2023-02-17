@@ -20,6 +20,7 @@ part_label.grid(row=0, column=0)
 
 # make folder for cache
 programdata_folder = os.environ["PROGRAMDATA"]+'\Spotify Keyboard'
+appdata = os.environ["APPDATA"]
 
 if not os.path.exists(programdata_folder):
     os.makedirs(programdata_folder)
@@ -32,7 +33,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
                                                client_secret=client_secret,
                                                redirect_uri=redirect_uri,
                                                cache_path=cache_path,
-                                               scope="playlist-read-collaborative playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing playlist-read-private user-modify-playback-state user-library-modify"))
+                                               scope="playlist-read-collaborative playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing playlist-read-private user-modify-playback-state user-library-modify user-read-playback-state"))
 
 
 user_id = sp.current_user()['id']
@@ -61,13 +62,14 @@ def output(options):
             place = position
             playlist_id = playlists_ids[place]
             print(playlist_id)
-            file = open("playlist_config.txt", "wb")
-            pickle.dump({'id': playlist_id, 'name': options}, file)
+            file = open(programdata_folder+"\playlist_config.txt", "wb")
+            pickle.dump({'id': playlist_id, 'name': options,
+                        'appdata': appdata}, file)
             file.close()
 
 
 try:
-    with open('playlist_config.txt', "rb") as f:
+    with open(programdata_folder+"\playlist_config.txt", "rb") as f:
         dict = pickle.load(f)
 
 except:
