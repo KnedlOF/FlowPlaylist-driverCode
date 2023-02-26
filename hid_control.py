@@ -150,6 +150,9 @@ while True:
                             request_in_progress = True
                             try:
                                 volume_set = sp.volume(new_volume)
+                            except spotipy.SpotifyException as e:
+                                if e.http_status == 404:
+                                    print('Skipping volume')
                             except (spotipy.SpotifyException, TimeoutError) as e:
                                 print(str(e))
                                 time.sleep(3)
@@ -163,6 +166,9 @@ while True:
                             request_in_progress = True
                             try:
                                 volume_set = sp.volume(new_volume)
+                            except spotipy.SpotifyException as e:
+                                if e.http_status == 404:
+                                    print('Skipping volume')
                             except (spotipy.SpotifyException, TimeoutError) as e:
                                 print(str(e))
                                 time.sleep(3)

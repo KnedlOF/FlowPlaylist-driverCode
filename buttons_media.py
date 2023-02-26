@@ -27,8 +27,11 @@ def previous():
     try:
         sp.previous_track()
         return ('Track skipped')
-    except Exception:
-        return ('Could not skip track')
+    except spotipy.client.SpotifyException as e:
+        if e.http_status == 404:
+            return ('Spotify not opened!')
+        else:
+            return ('Could not skip track')
 
 
 def next():
@@ -36,8 +39,11 @@ def next():
     try:
         sp.next_track()
         return ('Track skipped')
-    except Exception:
-        return ('Could not skip track')
+    except spotipy.client.SpotifyException as e:
+        if e.http_status == 404:
+            return ('Spotify not opened!')
+        else:
+            return ('Could not skip track')
 
 
 def pause():
@@ -62,9 +68,13 @@ def pause():
     if isPlaying:
         try:
             sp.pause_playback()
-            return ('Stoped')
-        except Exception:
-            return ('Could not stop')
+            return ('Paused')
+        except spotipy.client.SpotifyException as e:
+            if e.http_status == 404:
+                return ('Spotify not opened!')
+            else:
+                return ('Could not stop')
+
     else:
         try:
             sp.start_playback()
@@ -79,7 +89,7 @@ def pause():
                         desired_device_id = device['id']
                         print(desired_device_id)
                 if desired_device_id is None:
-                    return ("Could't find device")
+                    return ('Spotify not opened!')
                 sp.transfer_playback(desired_device_id, force_play=True)
                 return ('Playing')
             else:

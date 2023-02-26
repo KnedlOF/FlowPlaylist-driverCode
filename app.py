@@ -1,21 +1,76 @@
 from tkinter import *
 import spotipy
-from spotipy.oauth2 import SpotifyOAuth
+from spotipy.oauth2 import SpotifyOAuth as OriginalSpotifyOAuth
+from spotipy.oauth2 import SpotifyStateError
 from client_secrets import client_id, client_secret
 import pickle
 import os
+import tkinter as tk
+from urllib.parse import urlparse, parse_qs
 
-app = Tk()
+
+root = Tk()
+
+# modify library
+
+
+class MyGUI:
+    def __init__(self, state=None):
+        self.window = tk.Toplevel()
+        self.state = state
+        self.window.title("Authorization URL")
+        self.label = tk.Label(
+            self.window, text="Enter the URL you were redirected to:")
+        self.label.pack()
+        self.entry = tk.Entry(self.window, width=50)
+        self.entry.pack()
+        self.button = tk.Button(
+            self.window, text="Submit", command=self.submit)
+        self.button.pack()
+        self.code = None
+
+    def submit(self):
+        url = self.entry.get()
+        parsed_url = urlparse(url)
+        query_params = parse_qs(parsed_url.query)
+        state = query_params.get('state', [''])[0]
+        self.code = query_params.get('code', [''])[0]
+        if self.state is not None and self.state != state:
+            raise SpotifyStateError(self.state, state)
+        self.window.destroy()
+
+    def show(self):
+        self.window.mainloop()
+
+# modify library, so instead of pasting url in console, you need to paste it in tinker
+
+
+class SpotifyOAuth(OriginalSpotifyOAuth):
+    def _get_auth_response_interactive(self, open_browser=False):
+        if open_browser:
+            self._open_auth_url()
+            gui = MyGUI()
+            gui.show()
+            code = gui.code
+        else:
+            url = self.get_authorize_url()
+            print(f"Go to the following URL: {url}")
+            response = input("Enter the URL you were redirected to: ")
+            state, code = SpotifyOAuth.parse_auth_response_url(response)
+            if self.state is not None and self.state != state:
+                raise SpotifyStateError(self.state, state)
+        return code
+
 
 # changes logo
 photo = PhotoImage(file="pic.png")
-app.iconphoto(False, photo)
-app.title('Spotify keyboard')
-app.geometry('700x350')
+root.iconphoto(False, photo)
+root.title('Spotify keyboard')
+root.geometry('700x350')
 
 part_text = StringVar()
 part_label = Label(
-    app, text='Select playlist you would like songs to be added to:', font=('bold', 10), pady=10)
+    root, text='Select playlist you would like songs to be added to:', font=('bold', 10), pady=10)
 part_label.grid(row=0, column=0)
 
 # make folder for cache
@@ -75,12 +130,20 @@ try:
 except:
     dict = {'name': 'Select playlist'}
 
-# dropdown menu
+# app
+
 menu = StringVar()
 menu.set(dict['name'])
-drop = OptionMenu(app, menu, *playlists_names, command=output)
+
+if playlists_names == None:
+    playlists_names = ['No playlists created']
+    command = None
+else:
+    command = output
+drop = OptionMenu(root, menu, *playlists_names, command=command)
 drop.grid(row=1, column=0)
-exit_button = Button(app, text="Exit", command=app.destroy)
+exit_button = Button(root, text="Exit", command=root.destroy)
 exit_button.grid(row=1, column=5)
 
-app.mainloop()
+
+root.mainloop()

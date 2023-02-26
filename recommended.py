@@ -1,12 +1,20 @@
 from authorization import sp
+import spotipy
 
 
 def recommend():
     # gets currently playing song
-    currently_played = sp.current_user_playing_track()
 
-    if currently_played is None:
-        print('Spotify not playing any tracks. Exitting !!!')
+    try:
+        currently_played = sp.current_user_playing_track()
+        if currently_played is None:
+            return ('Spotify not opened!')
+
+    except spotipy.client.SpotifyException as e:
+        if e.http_status == 404:
+            return ('Spotify not opened!')
+        else:
+            return ('Something went wrong')
 
     # only takes id
     track_id = currently_played['item']['id']
