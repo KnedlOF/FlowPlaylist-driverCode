@@ -21,7 +21,7 @@ def playlist():
         with open(programdata_folder+"\playlist_config.txt", "rb") as f:
             dict = pickle.load(f)
     except FileNotFoundError as e:
-        logging.info(e)
+        logging.info("No playlist_config created")
         return ("Choose playlist in app")
     except Exception as e:
         logging.info(e)

@@ -8,19 +8,19 @@ import time
 # import win32gui
 # import win32api
 
-try:
-    with open(programdata_folder+"\playlist_config.txt", "rb") as f:
-        dict = pickle.load(f)
-except Exception as e:
-    logging.info(e)
-spotify_path = None
-appdata = dict["appdata"]
-spotify_executable = "Spotify\\Spotify.exe"
-path = os.path.join(appdata, spotify_executable)
-logging.info(path)
-if os.path.exists(path):
-    spotify_path = path
-    print(spotify_path)
+# try:
+#     with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+#         dict = pickle.load(f)
+# except Exception as e:
+#     logging.info(e)
+# spotify_path = None
+# appdata = dict["appdata"]
+# spotify_executable = "Spotify\\Spotify.exe"
+# path = os.path.join(appdata, spotify_executable)
+# logging.info(path)
+# if os.path.exists(path):
+#     spotify_path = path
+#     print(spotify_path)
 
 
 def previous():
@@ -49,7 +49,7 @@ def next():
     except spotipy.client.SpotifyException as e:
         if e.http_status == 404:
             forceplay()
-            time.sleep(0.05)
+            time.sleep(0.1)
             try:
                 sp.next_track()
                 return ('Track skipped')

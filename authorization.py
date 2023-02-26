@@ -24,7 +24,7 @@ print(cache_path)
 x = True
 while not os.path.exists(cache_path):
     if x:
-        logging.info('No cache')
+        logging.info('No cache file found')
         x = False
 
 # authorization

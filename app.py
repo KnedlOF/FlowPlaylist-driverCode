@@ -117,10 +117,30 @@ def output(options):
             place = position
             playlist_id = playlists_ids[place]
             print(playlist_id)
+            premium_volume = premiumvolume.get()
             file = open(programdata_folder+"\playlist_config.txt", "wb")
             pickle.dump({'id': playlist_id, 'name': options,
-                        'appdata': appdata}, file)
+                        'appdata': appdata, 'premium_volume': premium_volume}, file)
             file.close()
+
+
+def outputcheckbox():
+    try:
+        with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+            dict = pickle.load(f)
+
+    except:
+        dict = {}
+    if 'id' in dict:
+        playlist_id = dict['id']
+    else:
+        playlist_id = playlists_ids[0]
+    options = menu.get()
+    premium_volume = premiumvolume.get()
+    file = open(programdata_folder+"\playlist_config.txt", "wb")
+    pickle.dump({'id': playlist_id, 'name': options,
+                'appdata': appdata, 'premium_volume': premium_volume}, file)
+    file.close()
 
 
 try:
@@ -128,12 +148,16 @@ try:
         dict = pickle.load(f)
 
 except:
-    dict = {'name': 'Select playlist'}
+    dict = {'name': playlists_names[0],
+            'premium_volume': 'false', 'id': playlists_ids[0]}
+
 
 # app
 
 menu = StringVar()
+premiumvolume = IntVar()
 menu.set(dict['name'])
+premiumvolume.set(dict['premium_volume'])
 
 if playlists_names == None:
     playlists_names = ['No playlists created']
@@ -142,8 +166,12 @@ else:
     command = output
 drop = OptionMenu(root, menu, *playlists_names, command=command)
 drop.grid(row=1, column=0)
+
 exit_button = Button(root, text="Exit", command=root.destroy)
 exit_button.grid(row=1, column=5)
 
+checkbox = Checkbutton(root, text="Change volume of Spotify (requires Premium)",
+                       variable=premiumvolume, command=outputcheckbox)
+checkbox.grid(row=2, column=0)
 
 root.mainloop()
