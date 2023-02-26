@@ -9,15 +9,15 @@ import tkinter as tk
 from urllib.parse import urlparse, parse_qs
 
 
-root = Tk()
-
 # modify library
 
 
 class MyGUI:
     def __init__(self, state=None):
-        self.window = tk.Toplevel()
+        self.window = tk.Tk()
         self.state = state
+        self.photo = PhotoImage(file="pic.png")
+        self.window.iconphoto(False, self.photo)
         self.window.title("Authorization URL")
         self.label = tk.Label(
             self.window, text="Enter the URL you were redirected to:")
@@ -62,17 +62,6 @@ class SpotifyOAuth(OriginalSpotifyOAuth):
         return code
 
 
-# changes logo
-photo = PhotoImage(file="pic.png")
-root.iconphoto(False, photo)
-root.title('Spotify keyboard')
-root.geometry('700x350')
-
-part_text = StringVar()
-part_label = Label(
-    root, text='Select playlist you would like songs to be added to:', font=('bold', 10), pady=10)
-part_label.grid(row=0, column=0)
-
 # make folder for cache
 programdata_folder = os.environ["PROGRAMDATA"]+'\Spotify Keyboard'
 appdata = os.environ["APPDATA"]
@@ -82,7 +71,6 @@ if not os.path.exists(programdata_folder):
 
 cache_path = programdata_folder+'\.cache'
 
-
 redirect_uri = 'https://example.org/callback'
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
                                                client_secret=client_secret,
@@ -90,8 +78,20 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
                                                cache_path=cache_path,
                                                scope="playlist-read-collaborative playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing playlist-read-private user-modify-playback-state user-library-modify user-read-playback-state"))
 
-
 user_id = sp.current_user()['id']
+
+root = Tk()
+# changes logo
+photo = PhotoImage(file="pic.png")
+root.iconphoto(False, photo)
+root.title('Spotify keyboard')
+root.geometry('350x200')
+
+part_text = StringVar()
+part_label = Label(
+    root, text='Select playlist you would like songs to be added to:', font=('bold', 10), pady=10)
+part_label.grid(row=0, column=0)
+
 
 playlists_list = list()
 offset = 0

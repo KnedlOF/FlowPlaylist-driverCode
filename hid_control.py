@@ -39,6 +39,14 @@ def song_info_once(delay=0.1):
         track_info = sp.current_user_playing_track()
         if track_info is None:
             print('Spotify not playing any tracks.')
+            track_artistsblank = ''
+            track_nameblank = ''
+            str_out = b'\x002'
+            str_out += track_artistsblank.encode('utf-8')
+            dev.write(str_out)
+            str_out = b'\x003'
+            str_out += track_nameblank.encode('utf-8')
+            dev.write(str_out)
         track_name = track_info['item']['name']
         # it cuts track name if it is longer than 46 characters
         if len(track_name) >= 46:

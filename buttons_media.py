@@ -4,6 +4,7 @@ import logging
 import pickle
 from authorization import sp, programdata_folder
 import os
+import time
 # import win32gui
 # import win32api
 
@@ -29,7 +30,13 @@ def previous():
         return ('Track skipped')
     except spotipy.client.SpotifyException as e:
         if e.http_status == 404:
-            return ('Spotify not opened!')
+            forceplay()
+            time.sleep(0.05)
+            try:
+                sp.previous_track()
+                return ('Track skipped')
+            except:
+                return ('Could not skip track')
         else:
             return ('Could not skip track')
 
@@ -41,14 +48,33 @@ def next():
         return ('Track skipped')
     except spotipy.client.SpotifyException as e:
         if e.http_status == 404:
-            return ('Spotify not opened!')
+            forceplay()
+            time.sleep(0.05)
+            try:
+                sp.next_track()
+                return ('Track skipped')
+            except:
+                return ('Could not skip track')
         else:
             return ('Could not skip track')
 
 
+def forceplay(message="Playing"):
+    device_name = socket.gethostname()
+    desired_device_id = None
+    devices = sp.devices()
+    for device in devices['devices']:
+        if device['name'].lower() == device_name.lower() and device['type'] == 'Computer':
+            desired_device_id = device['id']
+            print(desired_device_id)
+    if desired_device_id is None:
+        return ('Spotify not opened!')
+    sp.transfer_playback(desired_device_id, force_play=True)
+    return message
+
+
 def pause():
     isPlaying = False
-    device_name = socket.gethostname()
 
     # if win32gui.FindWindow(None, "Spotify"):
     #     print("window exists")
@@ -82,15 +108,7 @@ def pause():
 
         except spotipy.client.SpotifyException as e:
             if e.http_status == 404:
-                desired_device_id = None
-                devices = sp.devices()
-                for device in devices['devices']:
-                    if device['name'].lower() == device_name.lower() and device['type'] == 'Computer':
-                        desired_device_id = device['id']
-                        print(desired_device_id)
-                if desired_device_id is None:
-                    return ('Spotify not opened!')
-                sp.transfer_playback(desired_device_id, force_play=True)
-                return ('Playing')
+                result = forceplay()
+                return result
             else:
                 return ('Could not play')

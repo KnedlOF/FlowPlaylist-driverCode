@@ -9,7 +9,7 @@ def like():
         cp = sp.current_user_playing_track()
 
         if cp is None:
-            return ('Spotify not opened!')
+            return ('No tracks playing')
 
         track_id = cp['item']['id']
         print(track_id)

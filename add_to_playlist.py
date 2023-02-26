@@ -33,7 +33,7 @@ def playlist():
     try:
         cp = sp.current_user_playing_track()
         if cp is None:
-            return ('Spotify not opened!')
+            return ('No tracks playing')
     except spotipy.client.SpotifyException as e:
         if e.http_status == 404:
             return ('Spotify not opened!')

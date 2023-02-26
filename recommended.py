@@ -8,7 +8,7 @@ def recommend():
     try:
         currently_played = sp.current_user_playing_track()
         if currently_played is None:
-            return ('Spotify not opened!')
+            return ('No tracks playing')
 
     except spotipy.client.SpotifyException as e:
         if e.http_status == 404:
