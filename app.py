@@ -148,9 +148,12 @@ try:
         dict = pickle.load(f)
 
 except:
-    dict = {'name': playlists_names[0],
+    dict = {'id': None, 'name': None,
             'premium_volume': 'false', 'id': playlists_ids[0]}
-
+    file = open(programdata_folder+"\playlist_config.txt", "wb")
+    pickle.dump({'id': playlists_names[0], 'name': playlists_names[0],
+                'appdata': appdata, 'premium_volume': False}, file)
+    file.close()
 
 # app
 
@@ -170,7 +173,7 @@ drop.grid(row=1, column=0)
 exit_button = Button(root, text="Exit", command=root.destroy)
 exit_button.grid(row=1, column=5)
 
-checkbox = Checkbutton(root, text="Change volume of Spotify (requires Premium)",
+checkbox = Checkbutton(root, text="Change desktop volume instead of Spotify",
                        variable=premiumvolume, command=outputcheckbox)
 checkbox.grid(row=2, column=0)
 

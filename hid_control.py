@@ -166,7 +166,7 @@ while True:
                     premiumvolume = dict['premium_volume']
 
                     # non premium volume, changes desktop volume
-                    if not premiumvolume:
+                    if premiumvolume:
                         set_volume = volume/100
                         devices = AudioUtilities.GetSpeakers()
                         interface = devices.Activate(
