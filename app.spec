@@ -41,4 +41,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon='C:\\Users\\Mitja\\Pictures\\spotify_keyboard_logo.ico',
 )
