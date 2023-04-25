@@ -166,6 +166,7 @@ while True:
                             str_out = b'\x004'
                             str_out += pause_text.encode('utf-8')
                             dev.write(str_out)
+                            song_info_once()
 
                         try:
                             with open(programdata_folder+"\playlist_config.txt", "rb") as f:
