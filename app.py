@@ -117,10 +117,14 @@ def output(options):
             place = position
             playlist_id = playlists_ids[place]
             print(playlist_id)
-            premium_volume = premiumvolume.get()
+            try:
+                premium_volume = premiumvolume.get()
+            except:
+                premium_volume = False
             file = open(programdata_folder+"\playlist_config.txt", "wb")
             pickle.dump({'id': playlist_id, 'name': options,
-                        'appdata': appdata, 'premium_volume': premium_volume}, file)
+                        'appdata': appdata, 'premium_volume': premium_volume, 'playlists_ids': playlists_ids,
+                         'playlists_names': playlists_names}, file)
             file.close()
 
 
@@ -136,10 +140,14 @@ def outputcheckbox():
     else:
         playlist_id = playlists_ids[0]
     options = menu.get()
-    premium_volume = premiumvolume.get()
+    try:
+        premium_volume = premiumvolume.get()
+    except:
+        premium_volume = False
     file = open(programdata_folder+"\playlist_config.txt", "wb")
     pickle.dump({'id': playlist_id, 'name': options,
-                'appdata': appdata, 'premium_volume': premium_volume}, file)
+                'appdata': appdata, 'premium_volume': premium_volume, 'playlists_ids': playlists_ids,
+                 'playlists_names': playlists_names}, file)
     file.close()
 
 
@@ -149,10 +157,12 @@ try:
 
 except:
     dict = {'id': None, 'name': None,
-            'premium_volume': 'false', 'id': playlists_ids[0]}
+            'premium_volume': 'False', 'id': playlists_ids[0], 'playlists_ids': playlists_ids,
+            'playlists_names': playlists_names}
     file = open(programdata_folder+"\playlist_config.txt", "wb")
     pickle.dump({'id': playlists_names[0], 'name': playlists_names[0],
-                'appdata': appdata, 'premium_volume': False}, file)
+                'appdata': appdata, 'premium_volume': False, 'playlists_ids': playlists_ids,
+                 'playlists_names': playlists_names}, file)
     file.close()
 
 # app

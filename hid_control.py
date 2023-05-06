@@ -18,6 +18,8 @@ from comtypes import CLSCTX_ALL
 timeout = 1
 prev_song = None
 prev_artists = None
+prev_playlist_btn = False
+hotkey = False
 
 # default is TinyUSB (0xcafe), Adafruit (0x239a), RaspberryPi (0x2e8a), Espressif (0x303a) VID
 USB_VID = [0x2e8a, 0x239a]
@@ -144,24 +146,57 @@ while True:
                             str_out = b'\x004'
                             str_out += recomm_text.encode('utf-8')
                             dev.write(str_out)
+
+                        # it activates when button goes from 1 to 0
                         if playlist_btn == 1:
+                            prev_playlist_btn = True
+                        if playlist_btn == 0 and prev_playlist_btn == True and hotkey == False:
                             playlist_text = playlist()
                             str_out = b'\x004'
                             str_out += playlist_text.encode('utf-8')
                             dev.write(str_out)
-                        if prev_btn == 1:
+                            prev_playlist_btn = False
+                        if playlist_btn == 0:
+                            hotkey = False
+
+                        elif playlist_btn == 1 and prev_playlist_btn == True and next_btn:
+                            hotkey = True
+                            with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+                                data = pickle.load(f)
+                            playlists_names = data['playlists_names']
+                            playlists_ids = data['playlists_ids']
+                            current_playlist = data['name']
+                            if current_playlist in playlists_names:
+                                index = playlists_names.index(current_playlist)
+                            num_playlists = len(playlists_names)-1
+                            index = index+1
+                            if index > num_playlists:
+                                index = 0
+                            data['id'] = playlists_ids[index]
+                            data['name'] = playlists_names[index]
+                            print(data['name'])
+                            with open(programdata_folder + "\playlist_config.txt", "wb") as file:
+                                pickle.dump(data, file)
+                            str_out = b'\x004'
+                            str_out += playlists_names[index].encode('utf-8')
+                            dev.write(str_out)
+                            prev_playlist_btn = False
+
+                        if prev_btn == 1 and hotkey == False:
                             prev_text = previous()
                             str_out = b'\x004'
                             str_out += prev_text.encode('utf-8')
                             dev.write(str_out)
                             song_info_once()
-                        if next_btn == 1:
+
+                        if next_btn == 1 and hotkey == False:
                             next_text = next()
                             str_out = b'\x004'
                             str_out += next_text.encode('utf-8')
                             dev.write(str_out)
                             song_info_once()
-                        if play_btn == 1:
+
+                        if play_btn == 1 and hotkey == False:
                             pause_text = pause()
                             str_out = b'\x004'
                             str_out += pause_text.encode('utf-8')
