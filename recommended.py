@@ -1,4 +1,5 @@
-from authorization import sp
+from authorization import sp, programdata_folder
+import pickle
 import spotipy
 
 
@@ -33,3 +34,22 @@ def recommend():
         return ("Songs added")
     except Exception:
         return ("Can't add")
+
+
+def play_playlist():
+    with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+        data = pickle.load(f)
+    selected_playlist = data['selected_play']
+    selected_playlists_ids = data['play_playlists_ids']
+    selected_playlists_names = data['play_playlists_names']
+    if selected_playlist in selected_playlists_ids:
+        index = selected_playlists_ids.index(
+            selected_playlist)
+    print(selected_playlist)
+    try:
+        uri = sp.playlist(selected_playlist)['uri']
+        print(uri)
+        sp.start_playback(context_uri=uri)
+        return ("Playing: " + selected_playlists_names[index])
+    except:
+        return ("Can't play")

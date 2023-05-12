@@ -2,7 +2,7 @@
 
 from buttons_media import previous, next, pause
 from add_to_playlist import playlist
-from recommended import recommend
+from recommended import recommend, play_playlist
 from like import like
 from authorization import *
 
@@ -19,7 +19,11 @@ timeout = 1
 prev_song = None
 prev_artists = None
 prev_playlist_btn = False
+prev_play_playlist = False
 hotkey = False
+hotkey2 = False
+recomm_btn = 0
+play_playlist_btn = 0
 
 # default is TinyUSB (0xcafe), Adafruit (0x239a), RaspberryPi (0x2e8a), Espressif (0x303a) VID
 USB_VID = [0x2e8a, 0x239a]
@@ -52,6 +56,8 @@ def song_info_once(delay=0.1):
             prev_artists = None
         track_info = sp.current_user_playing_track()
         if track_info is None:
+            prev_song = None
+            prev_artists = None
             print('Spotify not playing any tracks.')
             track_artistsblank = ''
             track_nameblank = ''
@@ -126,7 +132,7 @@ while True:
                     try:
                         str_in = dev.read(8)
                         like_btn = str_in[0]
-                        recomm_btn = str_in[1]
+                        multi_btn = str_in[1]
                         playlist_btn = str_in[2]
                         prev_btn = str_in[3]
                         play_btn = str_in[4]
@@ -136,16 +142,75 @@ while True:
                         print("Received from HID Device:",
                               struct.unpack('<8B', str_in), '\n')
 
+                        if multi_btn == 1:
+                            with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+                                data = pickle.load(f)
+                            multi = data['multi']
+                            print(multi)
+                            if multi == 'Play playlist':
+                                play_playlist_btn = str_in[1]
+                                recomm_btn = 0
+
+                            elif multi == 'Recommendations':
+                                recomm_btn = str_in[1]
+                                play_playlist_btn = 0
+                        else:
+                            recomm_btn = 0
+                            play_playlist_btn = 0
+
                         if like_btn == 1:
                             like_text = like()
                             str_out = b'\x004'
                             str_out += like_text.encode('utf-8')
                             dev.write(str_out)
+
                         if recomm_btn == 1:
                             recomm_text = recommend()
                             str_out = b'\x004'
                             str_out += recomm_text.encode('utf-8')
                             dev.write(str_out)
+
+                        # play playlist button
+                        if play_playlist_btn == 1:
+                            prev_play_playlist = True
+                        if play_playlist_btn == 0 and prev_play_playlist == True and hotkey2 == False:
+                            play_text = play_playlist()
+                            print(play_text)
+                            str_out = b'\x004'
+                            str_out += play_text.encode(
+                                'utf-8')
+                            dev.write(str_out)
+                            prev_play_playlist = False
+                        if play_playlist_btn == 0:
+                            prev_play_playlist = False
+                            hotkey2 = False
+                        elif play_playlist_btn == 1 and prev_play_playlist == True and next_btn:
+                            hotkey2 = True
+                            with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+                                data = pickle.load(f)
+                            selected_playlist = data['selected_play']
+                            selected_playlists_ids = data['play_playlists_ids']
+                            selected_playlists_names = data['play_playlists_names']
+
+                            if selected_playlist in selected_playlists_ids:
+                                index = selected_playlists_ids.index(
+                                    selected_playlist)
+                                number = len(selected_playlists_ids)-1
+                                index = index+1
+                                if index > number:
+                                    index = 0
+                                data['selected_play'] = selected_playlists_ids[index]
+                                with open(programdata_folder + "\playlist_config.txt", "wb") as file:
+                                    pickle.dump(data, file)
+                                text_out = selected_playlists_names[index]
+                            else:
+                                text_out = 'None selected'
+                            print(text_out)
+                            str_out = b'\x004'
+                            str_out += text_out.encode(
+                                'utf-8')
+                            dev.write(str_out)
+                            prev_play_playlist = False
 
                         # it activates when button goes from 1 to 0
                         if playlist_btn == 1:
@@ -158,7 +223,7 @@ while True:
                             prev_playlist_btn = False
                         if playlist_btn == 0:
                             hotkey = False
-
+                            prev_playlist_btn = False
                         elif playlist_btn == 1 and prev_playlist_btn == True and next_btn:
                             hotkey = True
                             with open(programdata_folder+"\playlist_config.txt", "rb") as f:
@@ -182,21 +247,21 @@ while True:
                             dev.write(str_out)
                             prev_playlist_btn = False
 
-                        if prev_btn == 1 and hotkey == False:
+                        if prev_btn == 1 and hotkey == False and hotkey2 == False:
                             prev_text = previous()
                             str_out = b'\x004'
                             str_out += prev_text.encode('utf-8')
                             dev.write(str_out)
                             song_info_once()
 
-                        if next_btn == 1 and hotkey == False:
+                        if next_btn == 1 and hotkey == False and hotkey2 == False:
                             next_text = next()
                             str_out = b'\x004'
                             str_out += next_text.encode('utf-8')
                             dev.write(str_out)
                             song_info_once()
 
-                        if play_btn == 1 and hotkey == False:
+                        if play_btn == 1 and hotkey == False and hotkey2 == False:
                             pause_text = pause()
                             str_out = b'\x004'
                             str_out += pause_text.encode('utf-8')
