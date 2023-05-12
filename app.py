@@ -98,7 +98,7 @@ part_label2.grid(row=2, column=0)
 
 part_text3 = StringVar()
 part_label3 = Label(
-    root, text='Select multibutton function:', font=('bold', 10), pady=10)
+    root, text="Select multifunction button's mode:", font=('bold', 10), pady=10)
 part_label3.grid(row=1, column=0)
 
 playlists_list = list()
