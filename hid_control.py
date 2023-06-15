@@ -50,6 +50,7 @@ def get_song_info():
 def song_info_once(delay=0.1):
     global prev_song
     global prev_artists
+
     try:
         if delay == 0.1:
             prev_song = None
@@ -61,6 +62,7 @@ def song_info_once(delay=0.1):
             print('Spotify not playing any tracks.')
             track_artistsblank = ''
             track_nameblank = ''
+            clear()
             str_out = b'\x002'
             str_out += track_artistsblank.encode('utf-8')
             dev.write(str_out)
@@ -84,6 +86,7 @@ def song_info_once(delay=0.1):
         if prev_artists != track_artists or prev_song != track_name:
             print(track_name)
             print(track_artists)
+            clear()
             str_out = b'\x002'
             str_out += track_artists.encode('utf-8')
             dev.write(str_out)
@@ -95,6 +98,16 @@ def song_info_once(delay=0.1):
         time.sleep(delay)
     except:
         time.sleep(delay)
+
+
+def clear():
+    nothing = ' '
+    str_out = b'\x002'
+    str_out += nothing.encode('utf-8')
+    dev.write(str_out)
+    str_out = b'\x003'
+    str_out += nothing.encode('utf-8')
+    dev.write(str_out)
 
 
 # parallel loop

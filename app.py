@@ -124,20 +124,27 @@ playlists_ids = [track['id'] for track in playlists_list]
 
 
 def output(options):
+    try:
+        with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+            dict = pickle.load(f)
+    except:
+        dict = {}
+
     options = menu.get()
     for position, item in enumerate(playlists_names):
         if item == options:
             place = position
             playlist_id = playlists_ids[place]
-            print(playlist_id)
+            print(dict)
             try:
                 premium_volume = premiumvolume.get()
             except:
                 premium_volume = False
+            dict['premium_volume'] = premium_volume
+            dict['id'] = playlist_id
+            dict['name'] = options
             file = open(programdata_folder+"\playlist_config.txt", "wb")
-            pickle.dump({'id': playlist_id, 'name': options,
-                        'appdata': appdata, 'premium_volume': premium_volume, 'playlists_ids': playlists_ids,
-                         'playlists_names': playlists_names, 'play_playlists_names': selected_playlists_names, 'play_playlists_ids': selected_playlists_ids, 'selected_play': selected_play, 'multi': menu_multi}, file)
+            pickle.dump(dict, file)
             file.close()
 
 
@@ -145,11 +152,14 @@ def outputcheckbox():
     try:
         with open(programdata_folder+"\playlist_config.txt", "rb") as f:
             dict = pickle.load(f)
-
+            print(dict)
     except:
         dict = {}
     if 'id' in dict:
-        playlist_id = dict['id']
+        if dict['id'] == None:
+            playlist_id = playlists_ids[0]
+        else:
+            playlist_id = dict['id']
     else:
         playlist_id = playlists_ids[0]
     options = menu.get()
@@ -157,10 +167,12 @@ def outputcheckbox():
         premium_volume = premiumvolume.get()
     except:
         premium_volume = False
+    dict['premium_volume'] = premium_volume
+    dict['id'] = playlist_id
+    dict['name'] = options
+
     file = open(programdata_folder+"\playlist_config.txt", "wb")
-    pickle.dump({'id': playlist_id, 'name': options,
-                'appdata': appdata, 'premium_volume': premium_volume, 'playlists_ids': playlists_ids,
-                 'playlists_names': playlists_names, 'play_playlists_names': selected_playlists_names, 'play_playlists_ids': selected_playlists_ids, 'selected_play': selected_play, 'multi': menu_multi}, file)
+    pickle.dump(dict, file)
     file.close()
 
 
@@ -182,18 +194,16 @@ try:
         dict = pickle.load(f)
 
 except:
-    dict = {'id': None, 'name': None,
-            'premium_volume': 'False', 'id': playlists_ids[0], 'playlists_ids': playlists_ids,
+    dict = {'id': playlists_ids[0], 'name': playlists_names[0],
+            'appdata': appdata, 'premium_volume': False, 'playlists_ids': playlists_ids,
             'playlists_names': playlists_names, 'play_playlists_names': [], 'play_playlists_ids': [], 'selected_play': all_playlsts_ids[0], 'multi': 'Recommendations'}
     file = open(programdata_folder+"\playlist_config.txt", "wb")
-    pickle.dump({'id': playlists_names[0], 'name': playlists_names[0],
-                'appdata': appdata, 'premium_volume': False, 'playlists_ids': playlists_ids,
-                 'playlists_names': playlists_names, 'play_playlists_names': [], 'play_playlists_ids': [], 'selected_play': all_playlsts_ids[0], 'multi': 'Recommendations'}, file)
+    pickle.dump(dict, file)
     file.close()
 
 if 'play_playlists_ids' not in dict:
     file = open(programdata_folder+"\playlist_config.txt", "wb")
-    pickle.dump({'id': playlists_names[0], 'name': playlists_names[0],
+    pickle.dump({'id': playlists_ids[0], 'name': playlists_names[0],
                  'appdata': appdata, 'premium_volume': False, 'playlists_ids': playlists_ids,
                 'playlists_names': playlists_names, 'play_playlists_names': [], 'play_playlists_ids': [], 'selected_play': all_playlsts_ids[0], 'multi': 'Recommendations'}, file)
     file.close()
