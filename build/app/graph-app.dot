@@ -225,19 +225,19 @@ charset="UTF-8";
 	"jinja2.parser" [label="<f0> SourceModule| <f1> jinja2.parser",shape="record"];
 	"jinja2.lexer" [label="<f0> SourceModule| <f1> jinja2.lexer",shape="record"];
 	"jinja2._identifier" [label="<f0> SourceModule| <f1> jinja2._identifier",shape="record"];
-	"typing_extensions" [label="<f0> MissingModule| <f1> typing_extensions",shape="record"];
+	"typing_extensions" [label="<f0> SourceModule| <f1> typing_extensions",shape="record"];
 	"jinja2.defaults" [label="<f0> SourceModule| <f1> jinja2.defaults",shape="record"];
 	"jinja2.tests" [label="<f0> SourceModule| <f1> jinja2.tests",shape="record"];
-	"jinja2.filters" [label="<f0> SourceModule| <f1> jinja2.filters",shape="record"];
-	"jinja2.sandbox" [label="<f0> SourceModule| <f1> jinja2.sandbox",shape="record"];
-	"jinja2.async_utils" [label="<f0> SourceModule| <f1> jinja2.async_utils",shape="record"];
 	"markupsafe" [label="<f0> Package| <f1> markupsafe",shape="record"];
 	"markupsafe._native" [label="<f0> SourceModule| <f1> markupsafe._native",shape="record"];
 	"markupsafe._speedups" [label="<f0> Extension| <f1> markupsafe._speedups",shape="record"];
 	"jinja2.utils" [label="<f0> SourceModule| <f1> jinja2.utils",shape="record"];
 	"jinja2.constants" [label="<f0> SourceModule| <f1> jinja2.constants",shape="record"];
 	"jinja2.runtime" [label="<f0> SourceModule| <f1> jinja2.runtime",shape="record"];
+	"jinja2.async_utils" [label="<f0> SourceModule| <f1> jinja2.async_utils",shape="record"];
 	"jinja2.loaders" [label="<f0> SourceModule| <f1> jinja2.loaders",shape="record"];
+	"jinja2.filters" [label="<f0> SourceModule| <f1> jinja2.filters",shape="record"];
+	"jinja2.sandbox" [label="<f0> SourceModule| <f1> jinja2.sandbox",shape="record"];
 	"jinja2.exceptions" [label="<f0> SourceModule| <f1> jinja2.exceptions",shape="record"];
 	"jinja2.environment" [label="<f0> SourceModule| <f1> jinja2.environment",shape="record"];
 	"asyncio" [label="<f0> Package| <f1> asyncio",shape="record"];
@@ -332,6 +332,7 @@ charset="UTF-8";
 	"asyncio.format_helpers" [label="<f0> SourceModule| <f1> asyncio.format_helpers",shape="record"];
 	"asyncio.constants" [label="<f0> SourceModule| <f1> asyncio.constants",shape="record"];
 	"jinja2.debug" [label="<f0> SourceModule| <f1> jinja2.debug",shape="record"];
+	"tputil" [label="<f0> MissingModule| <f1> tputil",shape="record"];
 	"jinja2.compiler" [label="<f0> SourceModule| <f1> jinja2.compiler",shape="record"];
 	"jinja2.visitor" [label="<f0> SourceModule| <f1> jinja2.visitor",shape="record"];
 	"jinja2.optimizer" [label="<f0> SourceModule| <f1> jinja2.optimizer",shape="record"];
@@ -432,99 +433,140 @@ charset="UTF-8";
 	"C:\Users\Mitja\AppData\Local\Programs\Python\Python310\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_pkgutil.py" [label="<f0> Script| <f1> C:\Users\Mitja\AppData\Local\Programs\Python\Python310\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_pkgutil.py",shape="record"];
 	"C:\Users\Mitja\AppData\Local\Programs\Python\Python310\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_inspect.py" [label="<f0> Script| <f1> C:\Users\Mitja\AppData\Local\Programs\Python\Python310\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_inspect.py",shape="record"];
 	"C:\Users\Mitja\AppData\Local\Programs\Python\Python310\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_subprocess.py" [label="<f0> Script| <f1> C:\Users\Mitja\AppData\Local\Programs\Python\Python310\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_subprocess.py",shape="record"];
+	"tkinter.colorchooser" [label="<f0> SourceModule| <f1> tkinter.colorchooser",shape="record"];
+	"tkinter.commondialog" [label="<f0> SourceModule| <f1> tkinter.commondialog",shape="record"];
 	"client_secrets" [label="<f0> SourceModule| <f1> client_secrets",shape="record"];
 	"spotipy.oauth2" [label="<f0> SourceModule| <f1> spotipy.oauth2",shape="record"];
 	"requests.api" [label="<f0> SourceModule| <f1> requests.api",shape="record"];
 	"requests.sessions" [label="<f0> SourceModule| <f1> requests.sessions",shape="record"];
-	"requests.utils" [label="<f0> SourceModule| <f1> requests.utils",shape="record"];
-	"netrc" [label="<f0> SourceModule| <f1> netrc",shape="record"];
-	"requests.__version__" [label="<f0> SourceModule| <f1> requests.__version__",shape="record"];
-	"requests.certs" [label="<f0> SourceModule| <f1> requests.certs",shape="record"];
-	"certifi" [label="<f0> Package| <f1> certifi",shape="record"];
-	"certifi.core" [label="<f0> SourceModule| <f1> certifi.core",shape="record"];
-	"urllib3.util" [label="<f0> Package| <f1> urllib3.util",shape="record"];
-	"urllib3" [label="<f0> Package| <f1> urllib3",shape="record"];
-	"urllib3.response" [label="<f0> SourceModule| <f1> urllib3.response",shape="record"];
-	"urllib3.packages.six" [label="<f0> SourceModule| <f1> urllib3.packages.six",shape="record"];
-	"StringIO" [label="<f0> MissingModule| <f1> StringIO",shape="record"];
-	"urllib3.packages" [label="<f0> Package| <f1> urllib3.packages",shape="record"];
-	"urllib3.connection" [label="<f0> SourceModule| <f1> urllib3.connection",shape="record"];
-	"urllib3.util.ssl_match_hostname" [label="<f0> SourceModule| <f1> urllib3.util.ssl_match_hostname",shape="record"];
-	"ipaddress" [label="<f0> SourceModule| <f1> ipaddress",shape="record"];
-	"urllib3.util.proxy" [label="<f0> SourceModule| <f1> urllib3.util.proxy",shape="record"];
-	"urllib3.packages.six.moves.http_client" [label="<f0> AliasNode| <f1> urllib3.packages.six.moves.http_client",shape="record"];
-	"urllib3.packages.six.moves" [label="<f0> RuntimePackage| <f1> urllib3.packages.six.moves",shape="record"];
-	"urllib3.packages.six.moves.queue" [label="<f0> AliasNode| <f1> urllib3.packages.six.moves.queue",shape="record"];
-	"urllib3._collections" [label="<f0> SourceModule| <f1> urllib3._collections",shape="record"];
-	"collections.MutableMapping" [label="<f0> MissingModule| <f1> collections.MutableMapping",shape="record"];
-	"collections.Mapping" [label="<f0> MissingModule| <f1> collections.Mapping",shape="record"];
-	"brotli" [label="<f0> MissingModule| <f1> brotli",shape="record"];
-	"brotlicffi" [label="<f0> MissingModule| <f1> brotlicffi",shape="record"];
-	"urllib3.poolmanager" [label="<f0> SourceModule| <f1> urllib3.poolmanager",shape="record"];
-	"urllib3.request" [label="<f0> SourceModule| <f1> urllib3.request",shape="record"];
-	""'urllib3.packages.six.moves.urllib'.parse"" [label="<f0> MissingModule| <f1> "'urllib3.packages.six.moves.urllib'.parse"",shape="record"];
-	"urllib3.filepost" [label="<f0> SourceModule| <f1> urllib3.filepost",shape="record"];
-	"urllib3.fields" [label="<f0> SourceModule| <f1> urllib3.fields",shape="record"];
-	"urllib3.connectionpool" [label="<f0> SourceModule| <f1> urllib3.connectionpool",shape="record"];
-	"urllib3.util.queue" [label="<f0> SourceModule| <f1> urllib3.util.queue",shape="record"];
-	"Queue" [label="<f0> MissingModule| <f1> Queue",shape="record"];
-	"urllib3._version" [label="<f0> SourceModule| <f1> urllib3._version",shape="record"];
-	"urllib3.exceptions" [label="<f0> SourceModule| <f1> urllib3.exceptions",shape="record"];
-	"urllib3.util.wait" [label="<f0> SourceModule| <f1> urllib3.util.wait",shape="record"];
-	"urllib3.util.url" [label="<f0> SourceModule| <f1> urllib3.util.url",shape="record"];
+	"requests.status_codes" [label="<f0> SourceModule| <f1> requests.status_codes",shape="record"];
+	"requests.adapters" [label="<f0> SourceModule| <f1> requests.adapters",shape="record"];
+	"urllib3.contrib.socks" [label="<f0> SourceModule| <f1> urllib3.contrib.socks",shape="record"];
+	"urllib3.contrib" [label="<f0> Package| <f1> urllib3.contrib",shape="record"];
+	"urllib3.contrib.pyopenssl" [label="<f0> SourceModule| <f1> urllib3.contrib.pyopenssl",shape="record"];
 	"idna" [label="<f0> Package| <f1> idna",shape="record"];
-	"idna.intranges" [label="<f0> SourceModule| <f1> idna.intranges",shape="record"];
 	"idna.core" [label="<f0> SourceModule| <f1> idna.core",shape="record"];
 	"idna.uts46data" [label="<f0> SourceModule| <f1> idna.uts46data",shape="record"];
+	"idna.intranges" [label="<f0> SourceModule| <f1> idna.intranges",shape="record"];
 	"unicodedata" [label="<f0> Extension| <f1> unicodedata",shape="record"];
 	"idna.idnadata" [label="<f0> SourceModule| <f1> idna.idnadata",shape="record"];
 	"idna.package_data" [label="<f0> SourceModule| <f1> idna.package_data",shape="record"];
-	"urllib3.util.timeout" [label="<f0> SourceModule| <f1> urllib3.util.timeout",shape="record"];
+	"'OpenSSL.crypto'" [label="<f0> MissingModule| <f1> 'OpenSSL.crypto'",shape="record"];
 	"urllib3.util.ssl_" [label="<f0> SourceModule| <f1> urllib3.util.ssl_",shape="record"];
 	"urllib3.util.ssltransport" [label="<f0> SourceModule| <f1> urllib3.util.ssltransport",shape="record"];
-	"urllib3.util.retry" [label="<f0> SourceModule| <f1> urllib3.util.retry",shape="record"];
-	"urllib3.util.response" [label="<f0> SourceModule| <f1> urllib3.util.response",shape="record"];
-	"urllib3.util.request" [label="<f0> SourceModule| <f1> urllib3.util.request",shape="record"];
-	"urllib3.util.connection" [label="<f0> SourceModule| <f1> urllib3.util.connection",shape="record"];
-	"urllib3.contrib._appengine_environ" [label="<f0> SourceModule| <f1> urllib3.contrib._appengine_environ",shape="record"];
-	"urllib3.contrib" [label="<f0> Package| <f1> urllib3.contrib",shape="record"];
-	"urllib3.contrib.pyopenssl" [label="<f0> SourceModule| <f1> urllib3.contrib.pyopenssl",shape="record"];
-	"'OpenSSL.crypto'" [label="<f0> MissingModule| <f1> 'OpenSSL.crypto'",shape="record"];
+	"urllib3.packages.six" [label="<f0> SourceModule| <f1> urllib3.packages.six",shape="record"];
+	"StringIO" [label="<f0> MissingModule| <f1> StringIO",shape="record"];
+	"urllib3.packages" [label="<f0> Package| <f1> urllib3.packages",shape="record"];
+	"urllib3.packages.ssl_match_hostname" [label="<f0> Package| <f1> urllib3.packages.ssl_match_hostname",shape="record"];
+	"urllib3.packages.ssl_match_hostname._implementation" [label="<f0> SourceModule| <f1> urllib3.packages.ssl_match_hostname._implementation",shape="record"];
+	"ipaddress" [label="<f0> SourceModule| <f1> ipaddress",shape="record"];
+	"backports" [label="<f0> MissingModule| <f1> backports",shape="record"];
 	"urllib3.packages.backports.makefile" [label="<f0> SourceModule| <f1> urllib3.packages.backports.makefile",shape="record"];
 	"urllib3.packages.backports" [label="<f0> Package| <f1> urllib3.packages.backports",shape="record"];
 	"'cryptography.x509'" [label="<f0> MissingModule| <f1> 'cryptography.x509'",shape="record"];
 	"'cryptography.hazmat'" [label="<f0> MissingModule| <f1> 'cryptography.hazmat'",shape="record"];
 	"cryptography" [label="<f0> MissingModule| <f1> cryptography",shape="record"];
 	"'OpenSSL.SSL'" [label="<f0> MissingModule| <f1> 'OpenSSL.SSL'",shape="record"];
+	"urllib3.contrib._appengine_environ" [label="<f0> SourceModule| <f1> urllib3.contrib._appengine_environ",shape="record"];
+	"urllib3" [label="<f0> Package| <f1> urllib3",shape="record"];
+	"urllib3.util.timeout" [label="<f0> SourceModule| <f1> urllib3.util.timeout",shape="record"];
+	"urllib3.util.request" [label="<f0> SourceModule| <f1> urllib3.util.request",shape="record"];
+	"brotli" [label="<f0> MissingModule| <f1> brotli",shape="record"];
+	"urllib3.filepost" [label="<f0> SourceModule| <f1> urllib3.filepost",shape="record"];
+	"urllib3.fields" [label="<f0> SourceModule| <f1> urllib3.fields",shape="record"];
+	"urllib3._version" [label="<f0> SourceModule| <f1> urllib3._version",shape="record"];
+	"urllib3.util.url" [label="<f0> SourceModule| <f1> urllib3.util.url",shape="record"];
+	"urllib3.connectionpool" [label="<f0> SourceModule| <f1> urllib3.connectionpool",shape="record"];
+	"urllib3.util.response" [label="<f0> SourceModule| <f1> urllib3.util.response",shape="record"];
+	"urllib3.packages.six.moves.http_client" [label="<f0> AliasNode| <f1> urllib3.packages.six.moves.http_client",shape="record"];
+	"urllib3.util.queue" [label="<f0> SourceModule| <f1> urllib3.util.queue",shape="record"];
+	"Queue" [label="<f0> MissingModule| <f1> Queue",shape="record"];
+	"urllib3.util.proxy" [label="<f0> SourceModule| <f1> urllib3.util.proxy",shape="record"];
+	"urllib3.util.connection" [label="<f0> SourceModule| <f1> urllib3.util.connection",shape="record"];
+	"urllib3.util.wait" [label="<f0> SourceModule| <f1> urllib3.util.wait",shape="record"];
+	"urllib3.request" [label="<f0> SourceModule| <f1> urllib3.request",shape="record"];
+	""'urllib3.packages.six.moves.urllib'.parse"" [label="<f0> MissingModule| <f1> "'urllib3.packages.six.moves.urllib'.parse"",shape="record"];
+	"urllib3.packages.six.moves.queue" [label="<f0> AliasNode| <f1> urllib3.packages.six.moves.queue",shape="record"];
+	"urllib3.packages.six.moves" [label="<f0> RuntimePackage| <f1> urllib3.packages.six.moves",shape="record"];
+	"urllib3.connection" [label="<f0> SourceModule| <f1> urllib3.connection",shape="record"];
+	"urllib3._collections" [label="<f0> SourceModule| <f1> urllib3._collections",shape="record"];
+	"collections.MutableMapping" [label="<f0> MissingModule| <f1> collections.MutableMapping",shape="record"];
+	"collections.Mapping" [label="<f0> MissingModule| <f1> collections.Mapping",shape="record"];
+	"socks" [label="<f0> MissingModule| <f1> socks",shape="record"];
+	"urllib3.exceptions" [label="<f0> SourceModule| <f1> urllib3.exceptions",shape="record"];
+	"urllib3.util.retry" [label="<f0> SourceModule| <f1> urllib3.util.retry",shape="record"];
+	"urllib3.util" [label="<f0> Package| <f1> urllib3.util",shape="record"];
+	"urllib3.response" [label="<f0> SourceModule| <f1> urllib3.response",shape="record"];
+	"urllib3.poolmanager" [label="<f0> SourceModule| <f1> urllib3.poolmanager",shape="record"];
 	"requests.structures" [label="<f0> SourceModule| <f1> requests.structures",shape="record"];
-	"requests.status_codes" [label="<f0> SourceModule| <f1> requests.status_codes",shape="record"];
-	"requests.models" [label="<f0> SourceModule| <f1> requests.models",shape="record"];
-	"requests.hooks" [label="<f0> SourceModule| <f1> requests.hooks",shape="record"];
 	"requests.exceptions" [label="<f0> SourceModule| <f1> requests.exceptions",shape="record"];
+	"requests.utils" [label="<f0> SourceModule| <f1> requests.utils",shape="record"];
+	"netrc" [label="<f0> SourceModule| <f1> netrc",shape="record"];
+	"requests.certs" [label="<f0> SourceModule| <f1> requests.certs",shape="record"];
+	"certifi" [label="<f0> Package| <f1> certifi",shape="record"];
+	"certifi.core" [label="<f0> SourceModule| <f1> certifi.core",shape="record"];
+	"requests.__version__" [label="<f0> SourceModule| <f1> requests.__version__",shape="record"];
+	"requests._internal_utils" [label="<f0> SourceModule| <f1> requests._internal_utils",shape="record"];
+	"requests.hooks" [label="<f0> SourceModule| <f1> requests.hooks",shape="record"];
+	"requests.models" [label="<f0> SourceModule| <f1> requests.models",shape="record"];
 	"requests.cookies" [label="<f0> SourceModule| <f1> requests.cookies",shape="record"];
 	"dummy_threading" [label="<f0> MissingModule| <f1> dummy_threading",shape="record"];
 	"requests.compat" [label="<f0> SourceModule| <f1> requests.compat",shape="record"];
 	"http.cookies" [label="<f0> SourceModule| <f1> http.cookies",shape="record"];
 	"http.cookiejar" [label="<f0> SourceModule| <f1> http.cookiejar",shape="record"];
+	"collections.Callable" [label="<f0> MissingModule| <f1> collections.Callable",shape="record"];
+	"Cookie" [label="<f0> MissingModule| <f1> Cookie",shape="record"];
+	"cookielib" [label="<f0> MissingModule| <f1> cookielib",shape="record"];
+	"urllib2" [label="<f0> MissingModule| <f1> urllib2",shape="record"];
+	"urlparse" [label="<f0> MissingModule| <f1> urlparse",shape="record"];
+	"urllib.getproxies_environment" [label="<f0> MissingModule| <f1> urllib.getproxies_environment",shape="record"];
+	"urllib.proxy_bypass_environment" [label="<f0> MissingModule| <f1> urllib.proxy_bypass_environment",shape="record"];
+	"urllib.proxy_bypass" [label="<f0> MissingModule| <f1> urllib.proxy_bypass",shape="record"];
+	"urllib.getproxies" [label="<f0> MissingModule| <f1> urllib.getproxies",shape="record"];
+	"urllib.urlencode" [label="<f0> MissingModule| <f1> urllib.urlencode",shape="record"];
+	"urllib.unquote_plus" [label="<f0> MissingModule| <f1> urllib.unquote_plus",shape="record"];
+	"urllib.quote_plus" [label="<f0> MissingModule| <f1> urllib.quote_plus",shape="record"];
+	"urllib.unquote" [label="<f0> MissingModule| <f1> urllib.unquote",shape="record"];
+	"urllib.quote" [label="<f0> MissingModule| <f1> urllib.quote",shape="record"];
 	"simplejson" [label="<f0> MissingModule| <f1> simplejson",shape="record"];
-	"charset_normalizer" [label="<f0> Package| <f1> charset_normalizer",shape="record"];
-	"charset_normalizer.version" [label="<f0> SourceModule| <f1> charset_normalizer.version",shape="record"];
-	"charset_normalizer.utils" [label="<f0> SourceModule| <f1> charset_normalizer.utils",shape="record"];
-	"charset_normalizer.constant" [label="<f0> SourceModule| <f1> charset_normalizer.constant",shape="record"];
-	"charset_normalizer.assets" [label="<f0> Package| <f1> charset_normalizer.assets",shape="record"];
-	"_multibytecodec" [label="<f0> BuiltinModule| <f1> _multibytecodec",shape="record"];
-	"unicodedata2" [label="<f0> MissingModule| <f1> unicodedata2",shape="record"];
-	"charset_normalizer.models" [label="<f0> SourceModule| <f1> charset_normalizer.models",shape="record"];
-	"charset_normalizer.cd" [label="<f0> SourceModule| <f1> charset_normalizer.cd",shape="record"];
-	"charset_normalizer.md" [label="<f0> SourceModule| <f1> charset_normalizer.md",shape="record"];
-	"charset_normalizer.legacy" [label="<f0> SourceModule| <f1> charset_normalizer.legacy",shape="record"];
-	"charset_normalizer.api" [label="<f0> SourceModule| <f1> charset_normalizer.api",shape="record"];
-	"chardet" [label="<f0> MissingModule| <f1> chardet",shape="record"];
+	"chardet" [label="<f0> Package| <f1> chardet",shape="record"];
+	"chardet.version" [label="<f0> SourceModule| <f1> chardet.version",shape="record"];
+	"chardet.enums" [label="<f0> SourceModule| <f1> chardet.enums",shape="record"];
+	"chardet.universaldetector" [label="<f0> SourceModule| <f1> chardet.universaldetector",shape="record"];
+	"chardet.sbcsgroupprober" [label="<f0> SourceModule| <f1> chardet.sbcsgroupprober",shape="record"];
+	"chardet.sbcharsetprober" [label="<f0> SourceModule| <f1> chardet.sbcharsetprober",shape="record"];
+	"chardet.charsetprober" [label="<f0> SourceModule| <f1> chardet.charsetprober",shape="record"];
+	"chardet.langturkishmodel" [label="<f0> SourceModule| <f1> chardet.langturkishmodel",shape="record"];
+	"chardet.langthaimodel" [label="<f0> SourceModule| <f1> chardet.langthaimodel",shape="record"];
+	"chardet.langrussianmodel" [label="<f0> SourceModule| <f1> chardet.langrussianmodel",shape="record"];
+	"chardet.langhebrewmodel" [label="<f0> SourceModule| <f1> chardet.langhebrewmodel",shape="record"];
+	"chardet.langgreekmodel" [label="<f0> SourceModule| <f1> chardet.langgreekmodel",shape="record"];
+	"chardet.langbulgarianmodel" [label="<f0> SourceModule| <f1> chardet.langbulgarianmodel",shape="record"];
+	"chardet.hebrewprober" [label="<f0> SourceModule| <f1> chardet.hebrewprober",shape="record"];
+	"chardet.mbcsgroupprober" [label="<f0> SourceModule| <f1> chardet.mbcsgroupprober",shape="record"];
+	"chardet.euctwprober" [label="<f0> SourceModule| <f1> chardet.euctwprober",shape="record"];
+	"chardet.mbcssm" [label="<f0> SourceModule| <f1> chardet.mbcssm",shape="record"];
+	"chardet.chardistribution" [label="<f0> SourceModule| <f1> chardet.chardistribution",shape="record"];
+	"chardet.jisfreq" [label="<f0> SourceModule| <f1> chardet.jisfreq",shape="record"];
+	"chardet.big5freq" [label="<f0> SourceModule| <f1> chardet.big5freq",shape="record"];
+	"chardet.gb2312freq" [label="<f0> SourceModule| <f1> chardet.gb2312freq",shape="record"];
+	"chardet.euckrfreq" [label="<f0> SourceModule| <f1> chardet.euckrfreq",shape="record"];
+	"chardet.euctwfreq" [label="<f0> SourceModule| <f1> chardet.euctwfreq",shape="record"];
+	"chardet.codingstatemachine" [label="<f0> SourceModule| <f1> chardet.codingstatemachine",shape="record"];
+	"chardet.mbcharsetprober" [label="<f0> SourceModule| <f1> chardet.mbcharsetprober",shape="record"];
+	"chardet.big5prober" [label="<f0> SourceModule| <f1> chardet.big5prober",shape="record"];
+	"chardet.cp949prober" [label="<f0> SourceModule| <f1> chardet.cp949prober",shape="record"];
+	"chardet.euckrprober" [label="<f0> SourceModule| <f1> chardet.euckrprober",shape="record"];
+	"chardet.gb2312prober" [label="<f0> SourceModule| <f1> chardet.gb2312prober",shape="record"];
+	"chardet.eucjpprober" [label="<f0> SourceModule| <f1> chardet.eucjpprober",shape="record"];
+	"chardet.jpcntx" [label="<f0> SourceModule| <f1> chardet.jpcntx",shape="record"];
+	"chardet.sjisprober" [label="<f0> SourceModule| <f1> chardet.sjisprober",shape="record"];
+	"chardet.utf8prober" [label="<f0> SourceModule| <f1> chardet.utf8prober",shape="record"];
+	"chardet.latin1prober" [label="<f0> SourceModule| <f1> chardet.latin1prober",shape="record"];
+	"chardet.escprober" [label="<f0> SourceModule| <f1> chardet.escprober",shape="record"];
+	"chardet.escsm" [label="<f0> SourceModule| <f1> chardet.escsm",shape="record"];
+	"chardet.charsetgroupprober" [label="<f0> SourceModule| <f1> chardet.charsetgroupprober",shape="record"];
 	"requests.auth" [label="<f0> SourceModule| <f1> requests.auth",shape="record"];
-	"requests.adapters" [label="<f0> SourceModule| <f1> requests.adapters",shape="record"];
-	"urllib3.contrib.socks" [label="<f0> SourceModule| <f1> urllib3.contrib.socks",shape="record"];
-	"socks" [label="<f0> MissingModule| <f1> socks",shape="record"];
-	"requests._internal_utils" [label="<f0> SourceModule| <f1> requests._internal_utils",shape="record"];
 	"spotipy.util" [label="<f0> SourceModule| <f1> spotipy.util",shape="record"];
 	"spotipy.cache_handler" [label="<f0> SourceModule| <f1> spotipy.cache_handler",shape="record"];
 	"redis" [label="<f0> Package| <f1> redis",shape="record"];
@@ -622,28 +664,11 @@ charset="UTF-8";
 	"tkinter" [label="<f0> Package| <f1> tkinter",shape="record"];
 	"tkinter.constants" [label="<f0> SourceModule| <f1> tkinter.constants",shape="record"];
 	"_tkinter" [label="<f0> Extension| <f1> _tkinter",shape="record"];
-	"linecache" [label="<f0> SourceModule| <f1> linecache",shape="record"];
-	"re" [label="<f0> SourceModule| <f1> re",shape="record"];
-	"_locale" [label="<f0> BuiltinModule| <f1> _locale",shape="record"];
-	"warnings" [label="<f0> SourceModule| <f1> warnings",shape="record"];
-	"tracemalloc" [label="<f0> SourceModule| <f1> tracemalloc",shape="record"];
-	"_tracemalloc" [label="<f0> BuiltinModule| <f1> _tracemalloc",shape="record"];
-	"enum" [label="<f0> SourceModule| <f1> enum",shape="record"];
-	"locale" [label="<f0> SourceModule| <f1> locale",shape="record"];
-	"keyword" [label="<f0> SourceModule| <f1> keyword",shape="record"];
-	"weakref" [label="<f0> SourceModule| <f1> weakref",shape="record"];
-	"abc" [label="<f0> SourceModule| <f1> abc",shape="record"];
-	"_py_abc" [label="<f0> SourceModule| <f1> _py_abc",shape="record"];
-	"_abc" [label="<f0> BuiltinModule| <f1> _abc",shape="record"];
-	"sre_compile" [label="<f0> SourceModule| <f1> sre_compile",shape="record"];
-	"heapq" [label="<f0> SourceModule| <f1> heapq",shape="record"];
-	"_heapq" [label="<f0> BuiltinModule| <f1> _heapq",shape="record"];
 	"reprlib" [label="<f0> SourceModule| <f1> reprlib",shape="record"];
-	"_weakrefset" [label="<f0> SourceModule| <f1> _weakrefset",shape="record"];
-	"types" [label="<f0> SourceModule| <f1> types",shape="record"];
-	"os" [label="<f0> SourceModule| <f1> os",shape="record"];
-	"_collections_abc" [label="<f0> SourceModule| <f1> _collections_abc",shape="record"];
-	"pathlib" [label="<f0> SourceModule| <f1> pathlib",shape="record"];
+	"traceback" [label="<f0> SourceModule| <f1> traceback",shape="record"];
+	"weakref" [label="<f0> SourceModule| <f1> weakref",shape="record"];
+	"genericpath" [label="<f0> SourceModule| <f1> genericpath",shape="record"];
+	"keyword" [label="<f0> SourceModule| <f1> keyword",shape="record"];
 	"encodings.zlib_codec" [label="<f0> SourceModule| <f1> encodings.zlib_codec",shape="record"];
 	"encodings.uu_codec" [label="<f0> SourceModule| <f1> encodings.uu_codec",shape="record"];
 	"encodings.utf_8_sig" [label="<f0> SourceModule| <f1> encodings.utf_8_sig",shape="record"];
@@ -659,6 +684,7 @@ charset="UTF-8";
 	"encodings.undefined" [label="<f0> SourceModule| <f1> encodings.undefined",shape="record"];
 	"encodings.tis_620" [label="<f0> SourceModule| <f1> encodings.tis_620",shape="record"];
 	"encodings.shift_jisx0213" [label="<f0> SourceModule| <f1> encodings.shift_jisx0213",shape="record"];
+	"_multibytecodec" [label="<f0> BuiltinModule| <f1> _multibytecodec",shape="record"];
 	"_codecs_jp" [label="<f0> BuiltinModule| <f1> _codecs_jp",shape="record"];
 	"encodings.shift_jis_2004" [label="<f0> SourceModule| <f1> encodings.shift_jis_2004",shape="record"];
 	"encodings.shift_jis" [label="<f0> SourceModule| <f1> encodings.shift_jis",shape="record"];
@@ -773,8 +799,9 @@ charset="UTF-8";
 	"encodings.ascii" [label="<f0> SourceModule| <f1> encodings.ascii",shape="record"];
 	"encodings.aliases" [label="<f0> SourceModule| <f1> encodings.aliases",shape="record"];
 	"encodings" [label="<f0> Package| <f1> encodings",shape="record"];
-	"token" [label="<f0> SourceModule| <f1> token",shape="record"];
-	"operator" [label="<f0> SourceModule| <f1> operator",shape="record"];
+	"_weakrefset" [label="<f0> SourceModule| <f1> _weakrefset",shape="record"];
+	"sre_constants" [label="<f0> SourceModule| <f1> sre_constants",shape="record"];
+	"types" [label="<f0> SourceModule| <f1> types",shape="record"];
 	"urllib.robotparser" [label="<f0> SourceModule| <f1> urllib.robotparser",shape="record"];
 	"urllib.response" [label="<f0> SourceModule| <f1> urllib.response",shape="record"];
 	"urllib.request" [label="<f0> SourceModule| <f1> urllib.request",shape="record"];
@@ -786,22 +813,37 @@ charset="UTF-8";
 	"urllib.error" [label="<f0> SourceModule| <f1> urllib.error",shape="record"];
 	"urllib" [label="<f0> Package| <f1> urllib",shape="record"];
 	"urllib.pathname2url" [label="<f0> MissingModule| <f1> urllib.pathname2url",shape="record"];
-	"traceback" [label="<f0> SourceModule| <f1> traceback",shape="record"];
-	"copyreg" [label="<f0> SourceModule| <f1> copyreg",shape="record"];
+	"heapq" [label="<f0> SourceModule| <f1> heapq",shape="record"];
+	"_heapq" [label="<f0> BuiltinModule| <f1> _heapq",shape="record"];
+	"re" [label="<f0> SourceModule| <f1> re",shape="record"];
+	"_locale" [label="<f0> BuiltinModule| <f1> _locale",shape="record"];
+	"sre_parse" [label="<f0> SourceModule| <f1> sre_parse",shape="record"];
+	"enum" [label="<f0> SourceModule| <f1> enum",shape="record"];
+	"locale" [label="<f0> SourceModule| <f1> locale",shape="record"];
+	"_collections_abc" [label="<f0> SourceModule| <f1> _collections_abc",shape="record"];
+	"fnmatch" [label="<f0> SourceModule| <f1> fnmatch",shape="record"];
+	"warnings" [label="<f0> SourceModule| <f1> warnings",shape="record"];
+	"tracemalloc" [label="<f0> SourceModule| <f1> tracemalloc",shape="record"];
+	"_tracemalloc" [label="<f0> BuiltinModule| <f1> _tracemalloc",shape="record"];
+	"abc" [label="<f0> SourceModule| <f1> abc",shape="record"];
+	"_py_abc" [label="<f0> SourceModule| <f1> _py_abc",shape="record"];
+	"_abc" [label="<f0> BuiltinModule| <f1> _abc",shape="record"];
+	"linecache" [label="<f0> SourceModule| <f1> linecache",shape="record"];
+	"operator" [label="<f0> SourceModule| <f1> operator",shape="record"];
 	"stat" [label="<f0> SourceModule| <f1> stat",shape="record"];
 	"_stat" [label="<f0> BuiltinModule| <f1> _stat",shape="record"];
-	"sre_constants" [label="<f0> SourceModule| <f1> sre_constants",shape="record"];
-	"fnmatch" [label="<f0> SourceModule| <f1> fnmatch",shape="record"];
-	"sre_parse" [label="<f0> SourceModule| <f1> sre_parse",shape="record"];
-	"tokenize" [label="<f0> SourceModule| <f1> tokenize",shape="record"];
+	"copyreg" [label="<f0> SourceModule| <f1> copyreg",shape="record"];
+	"os" [label="<f0> SourceModule| <f1> os",shape="record"];
+	"io" [label="<f0> SourceModule| <f1> io",shape="record"];
+	"token" [label="<f0> SourceModule| <f1> token",shape="record"];
 	"collections.abc" [label="<f0> SourceModule| <f1> collections.abc",shape="record"];
 	"collections" [label="<f0> Package| <f1> collections",shape="record"];
 	"collections.Sequence" [label="<f0> MissingModule| <f1> collections.Sequence",shape="record"];
 	"collections.MutableSet" [label="<f0> MissingModule| <f1> collections.MutableSet",shape="record"];
-	"collections.Callable" [label="<f0> MissingModule| <f1> collections.Callable",shape="record"];
-	"genericpath" [label="<f0> SourceModule| <f1> genericpath",shape="record"];
+	"tokenize" [label="<f0> SourceModule| <f1> tokenize",shape="record"];
+	"sre_compile" [label="<f0> SourceModule| <f1> sre_compile",shape="record"];
+	"pathlib" [label="<f0> SourceModule| <f1> pathlib",shape="record"];
 	"posixpath" [label="<f0> SourceModule| <f1> posixpath",shape="record"];
-	"io" [label="<f0> SourceModule| <f1> io",shape="record"];
 	"functools" [label="<f0> SourceModule| <f1> functools",shape="record"];
 	"_functools" [label="<f0> BuiltinModule| <f1> _functools",shape="record"];
 	"_elementtree" [label="<f0> Extension| <f1> _elementtree",shape="record"];
@@ -825,77 +867,45 @@ charset="UTF-8";
 	"ntpath" [label="<f0> SourceModule| <f1> ntpath",shape="record"];
 	"posix" [label="<f0> MissingModule| <f1> posix",shape="record"];
 	"resource" [label="<f0> MissingModule| <f1> resource",shape="record"];
-	subgraph "cluster_importlib.metadata" {
-		label="importlib.metadata";
-		"importlib.metadata" -> "importlib.metadata._adapters" [style="dotted"];
-		"importlib.metadata" -> "importlib.metadata._meta" [style="dotted"];
-		"importlib.metadata" -> "importlib.metadata._collections" [style="dotted"];
-		"importlib.metadata" -> "importlib.metadata._functools" [style="dotted"];
-		"importlib.metadata" -> "importlib.metadata._itertools" [style="dotted"];
-		"importlib.metadata" -> "importlib.metadata._text" [style="dotted"];
+	subgraph "cluster_multiprocessing" {
+		label="multiprocessing";
+		"multiprocessing" -> "multiprocessing.process" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.util" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.AuthenticationError" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.BufferTooShort" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.resource_sharer" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.connection" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.get_start_method" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.set_start_method" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.resource_tracker" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.spawn" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.forkserver" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.reduction" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.get_context" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.TimeoutError" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.pool" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.shared_memory" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.context" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.queues" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.synchronize" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.heap" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.managers" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.sharedctypes" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.popen_fork" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.popen_spawn_posix" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.popen_forkserver" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.popen_spawn_win32" [style="dotted"];
+		"multiprocessing" -> "multiprocessing.dummy" [style="dotted"];
 	}
-	subgraph "cluster_deprecated" {
-		label="deprecated";
-		"deprecated" -> "deprecated.classic" [style="dotted"];
+	subgraph "cluster_pydoc_data" {
+		label="pydoc_data";
+		"pydoc_data" -> "pydoc_data.topics" [style="dotted"];
 	}
-	subgraph "cluster_six.moves" {
-		label="six.moves";
-	}
-	subgraph "cluster_curses" {
-		label="curses";
-		"curses" -> "curses.has_key" [style="dotted"];
-	}
-	subgraph "cluster_requests" {
-		label="requests";
-		"requests" -> "requests.exceptions" [style="dotted"];
-		"requests" -> "requests.packages" [style="dotted"];
-		"requests" -> "requests.certs" [style="dotted"];
-		"requests" -> "requests.utils" [style="dotted"];
-		"requests" -> "requests.__version__" [style="dotted"];
-		"requests" -> "requests.sessions" [style="dotted"];
-		"requests" -> "requests.api" [style="dotted"];
-		"requests" -> "requests.models" [style="dotted"];
-		"requests" -> "requests.status_codes" [style="dotted"];
-		"requests" -> "requests._internal_utils" [style="dotted"];
-		"requests" -> "requests.adapters" [style="dotted"];
-		"requests" -> "requests.auth" [style="dotted"];
-		"requests" -> "requests.compat" [style="dotted"];
-		"requests" -> "requests.cookies" [style="dotted"];
-		"requests" -> "requests.hooks" [style="dotted"];
-		"requests" -> "requests.structures" [style="dotted"];
-	}
-	subgraph "cluster_pywin" {
-		label="pywin";
-		"pywin" -> "pywin.mfc" [style="dotted"];
-		"pywin" -> "pywin.dialogs" [style="dotted"];
-	}
-	subgraph "cluster_concurrent" {
-		label="concurrent";
-		"concurrent" -> "concurrent.futures" [style="dotted"];
-	}
-	subgraph "cluster_redis.commands.timeseries" {
-		label="redis.commands.timeseries";
-		"redis.commands.timeseries" -> "redis.commands.timeseries.commands" [style="dotted"];
-		"redis.commands.timeseries" -> "redis.commands.timeseries.info" [style="dotted"];
-		"redis.commands.timeseries" -> "redis.commands.timeseries.utils" [style="dotted"];
-	}
-	subgraph "cluster_xml" {
-		label="xml";
-		"xml" -> "xml.parsers" [style="dotted"];
-		"xml" -> "xml.sax" [style="dotted"];
-		"xml" -> "xml.etree" [style="dotted"];
-	}
-	subgraph "cluster_pkg_resources._vendor.pyparsing.diagram" {
-		label="pkg_resources._vendor.pyparsing.diagram";
-	}
-	subgraph "cluster_urllib3.contrib" {
-		label="urllib3.contrib";
-		"urllib3.contrib" -> "urllib3.contrib._appengine_environ" [style="dotted"];
-		"urllib3.contrib" -> "urllib3.contrib.pyopenssl" [style="dotted"];
-		"urllib3.contrib" -> "urllib3.contrib.socks" [style="dotted"];
-	}
-	subgraph "cluster_urllib3.packages.six.moves" {
-		label="urllib3.packages.six.moves";
+	subgraph "cluster_concurrent.futures" {
+		label="concurrent.futures";
+		"concurrent.futures" -> "concurrent.futures._base" [style="dotted"];
+		"concurrent.futures" -> "concurrent.futures.process" [style="dotted"];
+		"concurrent.futures" -> "concurrent.futures.thread" [style="dotted"];
 	}
 	subgraph "cluster_collections" {
 		label="collections";
@@ -905,163 +915,6 @@ charset="UTF-8";
 		"collections" -> "collections.MutableSet" [style="dotted"];
 		"collections" -> "collections.Sequence" [style="dotted"];
 		"collections" -> "collections.abc" [style="dotted"];
-	}
-	subgraph "cluster_http" {
-		label="http";
-		"http" -> "http.client" [style="dotted"];
-		"http" -> "http.server" [style="dotted"];
-		"http" -> "urllib3.packages.six.moves.http_client" [style="dotted"];
-		"http" -> "http.cookiejar" [style="dotted"];
-		"http" -> "http.cookies" [style="dotted"];
-	}
-	subgraph "cluster_pkg_resources._vendor.importlib_resources" {
-		label="pkg_resources._vendor.importlib_resources";
-		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources.abc" [style="dotted"];
-		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources.readers" [style="dotted"];
-		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources._adapters" [style="dotted"];
-		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources._common" [style="dotted"];
-		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources._legacy" [style="dotted"];
-		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources._compat" [style="dotted"];
-		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources._itertools" [style="dotted"];
-		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources.simple" [style="dotted"];
-	}
-	subgraph "cluster_pkg_resources._vendor" {
-		label="pkg_resources._vendor";
-		"pkg_resources._vendor" -> "pkg_resources._vendor.appdirs" [style="dotted"];
-		"pkg_resources._vendor" -> "pkg_resources._vendor.zipp" [style="dotted"];
-		"pkg_resources._vendor" -> "pkg_resources._vendor.pyparsing" [style="dotted"];
-		"pkg_resources._vendor" -> "pkg_resources._vendor.packaging" [style="dotted"];
-		"pkg_resources._vendor" -> "pkg_resources._vendor.more_itertools" [style="dotted"];
-		"pkg_resources._vendor" -> "pkg_resources._vendor.jaraco" [style="dotted"];
-		"pkg_resources._vendor" -> "pkg_resources._vendor.importlib_resources" [style="dotted"];
-	}
-	subgraph "cluster_win32com.client" {
-		label="win32com.client";
-		"win32com.client" -> "win32com.client.build" [style="dotted"];
-		"win32com.client" -> "win32com.client.util" [style="dotted"];
-		"win32com.client" -> "win32com.client.dynamic" [style="dotted"];
-		"win32com.client" -> "win32com.client.CLSIDToClass" [style="dotted"];
-		"win32com.client" -> "win32com.client.genpy" [style="dotted"];
-		"win32com.client" -> "win32com.client.selecttlb" [style="dotted"];
-		"win32com.client" -> "win32com.client.gencache" [style="dotted"];
-		"win32com.client" -> "win32com.client.makepy" [style="dotted"];
-	}
-	subgraph "cluster_pyparsing.diagram" {
-		label="pyparsing.diagram";
-	}
-	subgraph "cluster_wrapt" {
-		label="wrapt";
-		"wrapt" -> "wrapt.wrappers" [style="dotted"];
-		"wrapt" -> "wrapt.decorators" [style="dotted"];
-		"wrapt" -> "wrapt.importer" [style="dotted"];
-		"wrapt" -> "wrapt.arguments" [style="dotted"];
-		"wrapt" -> "wrapt._wrappers" [style="dotted"];
-	}
-	subgraph "cluster_ctypes" {
-		label="ctypes";
-		"ctypes" -> "ctypes._endian" [style="dotted"];
-	}
-	subgraph "cluster_pkg_resources._vendor.jaraco.text" {
-		label="pkg_resources._vendor.jaraco.text";
-	}
-	subgraph "cluster_certifi" {
-		label="certifi";
-		"certifi" -> "certifi.core" [style="dotted"];
-	}
-	subgraph "cluster_redis.commands.bf" {
-		label="redis.commands.bf";
-		"redis.commands.bf" -> "redis.commands.bf.commands" [style="dotted"];
-		"redis.commands.bf" -> "redis.commands.bf.info" [style="dotted"];
-	}
-	subgraph "cluster_xml.etree" {
-		label="xml.etree";
-		"xml.etree" -> "xml.etree.ElementPath" [style="dotted"];
-		"xml.etree" -> "xml.etree.ElementTree" [style="dotted"];
-		"xml.etree" -> "xml.etree.ElementInclude" [style="dotted"];
-		"xml.etree" -> "xml.etree.cElementTree" [style="dotted"];
-	}
-	subgraph "cluster_pkg_resources._vendor.packaging" {
-		label="pkg_resources._vendor.packaging";
-		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.__about__" [style="dotted"];
-		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging._manylinux" [style="dotted"];
-		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging._musllinux" [style="dotted"];
-		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging._structures" [style="dotted"];
-		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.markers" [style="dotted"];
-		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.requirements" [style="dotted"];
-		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.specifiers" [style="dotted"];
-		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.tags" [style="dotted"];
-		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.utils" [style="dotted"];
-		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.version" [style="dotted"];
-	}
-	subgraph "cluster_multiprocessing.dummy" {
-		label="multiprocessing.dummy";
-		"multiprocessing.dummy" -> "multiprocessing.dummy.connection" [style="dotted"];
-	}
-	subgraph "cluster_idna" {
-		label="idna";
-		"idna" -> "idna.package_data" [style="dotted"];
-		"idna" -> "idna.idnadata" [style="dotted"];
-		"idna" -> "idna.core" [style="dotted"];
-		"idna" -> "idna.intranges" [style="dotted"];
-		"idna" -> "idna.uts46data" [style="dotted"];
-	}
-	subgraph "cluster_jinja2" {
-		label="jinja2";
-		"jinja2" -> "jinja2.nodes" [style="dotted"];
-		"jinja2" -> "jinja2.bccache" [style="dotted"];
-		"jinja2" -> "jinja2.environment" [style="dotted"];
-		"jinja2" -> "jinja2.exceptions" [style="dotted"];
-		"jinja2" -> "jinja2.loaders" [style="dotted"];
-		"jinja2" -> "jinja2.runtime" [style="dotted"];
-		"jinja2" -> "jinja2.utils" [style="dotted"];
-		"jinja2" -> "jinja2.ext" [style="dotted"];
-		"jinja2" -> "jinja2.defaults" [style="dotted"];
-		"jinja2" -> "jinja2.lexer" [style="dotted"];
-		"jinja2" -> "jinja2.parser" [style="dotted"];
-		"jinja2" -> "jinja2._identifier" [style="dotted"];
-		"jinja2" -> "jinja2.filters" [style="dotted"];
-		"jinja2" -> "jinja2.tests" [style="dotted"];
-		"jinja2" -> "jinja2.async_utils" [style="dotted"];
-		"jinja2" -> "jinja2.sandbox" [style="dotted"];
-		"jinja2" -> "jinja2.constants" [style="dotted"];
-		"jinja2" -> "jinja2.compiler" [style="dotted"];
-		"jinja2" -> "jinja2.debug" [style="dotted"];
-		"jinja2" -> "jinja2.idtracking" [style="dotted"];
-		"jinja2" -> "jinja2.optimizer" [style="dotted"];
-		"jinja2" -> "jinja2.visitor" [style="dotted"];
-	}
-	subgraph "cluster_asyncio" {
-		label="asyncio";
-		"asyncio" -> "asyncio.constants" [style="dotted"];
-		"asyncio" -> "asyncio.format_helpers" [style="dotted"];
-		"asyncio" -> "asyncio.DefaultEventLoopPolicy" [style="dotted"];
-		"asyncio" -> "asyncio.base_futures" [style="dotted"];
-		"asyncio" -> "asyncio.coroutines" [style="dotted"];
-		"asyncio" -> "asyncio.exceptions" [style="dotted"];
-		"asyncio" -> "asyncio.futures" [style="dotted"];
-		"asyncio" -> "asyncio.protocols" [style="dotted"];
-		"asyncio" -> "asyncio.transports" [style="dotted"];
-		"asyncio" -> "asyncio.sslproto" [style="dotted"];
-		"asyncio" -> "asyncio.mixins" [style="dotted"];
-		"asyncio" -> "asyncio.base_tasks" [style="dotted"];
-		"asyncio" -> "asyncio.locks" [style="dotted"];
-		"asyncio" -> "asyncio.tasks" [style="dotted"];
-		"asyncio" -> "asyncio.staggered" [style="dotted"];
-		"asyncio" -> "asyncio.trsock" [style="dotted"];
-		"asyncio" -> "asyncio.base_events" [style="dotted"];
-		"asyncio" -> "asyncio.events" [style="dotted"];
-		"asyncio" -> "asyncio.runners" [style="dotted"];
-		"asyncio" -> "asyncio.queues" [style="dotted"];
-		"asyncio" -> "asyncio.streams" [style="dotted"];
-		"asyncio" -> "asyncio.subprocess" [style="dotted"];
-		"asyncio" -> "asyncio.threads" [style="dotted"];
-		"asyncio" -> "asyncio.base_subprocess" [style="dotted"];
-		"asyncio" -> "asyncio.proactor_events" [style="dotted"];
-		"asyncio" -> "asyncio.selector_events" [style="dotted"];
-		"asyncio" -> "asyncio.windows_utils" [style="dotted"];
-		"asyncio" -> "asyncio.windows_events" [style="dotted"];
-		"asyncio" -> "asyncio.unix_events" [style="dotted"];
-		"asyncio" -> "asyncio.log" [style="dotted"];
 	}
 	subgraph "cluster_pyparsing" {
 		label="pyparsing";
@@ -1076,23 +929,73 @@ charset="UTF-8";
 		"pyparsing" -> "pyparsing.common" [style="dotted"];
 		"pyparsing" -> "pyparsing.diagram" [style="dotted"];
 	}
-	subgraph "cluster_pywin.mfc" {
-		label="pywin.mfc";
-		"pywin.mfc" -> "pywin.mfc.object" [style="dotted"];
-		"pywin.mfc" -> "pywin.mfc.window" [style="dotted"];
-		"pywin.mfc" -> "pywin.mfc.dialog" [style="dotted"];
-		"pywin.mfc" -> "pywin.mfc.thread" [style="dotted"];
+	subgraph "cluster_pkg_resources._vendor.jaraco.text" {
+		label="pkg_resources._vendor.jaraco.text";
 	}
-	subgraph "cluster_pkg_resources" {
-		label="pkg_resources";
-		"pkg_resources" -> "pkg_resources.extern" [style="dotted"];
-		"pkg_resources" -> "pkg_resources._vendor" [style="dotted"];
+	subgraph "cluster_chardet" {
+		label="chardet";
+		"chardet" -> "chardet.universaldetector" [style="dotted"];
+		"chardet" -> "chardet.enums" [style="dotted"];
+		"chardet" -> "chardet.version" [style="dotted"];
+		"chardet" -> "chardet.charsetgroupprober" [style="dotted"];
+		"chardet" -> "chardet.escprober" [style="dotted"];
+		"chardet" -> "chardet.latin1prober" [style="dotted"];
+		"chardet" -> "chardet.mbcsgroupprober" [style="dotted"];
+		"chardet" -> "chardet.sbcsgroupprober" [style="dotted"];
+		"chardet" -> "chardet.hebrewprober" [style="dotted"];
+		"chardet" -> "chardet.langbulgarianmodel" [style="dotted"];
+		"chardet" -> "chardet.langgreekmodel" [style="dotted"];
+		"chardet" -> "chardet.langhebrewmodel" [style="dotted"];
+		"chardet" -> "chardet.langrussianmodel" [style="dotted"];
+		"chardet" -> "chardet.langthaimodel" [style="dotted"];
+		"chardet" -> "chardet.langturkishmodel" [style="dotted"];
+		"chardet" -> "chardet.sbcharsetprober" [style="dotted"];
+		"chardet" -> "chardet.charsetprober" [style="dotted"];
+		"chardet" -> "chardet.utf8prober" [style="dotted"];
+		"chardet" -> "chardet.sjisprober" [style="dotted"];
+		"chardet" -> "chardet.eucjpprober" [style="dotted"];
+		"chardet" -> "chardet.gb2312prober" [style="dotted"];
+		"chardet" -> "chardet.euckrprober" [style="dotted"];
+		"chardet" -> "chardet.cp949prober" [style="dotted"];
+		"chardet" -> "chardet.big5prober" [style="dotted"];
+		"chardet" -> "chardet.euctwprober" [style="dotted"];
+		"chardet" -> "chardet.mbcharsetprober" [style="dotted"];
+		"chardet" -> "chardet.codingstatemachine" [style="dotted"];
+		"chardet" -> "chardet.chardistribution" [style="dotted"];
+		"chardet" -> "chardet.mbcssm" [style="dotted"];
+		"chardet" -> "chardet.euctwfreq" [style="dotted"];
+		"chardet" -> "chardet.euckrfreq" [style="dotted"];
+		"chardet" -> "chardet.gb2312freq" [style="dotted"];
+		"chardet" -> "chardet.big5freq" [style="dotted"];
+		"chardet" -> "chardet.jisfreq" [style="dotted"];
+		"chardet" -> "chardet.jpcntx" [style="dotted"];
+		"chardet" -> "chardet.escsm" [style="dotted"];
 	}
-	subgraph "cluster_pkg_resources._vendor.jaraco" {
-		label="pkg_resources._vendor.jaraco";
-		"pkg_resources._vendor.jaraco" -> "pkg_resources._vendor.jaraco.context" [style="dotted"];
-		"pkg_resources._vendor.jaraco" -> "pkg_resources._vendor.jaraco.functools" [style="dotted"];
-		"pkg_resources._vendor.jaraco" -> "pkg_resources._vendor.jaraco.text" [style="dotted"];
+	subgraph "cluster_pkg_resources._vendor" {
+		label="pkg_resources._vendor";
+		"pkg_resources._vendor" -> "pkg_resources._vendor.appdirs" [style="dotted"];
+		"pkg_resources._vendor" -> "pkg_resources._vendor.zipp" [style="dotted"];
+		"pkg_resources._vendor" -> "pkg_resources._vendor.pyparsing" [style="dotted"];
+		"pkg_resources._vendor" -> "pkg_resources._vendor.packaging" [style="dotted"];
+		"pkg_resources._vendor" -> "pkg_resources._vendor.more_itertools" [style="dotted"];
+		"pkg_resources._vendor" -> "pkg_resources._vendor.jaraco" [style="dotted"];
+		"pkg_resources._vendor" -> "pkg_resources._vendor.importlib_resources" [style="dotted"];
+	}
+	subgraph "cluster_xml.parsers" {
+		label="xml.parsers";
+		"xml.parsers" -> "xml.parsers.expat" [style="dotted"];
+	}
+	subgraph "cluster_deprecated" {
+		label="deprecated";
+		"deprecated" -> "deprecated.classic" [style="dotted"];
+	}
+	subgraph "cluster_spotipy" {
+		label="spotipy";
+		"spotipy" -> "spotipy.cache_handler" [style="dotted"];
+		"spotipy" -> "spotipy.client" [style="dotted"];
+		"spotipy" -> "spotipy.exceptions" [style="dotted"];
+		"spotipy" -> "spotipy.oauth2" [style="dotted"];
+		"spotipy" -> "spotipy.util" [style="dotted"];
 	}
 	subgraph "cluster_redis.commands.search" {
 		label="redis.commands.search";
@@ -1103,6 +1006,159 @@ charset="UTF-8";
 		"redis.commands.search" -> "redis.commands.search.query" [style="dotted"];
 		"redis.commands.search" -> "redis.commands.search.result" [style="dotted"];
 		"redis.commands.search" -> "redis.commands.search.suggestion" [style="dotted"];
+	}
+	subgraph "cluster_urllib3.packages.backports" {
+		label="urllib3.packages.backports";
+		"urllib3.packages.backports" -> "urllib3.packages.backports.makefile" [style="dotted"];
+	}
+	subgraph "cluster_redis.commands.json" {
+		label="redis.commands.json";
+		"redis.commands.json" -> "redis.commands.json.commands" [style="dotted"];
+		"redis.commands.json" -> "redis.commands.json.decoders" [style="dotted"];
+		"redis.commands.json" -> "redis.commands.json._util" [style="dotted"];
+		"redis.commands.json" -> "redis.commands.json.path" [style="dotted"];
+	}
+	subgraph "cluster_urllib3.packages.ssl_match_hostname" {
+		label="urllib3.packages.ssl_match_hostname";
+		"urllib3.packages.ssl_match_hostname" -> "urllib3.packages.ssl_match_hostname._implementation" [style="dotted"];
+	}
+	subgraph "cluster_urllib3.contrib" {
+		label="urllib3.contrib";
+		"urllib3.contrib" -> "urllib3.contrib._appengine_environ" [style="dotted"];
+		"urllib3.contrib" -> "urllib3.contrib.pyopenssl" [style="dotted"];
+		"urllib3.contrib" -> "urllib3.contrib.socks" [style="dotted"];
+	}
+	subgraph "cluster_six.moves" {
+		label="six.moves";
+	}
+	subgraph "cluster_pkg_resources._vendor.packaging" {
+		label="pkg_resources._vendor.packaging";
+		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.__about__" [style="dotted"];
+		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging._manylinux" [style="dotted"];
+		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging._musllinux" [style="dotted"];
+		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging._structures" [style="dotted"];
+		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.markers" [style="dotted"];
+		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.requirements" [style="dotted"];
+		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.specifiers" [style="dotted"];
+		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.tags" [style="dotted"];
+		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.utils" [style="dotted"];
+		"pkg_resources._vendor.packaging" -> "pkg_resources._vendor.packaging.version" [style="dotted"];
+	}
+	subgraph "cluster_redis.commands.timeseries" {
+		label="redis.commands.timeseries";
+		"redis.commands.timeseries" -> "redis.commands.timeseries.commands" [style="dotted"];
+		"redis.commands.timeseries" -> "redis.commands.timeseries.info" [style="dotted"];
+		"redis.commands.timeseries" -> "redis.commands.timeseries.utils" [style="dotted"];
+	}
+	subgraph "cluster_urllib3.util" {
+		label="urllib3.util";
+		"urllib3.util" -> "urllib3.util.connection" [style="dotted"];
+		"urllib3.util" -> "urllib3.util.request" [style="dotted"];
+		"urllib3.util" -> "urllib3.util.response" [style="dotted"];
+		"urllib3.util" -> "urllib3.util.retry" [style="dotted"];
+		"urllib3.util" -> "urllib3.util.ssl_" [style="dotted"];
+		"urllib3.util" -> "urllib3.util.timeout" [style="dotted"];
+		"urllib3.util" -> "urllib3.util.url" [style="dotted"];
+		"urllib3.util" -> "urllib3.util.wait" [style="dotted"];
+		"urllib3.util" -> "urllib3.util.ssltransport" [style="dotted"];
+		"urllib3.util" -> "urllib3.util.proxy" [style="dotted"];
+		"urllib3.util" -> "urllib3.util.queue" [style="dotted"];
+	}
+	subgraph "cluster_pkg_resources._vendor.pyparsing.diagram" {
+		label="pkg_resources._vendor.pyparsing.diagram";
+	}
+	subgraph "cluster_pyparsing.diagram" {
+		label="pyparsing.diagram";
+	}
+	subgraph "cluster_logging" {
+		label="logging";
+	}
+	subgraph "cluster_wrapt" {
+		label="wrapt";
+		"wrapt" -> "wrapt.wrappers" [style="dotted"];
+		"wrapt" -> "wrapt.decorators" [style="dotted"];
+		"wrapt" -> "wrapt.importer" [style="dotted"];
+		"wrapt" -> "wrapt.arguments" [style="dotted"];
+		"wrapt" -> "wrapt._wrappers" [style="dotted"];
+	}
+	subgraph "cluster_pywin" {
+		label="pywin";
+		"pywin" -> "pywin.mfc" [style="dotted"];
+		"pywin" -> "pywin.dialogs" [style="dotted"];
+	}
+	subgraph "cluster_requests" {
+		label="requests";
+		"requests" -> "requests.exceptions" [style="dotted"];
+		"requests" -> "requests.__version__" [style="dotted"];
+		"requests" -> "requests.certs" [style="dotted"];
+		"requests" -> "requests.utils" [style="dotted"];
+		"requests" -> "requests.packages" [style="dotted"];
+		"requests" -> "requests.models" [style="dotted"];
+		"requests" -> "requests.sessions" [style="dotted"];
+		"requests" -> "requests.api" [style="dotted"];
+		"requests" -> "requests.status_codes" [style="dotted"];
+		"requests" -> "requests.auth" [style="dotted"];
+		"requests" -> "requests.compat" [style="dotted"];
+		"requests" -> "requests.cookies" [style="dotted"];
+		"requests" -> "requests.hooks" [style="dotted"];
+		"requests" -> "requests._internal_utils" [style="dotted"];
+		"requests" -> "requests.structures" [style="dotted"];
+		"requests" -> "requests.adapters" [style="dotted"];
+	}
+	subgraph "cluster_json" {
+		label="json";
+		"json" -> "json.scanner" [style="dotted"];
+		"json" -> "json.decoder" [style="dotted"];
+		"json" -> "json.encoder" [style="dotted"];
+	}
+	subgraph "cluster_urllib3" {
+		label="urllib3";
+		"urllib3" -> "urllib3.exceptions" [style="dotted"];
+		"urllib3" -> "urllib3._version" [style="dotted"];
+		"urllib3" -> "urllib3.connectionpool" [style="dotted"];
+		"urllib3" -> "urllib3.filepost" [style="dotted"];
+		"urllib3" -> "urllib3.poolmanager" [style="dotted"];
+		"urllib3" -> "urllib3.response" [style="dotted"];
+		"urllib3" -> "urllib3.connection" [style="dotted"];
+		"urllib3" -> "urllib3.contrib" [style="dotted"];
+		"urllib3" -> "urllib3.packages" [style="dotted"];
+		"urllib3" -> "urllib3.util" [style="dotted"];
+		"urllib3" -> "urllib3.fields" [style="dotted"];
+		"urllib3" -> "urllib3.request" [style="dotted"];
+		"urllib3" -> "urllib3._collections" [style="dotted"];
+	}
+	subgraph "cluster_redis.asyncio" {
+		label="redis.asyncio";
+		"redis.asyncio" -> "redis.asyncio.client" [style="dotted"];
+		"redis.asyncio" -> "redis.asyncio.cluster" [style="dotted"];
+		"redis.asyncio" -> "redis.asyncio.connection" [style="dotted"];
+		"redis.asyncio" -> "redis.asyncio.parser" [style="dotted"];
+		"redis.asyncio" -> "redis.asyncio.sentinel" [style="dotted"];
+		"redis.asyncio" -> "redis.asyncio.utils" [style="dotted"];
+		"redis.asyncio" -> "redis.asyncio.lock" [style="dotted"];
+		"redis.asyncio" -> "redis.asyncio.retry" [style="dotted"];
+	}
+	subgraph "cluster_redis.commands.bf" {
+		label="redis.commands.bf";
+		"redis.commands.bf" -> "redis.commands.bf.commands" [style="dotted"];
+		"redis.commands.bf" -> "redis.commands.bf.info" [style="dotted"];
+	}
+	subgraph "cluster_curses" {
+		label="curses";
+		"curses" -> "curses.has_key" [style="dotted"];
+	}
+	subgraph "cluster_packaging" {
+		label="packaging";
+		"packaging" -> "packaging.__about__" [style="dotted"];
+		"packaging" -> "packaging._manylinux" [style="dotted"];
+		"packaging" -> "packaging._musllinux" [style="dotted"];
+		"packaging" -> "packaging.requirements" [style="dotted"];
+		"packaging" -> "packaging._structures" [style="dotted"];
+		"packaging" -> "packaging.markers" [style="dotted"];
+		"packaging" -> "packaging.specifiers" [style="dotted"];
+		"packaging" -> "packaging.tags" [style="dotted"];
+		"packaging" -> "packaging.utils" [style="dotted"];
+		"packaging" -> "packaging.version" [style="dotted"];
 	}
 	subgraph "cluster_importlib" {
 		label="importlib";
@@ -1118,19 +1174,124 @@ charset="UTF-8";
 		"importlib" -> "importlib.metadata" [style="dotted"];
 		"importlib" -> "importlib.resources" [style="dotted"];
 	}
-	subgraph "cluster_async_timeout" {
-		label="async_timeout";
+	subgraph "cluster_pywin.dialogs" {
+		label="pywin.dialogs";
+		"pywin.dialogs" -> "pywin.dialogs.status" [style="dotted"];
+		"pywin.dialogs" -> "pywin.dialogs.list" [style="dotted"];
 	}
-	subgraph "cluster_spotipy" {
-		label="spotipy";
-		"spotipy" -> "spotipy.cache_handler" [style="dotted"];
-		"spotipy" -> "spotipy.client" [style="dotted"];
-		"spotipy" -> "spotipy.exceptions" [style="dotted"];
-		"spotipy" -> "spotipy.oauth2" [style="dotted"];
-		"spotipy" -> "spotipy.util" [style="dotted"];
+	subgraph "cluster_pywin.mfc" {
+		label="pywin.mfc";
+		"pywin.mfc" -> "pywin.mfc.object" [style="dotted"];
+		"pywin.mfc" -> "pywin.mfc.window" [style="dotted"];
+		"pywin.mfc" -> "pywin.mfc.dialog" [style="dotted"];
+		"pywin.mfc" -> "pywin.mfc.thread" [style="dotted"];
+	}
+	subgraph "cluster_pkg_resources._vendor.jaraco" {
+		label="pkg_resources._vendor.jaraco";
+		"pkg_resources._vendor.jaraco" -> "pkg_resources._vendor.jaraco.context" [style="dotted"];
+		"pkg_resources._vendor.jaraco" -> "pkg_resources._vendor.jaraco.functools" [style="dotted"];
+		"pkg_resources._vendor.jaraco" -> "pkg_resources._vendor.jaraco.text" [style="dotted"];
+	}
+	subgraph "cluster_redis.commands.graph" {
+		label="redis.commands.graph";
+		"redis.commands.graph" -> "redis.commands.graph.commands" [style="dotted"];
+		"redis.commands.graph" -> "redis.commands.graph.edge" [style="dotted"];
+		"redis.commands.graph" -> "redis.commands.graph.node" [style="dotted"];
+		"redis.commands.graph" -> "redis.commands.graph.path" [style="dotted"];
+		"redis.commands.graph" -> "redis.commands.graph.exceptions" [style="dotted"];
+		"redis.commands.graph" -> "redis.commands.graph.execution_plan" [style="dotted"];
+		"redis.commands.graph" -> "redis.commands.graph.query_result" [style="dotted"];
+	}
+	subgraph "cluster_tkinter" {
+		label="tkinter";
+		"tkinter" -> "tkinter.constants" [style="dotted"];
+		"tkinter" -> "tkinter.colorchooser" [style="dotted"];
+		"tkinter" -> "tkinter.commondialog" [style="dotted"];
+	}
+	subgraph "cluster_win32com.client" {
+		label="win32com.client";
+		"win32com.client" -> "win32com.client.build" [style="dotted"];
+		"win32com.client" -> "win32com.client.util" [style="dotted"];
+		"win32com.client" -> "win32com.client.dynamic" [style="dotted"];
+		"win32com.client" -> "win32com.client.CLSIDToClass" [style="dotted"];
+		"win32com.client" -> "win32com.client.genpy" [style="dotted"];
+		"win32com.client" -> "win32com.client.selecttlb" [style="dotted"];
+		"win32com.client" -> "win32com.client.gencache" [style="dotted"];
+		"win32com.client" -> "win32com.client.makepy" [style="dotted"];
+	}
+	subgraph "cluster_pkg_resources.extern" {
+		label="pkg_resources.extern";
+		"pkg_resources.extern" -> "pkg_resources.extern.appdirs" [style="dotted"];
+		"pkg_resources.extern" -> "pkg_resources.extern.packaging" [style="dotted"];
+	}
+	subgraph "cluster_redis" {
+		label="redis";
+		"redis" -> "redis.client" [style="dotted"];
+		"redis" -> "redis.cluster" [style="dotted"];
+		"redis" -> "redis.connection" [style="dotted"];
+		"redis" -> "redis.exceptions" [style="dotted"];
+		"redis" -> "redis.sentinel" [style="dotted"];
+		"redis" -> "redis.utils" [style="dotted"];
+		"redis" -> "redis.commands" [style="dotted"];
+		"redis" -> "redis.compat" [style="dotted"];
+		"redis" -> "redis.typing" [style="dotted"];
+		"redis" -> "redis.asyncio" [style="dotted"];
+		"redis" -> "redis.crc" [style="dotted"];
+		"redis" -> "redis.backoff" [style="dotted"];
+		"redis" -> "redis.retry" [style="dotted"];
+		"redis" -> "redis.ocsp" [style="dotted"];
+		"redis" -> "redis.lock" [style="dotted"];
+	}
+	subgraph "cluster_idna" {
+		label="idna";
+		"idna" -> "idna.package_data" [style="dotted"];
+		"idna" -> "idna.idnadata" [style="dotted"];
+		"idna" -> "idna.core" [style="dotted"];
+		"idna" -> "idna.intranges" [style="dotted"];
+		"idna" -> "idna.uts46data" [style="dotted"];
+	}
+	subgraph "cluster_xmlrpc" {
+		label="xmlrpc";
+		"xmlrpc" -> "xmlrpc.client" [style="dotted"];
+	}
+	subgraph "cluster_win32com.shell" {
+		label="win32com.shell";
+		"win32com.shell" -> "win32com.shell.shellcon" [style="dotted"];
+		"win32com.shell" -> "win32com.shell.shell" [style="dotted"];
+	}
+	subgraph "cluster_xml" {
+		label="xml";
+		"xml" -> "xml.parsers" [style="dotted"];
+		"xml" -> "xml.sax" [style="dotted"];
+		"xml" -> "xml.etree" [style="dotted"];
+	}
+	subgraph "cluster_pkg_resources._vendor.more_itertools" {
+		label="pkg_resources._vendor.more_itertools";
+		"pkg_resources._vendor.more_itertools" -> "pkg_resources._vendor.more_itertools.more" [style="dotted"];
+		"pkg_resources._vendor.more_itertools" -> "pkg_resources._vendor.more_itertools.recipes" [style="dotted"];
+	}
+	subgraph "cluster_xml.etree" {
+		label="xml.etree";
+		"xml.etree" -> "xml.etree.ElementPath" [style="dotted"];
+		"xml.etree" -> "xml.etree.ElementTree" [style="dotted"];
+		"xml.etree" -> "xml.etree.ElementInclude" [style="dotted"];
+		"xml.etree" -> "xml.etree.cElementTree" [style="dotted"];
+	}
+	subgraph "cluster_ctypes" {
+		label="ctypes";
+		"ctypes" -> "ctypes._endian" [style="dotted"];
 	}
 	subgraph "cluster_urllib" {
 		label="urllib";
+		"urllib" -> "urllib.quote" [style="dotted"];
+		"urllib" -> "urllib.unquote" [style="dotted"];
+		"urllib" -> "urllib.quote_plus" [style="dotted"];
+		"urllib" -> "urllib.unquote_plus" [style="dotted"];
+		"urllib" -> "urllib.urlencode" [style="dotted"];
+		"urllib" -> "urllib.getproxies" [style="dotted"];
+		"urllib" -> "urllib.proxy_bypass" [style="dotted"];
+		"urllib" -> "urllib.proxy_bypass_environment" [style="dotted"];
+		"urllib" -> "urllib.getproxies_environment" [style="dotted"];
 		"urllib" -> "urllib.pathname2url" [style="dotted"];
 		"urllib" -> "urllib.error" [style="dotted"];
 		"urllib" -> "urllib.parse" [style="dotted"];
@@ -1138,24 +1299,97 @@ charset="UTF-8";
 		"urllib" -> "urllib.response" [style="dotted"];
 		"urllib" -> "urllib.robotparser" [style="dotted"];
 		"urllib" -> "six.moves.urllib_parse" [style="dotted"];
+		"urllib" -> "urllib3" [style="dotted"];
+		"urllib" -> "urllib2" [style="dotted"];
 	}
-	subgraph "cluster_win32com.shell" {
-		label="win32com.shell";
-		"win32com.shell" -> "win32com.shell.shellcon" [style="dotted"];
-		"win32com.shell" -> "win32com.shell.shell" [style="dotted"];
+	subgraph "cluster_http" {
+		label="http";
+		"http" -> "http.client" [style="dotted"];
+		"http" -> "http.server" [style="dotted"];
+		"http" -> "urllib3.packages.six.moves.http_client" [style="dotted"];
+		"http" -> "http.cookiejar" [style="dotted"];
+		"http" -> "http.cookies" [style="dotted"];
 	}
-	subgraph "cluster_pkg_resources._vendor.pyparsing" {
-		label="pkg_resources._vendor.pyparsing";
-		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.util" [style="dotted"];
-		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.exceptions" [style="dotted"];
-		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.actions" [style="dotted"];
-		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.core" [style="dotted"];
-		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.results" [style="dotted"];
-		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.helpers" [style="dotted"];
-		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.unicode" [style="dotted"];
-		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.testing" [style="dotted"];
-		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.common" [style="dotted"];
-		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.diagram" [style="dotted"];
+	subgraph "cluster_redis.commands" {
+		label="redis.commands";
+		"redis.commands" -> "redis.commands.cluster" [style="dotted"];
+		"redis.commands" -> "redis.commands.core" [style="dotted"];
+		"redis.commands" -> "redis.commands.helpers" [style="dotted"];
+		"redis.commands" -> "redis.commands.parser" [style="dotted"];
+		"redis.commands" -> "redis.commands.redismodules" [style="dotted"];
+		"redis.commands" -> "redis.commands.sentinel" [style="dotted"];
+		"redis.commands" -> "redis.commands.json" [style="dotted"];
+		"redis.commands" -> "redis.commands.search" [style="dotted"];
+		"redis.commands" -> "redis.commands.timeseries" [style="dotted"];
+		"redis.commands" -> "redis.commands.bf" [style="dotted"];
+		"redis.commands" -> "redis.commands.graph" [style="dotted"];
+	}
+	subgraph "cluster_html" {
+		label="html";
+		"html" -> "html.entities" [style="dotted"];
+	}
+	subgraph "cluster_importlib_metadata" {
+		label="importlib_metadata";
+		"importlib_metadata" -> "importlib_metadata._adapters" [style="dotted"];
+		"importlib_metadata" -> "importlib_metadata._meta" [style="dotted"];
+		"importlib_metadata" -> "importlib_metadata._py39compat" [style="dotted"];
+		"importlib_metadata" -> "importlib_metadata._collections" [style="dotted"];
+		"importlib_metadata" -> "importlib_metadata._compat" [style="dotted"];
+		"importlib_metadata" -> "importlib_metadata._functools" [style="dotted"];
+		"importlib_metadata" -> "importlib_metadata._itertools" [style="dotted"];
+		"importlib_metadata" -> "importlib_metadata._text" [style="dotted"];
+	}
+	subgraph "cluster_xml.sax" {
+		label="xml.sax";
+		"xml.sax" -> "xml.sax.handler" [style="dotted"];
+		"xml.sax" -> "xml.sax.xmlreader" [style="dotted"];
+		"xml.sax" -> "xml.sax.saxutils" [style="dotted"];
+		"xml.sax" -> "xml.sax._exceptions" [style="dotted"];
+		"xml.sax" -> "xml.sax.expatreader" [style="dotted"];
+	}
+	subgraph "cluster_certifi" {
+		label="certifi";
+		"certifi" -> "certifi.core" [style="dotted"];
+	}
+	subgraph "cluster_concurrent" {
+		label="concurrent";
+		"concurrent" -> "concurrent.futures" [style="dotted"];
+	}
+	subgraph "cluster_multiprocessing.dummy" {
+		label="multiprocessing.dummy";
+		"multiprocessing.dummy" -> "multiprocessing.dummy.connection" [style="dotted"];
+	}
+	subgraph "cluster_win32com.server" {
+		label="win32com.server";
+		"win32com.server" -> "win32com.server.policy" [style="dotted"];
+		"win32com.server" -> "win32com.server.util" [style="dotted"];
+		"win32com.server" -> "win32com.server.exception" [style="dotted"];
+		"win32com.server" -> "win32com.server.dispatcher" [style="dotted"];
+	}
+	subgraph "cluster_jinja2" {
+		label="jinja2";
+		"jinja2" -> "jinja2.nodes" [style="dotted"];
+		"jinja2" -> "jinja2.bccache" [style="dotted"];
+		"jinja2" -> "jinja2.environment" [style="dotted"];
+		"jinja2" -> "jinja2.exceptions" [style="dotted"];
+		"jinja2" -> "jinja2.filters" [style="dotted"];
+		"jinja2" -> "jinja2.loaders" [style="dotted"];
+		"jinja2" -> "jinja2.runtime" [style="dotted"];
+		"jinja2" -> "jinja2.utils" [style="dotted"];
+		"jinja2" -> "jinja2.ext" [style="dotted"];
+		"jinja2" -> "jinja2.defaults" [style="dotted"];
+		"jinja2" -> "jinja2.lexer" [style="dotted"];
+		"jinja2" -> "jinja2.parser" [style="dotted"];
+		"jinja2" -> "jinja2._identifier" [style="dotted"];
+		"jinja2" -> "jinja2.tests" [style="dotted"];
+		"jinja2" -> "jinja2.constants" [style="dotted"];
+		"jinja2" -> "jinja2.async_utils" [style="dotted"];
+		"jinja2" -> "jinja2.sandbox" [style="dotted"];
+		"jinja2" -> "jinja2.compiler" [style="dotted"];
+		"jinja2" -> "jinja2.debug" [style="dotted"];
+		"jinja2" -> "jinja2.idtracking" [style="dotted"];
+		"jinja2" -> "jinja2.optimizer" [style="dotted"];
+		"jinja2" -> "jinja2.visitor" [style="dotted"];
 	}
 	subgraph "cluster_encodings" {
 		label="encodings";
@@ -1281,219 +1515,84 @@ charset="UTF-8";
 		"encodings" -> "encodings.uu_codec" [style="dotted"];
 		"encodings" -> "encodings.zlib_codec" [style="dotted"];
 	}
-	subgraph "cluster_xml.sax" {
-		label="xml.sax";
-		"xml.sax" -> "xml.sax.handler" [style="dotted"];
-		"xml.sax" -> "xml.sax.xmlreader" [style="dotted"];
-		"xml.sax" -> "xml.sax.saxutils" [style="dotted"];
-		"xml.sax" -> "xml.sax._exceptions" [style="dotted"];
-		"xml.sax" -> "xml.sax.expatreader" [style="dotted"];
+	subgraph "cluster_pkg_resources" {
+		label="pkg_resources";
+		"pkg_resources" -> "pkg_resources.extern" [style="dotted"];
+		"pkg_resources" -> "pkg_resources._vendor" [style="dotted"];
 	}
-	subgraph "cluster_multiprocessing" {
-		label="multiprocessing";
-		"multiprocessing" -> "multiprocessing.process" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.util" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.AuthenticationError" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.BufferTooShort" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.resource_sharer" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.connection" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.get_start_method" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.set_start_method" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.resource_tracker" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.spawn" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.forkserver" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.reduction" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.get_context" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.TimeoutError" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.pool" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.shared_memory" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.context" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.queues" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.synchronize" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.heap" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.managers" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.sharedctypes" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.popen_fork" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.popen_spawn_posix" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.popen_forkserver" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.popen_spawn_win32" [style="dotted"];
-		"multiprocessing" -> "multiprocessing.dummy" [style="dotted"];
-	}
-	subgraph "cluster_pkg_resources._vendor.more_itertools" {
-		label="pkg_resources._vendor.more_itertools";
-		"pkg_resources._vendor.more_itertools" -> "pkg_resources._vendor.more_itertools.more" [style="dotted"];
-		"pkg_resources._vendor.more_itertools" -> "pkg_resources._vendor.more_itertools.recipes" [style="dotted"];
-	}
-	subgraph "cluster_tkinter" {
-		label="tkinter";
-		"tkinter" -> "tkinter.constants" [style="dotted"];
-	}
-	subgraph "cluster_charset_normalizer.assets" {
-		label="charset_normalizer.assets";
-	}
-	subgraph "cluster_pywin.dialogs" {
-		label="pywin.dialogs";
-		"pywin.dialogs" -> "pywin.dialogs.status" [style="dotted"];
-		"pywin.dialogs" -> "pywin.dialogs.list" [style="dotted"];
-	}
-	subgraph "cluster_redis.commands.graph" {
-		label="redis.commands.graph";
-		"redis.commands.graph" -> "redis.commands.graph.commands" [style="dotted"];
-		"redis.commands.graph" -> "redis.commands.graph.edge" [style="dotted"];
-		"redis.commands.graph" -> "redis.commands.graph.node" [style="dotted"];
-		"redis.commands.graph" -> "redis.commands.graph.path" [style="dotted"];
-		"redis.commands.graph" -> "redis.commands.graph.exceptions" [style="dotted"];
-		"redis.commands.graph" -> "redis.commands.graph.execution_plan" [style="dotted"];
-		"redis.commands.graph" -> "redis.commands.graph.query_result" [style="dotted"];
-	}
-	subgraph "cluster_redis" {
-		label="redis";
-		"redis" -> "redis.client" [style="dotted"];
-		"redis" -> "redis.cluster" [style="dotted"];
-		"redis" -> "redis.connection" [style="dotted"];
-		"redis" -> "redis.exceptions" [style="dotted"];
-		"redis" -> "redis.sentinel" [style="dotted"];
-		"redis" -> "redis.utils" [style="dotted"];
-		"redis" -> "redis.commands" [style="dotted"];
-		"redis" -> "redis.compat" [style="dotted"];
-		"redis" -> "redis.typing" [style="dotted"];
-		"redis" -> "redis.asyncio" [style="dotted"];
-		"redis" -> "redis.crc" [style="dotted"];
-		"redis" -> "redis.backoff" [style="dotted"];
-		"redis" -> "redis.retry" [style="dotted"];
-		"redis" -> "redis.ocsp" [style="dotted"];
-		"redis" -> "redis.lock" [style="dotted"];
-	}
-	subgraph "cluster_redis.asyncio" {
-		label="redis.asyncio";
-		"redis.asyncio" -> "redis.asyncio.client" [style="dotted"];
-		"redis.asyncio" -> "redis.asyncio.cluster" [style="dotted"];
-		"redis.asyncio" -> "redis.asyncio.connection" [style="dotted"];
-		"redis.asyncio" -> "redis.asyncio.parser" [style="dotted"];
-		"redis.asyncio" -> "redis.asyncio.sentinel" [style="dotted"];
-		"redis.asyncio" -> "redis.asyncio.utils" [style="dotted"];
-		"redis.asyncio" -> "redis.asyncio.lock" [style="dotted"];
-		"redis.asyncio" -> "redis.asyncio.retry" [style="dotted"];
-	}
-	subgraph "cluster_xml.parsers" {
-		label="xml.parsers";
-		"xml.parsers" -> "xml.parsers.expat" [style="dotted"];
-	}
-	subgraph "cluster_win32com" {
-		label="win32com";
-		"win32com" -> "win32com.universal" [style="dotted"];
-		"win32com" -> "win32com.client" [style="dotted"];
-		"win32com" -> "win32com.server" [style="dotted"];
-		"win32com" -> "win32com.util" [style="dotted"];
-		"win32com" -> "win32com.shell" [style="dotted"];
-	}
-	subgraph "cluster_urllib3.packages.backports" {
-		label="urllib3.packages.backports";
-		"urllib3.packages.backports" -> "urllib3.packages.backports.makefile" [style="dotted"];
-	}
-	subgraph "cluster_importlib_metadata" {
-		label="importlib_metadata";
-		"importlib_metadata" -> "importlib_metadata._adapters" [style="dotted"];
-		"importlib_metadata" -> "importlib_metadata._meta" [style="dotted"];
-		"importlib_metadata" -> "importlib_metadata._py39compat" [style="dotted"];
-		"importlib_metadata" -> "importlib_metadata._collections" [style="dotted"];
-		"importlib_metadata" -> "importlib_metadata._compat" [style="dotted"];
-		"importlib_metadata" -> "importlib_metadata._functools" [style="dotted"];
-		"importlib_metadata" -> "importlib_metadata._itertools" [style="dotted"];
-		"importlib_metadata" -> "importlib_metadata._text" [style="dotted"];
-	}
-	subgraph "cluster_pydoc_data" {
-		label="pydoc_data";
-		"pydoc_data" -> "pydoc_data.topics" [style="dotted"];
-	}
-	subgraph "cluster_redis.commands" {
-		label="redis.commands";
-		"redis.commands" -> "redis.commands.cluster" [style="dotted"];
-		"redis.commands" -> "redis.commands.core" [style="dotted"];
-		"redis.commands" -> "redis.commands.helpers" [style="dotted"];
-		"redis.commands" -> "redis.commands.parser" [style="dotted"];
-		"redis.commands" -> "redis.commands.redismodules" [style="dotted"];
-		"redis.commands" -> "redis.commands.sentinel" [style="dotted"];
-		"redis.commands" -> "redis.commands.json" [style="dotted"];
-		"redis.commands" -> "redis.commands.search" [style="dotted"];
-		"redis.commands" -> "redis.commands.timeseries" [style="dotted"];
-		"redis.commands" -> "redis.commands.bf" [style="dotted"];
-		"redis.commands" -> "redis.commands.graph" [style="dotted"];
-	}
-	subgraph "cluster_charset_normalizer" {
-		label="charset_normalizer";
-		"charset_normalizer" -> "charset_normalizer.api" [style="dotted"];
-		"charset_normalizer" -> "charset_normalizer.legacy" [style="dotted"];
-		"charset_normalizer" -> "charset_normalizer.models" [style="dotted"];
-		"charset_normalizer" -> "charset_normalizer.utils" [style="dotted"];
-		"charset_normalizer" -> "charset_normalizer.version" [style="dotted"];
-		"charset_normalizer" -> "charset_normalizer.constant" [style="dotted"];
-		"charset_normalizer" -> "charset_normalizer.assets" [style="dotted"];
-		"charset_normalizer" -> "charset_normalizer.md" [style="dotted"];
-		"charset_normalizer" -> "charset_normalizer.cd" [style="dotted"];
-	}
-	subgraph "cluster_xmlrpc" {
-		label="xmlrpc";
-		"xmlrpc" -> "xmlrpc.client" [style="dotted"];
-	}
-	subgraph "cluster_pkg_resources.extern" {
-		label="pkg_resources.extern";
-		"pkg_resources.extern" -> "pkg_resources.extern.appdirs" [style="dotted"];
-		"pkg_resources.extern" -> "pkg_resources.extern.packaging" [style="dotted"];
+	subgraph "cluster_async_timeout" {
+		label="async_timeout";
 	}
 	subgraph "cluster_markupsafe" {
 		label="markupsafe";
 		"markupsafe" -> "markupsafe._speedups" [style="dotted"];
 		"markupsafe" -> "markupsafe._native" [style="dotted"];
 	}
-	subgraph "cluster_logging" {
-		label="logging";
+	subgraph "cluster_urllib3.packages.six.moves" {
+		label="urllib3.packages.six.moves";
+	}
+	subgraph "cluster_pkg_resources._vendor.pyparsing" {
+		label="pkg_resources._vendor.pyparsing";
+		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.util" [style="dotted"];
+		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.exceptions" [style="dotted"];
+		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.actions" [style="dotted"];
+		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.core" [style="dotted"];
+		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.results" [style="dotted"];
+		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.helpers" [style="dotted"];
+		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.unicode" [style="dotted"];
+		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.testing" [style="dotted"];
+		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.common" [style="dotted"];
+		"pkg_resources._vendor.pyparsing" -> "pkg_resources._vendor.pyparsing.diagram" [style="dotted"];
 	}
 	subgraph "cluster_urllib3.packages" {
 		label="urllib3.packages";
+		"urllib3.packages" -> "urllib3.packages.ssl_match_hostname" [style="dotted"];
 		"urllib3.packages" -> "urllib3.packages.six" [style="dotted"];
 		"urllib3.packages" -> "urllib3.packages.backports" [style="dotted"];
 	}
-	subgraph "cluster_redis.commands.json" {
-		label="redis.commands.json";
-		"redis.commands.json" -> "redis.commands.json.commands" [style="dotted"];
-		"redis.commands.json" -> "redis.commands.json.decoders" [style="dotted"];
-		"redis.commands.json" -> "redis.commands.json._util" [style="dotted"];
-		"redis.commands.json" -> "redis.commands.json.path" [style="dotted"];
+	subgraph "cluster_asyncio" {
+		label="asyncio";
+		"asyncio" -> "asyncio.constants" [style="dotted"];
+		"asyncio" -> "asyncio.format_helpers" [style="dotted"];
+		"asyncio" -> "asyncio.DefaultEventLoopPolicy" [style="dotted"];
+		"asyncio" -> "asyncio.base_futures" [style="dotted"];
+		"asyncio" -> "asyncio.coroutines" [style="dotted"];
+		"asyncio" -> "asyncio.exceptions" [style="dotted"];
+		"asyncio" -> "asyncio.futures" [style="dotted"];
+		"asyncio" -> "asyncio.protocols" [style="dotted"];
+		"asyncio" -> "asyncio.transports" [style="dotted"];
+		"asyncio" -> "asyncio.sslproto" [style="dotted"];
+		"asyncio" -> "asyncio.mixins" [style="dotted"];
+		"asyncio" -> "asyncio.base_tasks" [style="dotted"];
+		"asyncio" -> "asyncio.locks" [style="dotted"];
+		"asyncio" -> "asyncio.tasks" [style="dotted"];
+		"asyncio" -> "asyncio.staggered" [style="dotted"];
+		"asyncio" -> "asyncio.trsock" [style="dotted"];
+		"asyncio" -> "asyncio.base_events" [style="dotted"];
+		"asyncio" -> "asyncio.events" [style="dotted"];
+		"asyncio" -> "asyncio.runners" [style="dotted"];
+		"asyncio" -> "asyncio.queues" [style="dotted"];
+		"asyncio" -> "asyncio.streams" [style="dotted"];
+		"asyncio" -> "asyncio.subprocess" [style="dotted"];
+		"asyncio" -> "asyncio.threads" [style="dotted"];
+		"asyncio" -> "asyncio.base_subprocess" [style="dotted"];
+		"asyncio" -> "asyncio.proactor_events" [style="dotted"];
+		"asyncio" -> "asyncio.selector_events" [style="dotted"];
+		"asyncio" -> "asyncio.windows_utils" [style="dotted"];
+		"asyncio" -> "asyncio.windows_events" [style="dotted"];
+		"asyncio" -> "asyncio.unix_events" [style="dotted"];
+		"asyncio" -> "asyncio.log" [style="dotted"];
 	}
-	subgraph "cluster_json" {
-		label="json";
-		"json" -> "json.scanner" [style="dotted"];
-		"json" -> "json.decoder" [style="dotted"];
-		"json" -> "json.encoder" [style="dotted"];
-	}
-	subgraph "cluster_packaging" {
-		label="packaging";
-		"packaging" -> "packaging.__about__" [style="dotted"];
-		"packaging" -> "packaging._manylinux" [style="dotted"];
-		"packaging" -> "packaging._musllinux" [style="dotted"];
-		"packaging" -> "packaging.requirements" [style="dotted"];
-		"packaging" -> "packaging._structures" [style="dotted"];
-		"packaging" -> "packaging.markers" [style="dotted"];
-		"packaging" -> "packaging.specifiers" [style="dotted"];
-		"packaging" -> "packaging.tags" [style="dotted"];
-		"packaging" -> "packaging.utils" [style="dotted"];
-		"packaging" -> "packaging.version" [style="dotted"];
-	}
-	subgraph "cluster_urllib3.util" {
-		label="urllib3.util";
-		"urllib3.util" -> "urllib3.util.connection" [style="dotted"];
-		"urllib3.util" -> "urllib3.util.request" [style="dotted"];
-		"urllib3.util" -> "urllib3.util.response" [style="dotted"];
-		"urllib3.util" -> "urllib3.util.retry" [style="dotted"];
-		"urllib3.util" -> "urllib3.util.ssl_" [style="dotted"];
-		"urllib3.util" -> "urllib3.util.timeout" [style="dotted"];
-		"urllib3.util" -> "urllib3.util.url" [style="dotted"];
-		"urllib3.util" -> "urllib3.util.wait" [style="dotted"];
-		"urllib3.util" -> "urllib3.util.proxy" [style="dotted"];
-		"urllib3.util" -> "urllib3.util.ssl_match_hostname" [style="dotted"];
-		"urllib3.util" -> "urllib3.util.queue" [style="dotted"];
-		"urllib3.util" -> "urllib3.util.ssltransport" [style="dotted"];
+	subgraph "cluster_pkg_resources._vendor.importlib_resources" {
+		label="pkg_resources._vendor.importlib_resources";
+		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources.abc" [style="dotted"];
+		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources.readers" [style="dotted"];
+		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources._adapters" [style="dotted"];
+		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources._common" [style="dotted"];
+		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources._legacy" [style="dotted"];
+		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources._compat" [style="dotted"];
+		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources._itertools" [style="dotted"];
+		"pkg_resources._vendor.importlib_resources" -> "pkg_resources._vendor.importlib_resources.simple" [style="dotted"];
 	}
 	subgraph "cluster_email" {
 		label="email";
@@ -1517,38 +1616,22 @@ charset="UTF-8";
 		"email" -> "email.contentmanager" [style="dotted"];
 		"email" -> "email.feedparser" [style="dotted"];
 	}
-	subgraph "cluster_html" {
-		label="html";
-		"html" -> "html.entities" [style="dotted"];
+	subgraph "cluster_win32com" {
+		label="win32com";
+		"win32com" -> "win32com.universal" [style="dotted"];
+		"win32com" -> "win32com.client" [style="dotted"];
+		"win32com" -> "win32com.server" [style="dotted"];
+		"win32com" -> "win32com.util" [style="dotted"];
+		"win32com" -> "win32com.shell" [style="dotted"];
 	}
-	subgraph "cluster_concurrent.futures" {
-		label="concurrent.futures";
-		"concurrent.futures" -> "concurrent.futures._base" [style="dotted"];
-		"concurrent.futures" -> "concurrent.futures.process" [style="dotted"];
-		"concurrent.futures" -> "concurrent.futures.thread" [style="dotted"];
-	}
-	subgraph "cluster_urllib3" {
-		label="urllib3";
-		"urllib3" -> "urllib3.exceptions" [style="dotted"];
-		"urllib3" -> "urllib3._version" [style="dotted"];
-		"urllib3" -> "urllib3.connectionpool" [style="dotted"];
-		"urllib3" -> "urllib3.filepost" [style="dotted"];
-		"urllib3" -> "urllib3.poolmanager" [style="dotted"];
-		"urllib3" -> "urllib3.response" [style="dotted"];
-		"urllib3" -> "urllib3.util" [style="dotted"];
-		"urllib3" -> "urllib3._collections" [style="dotted"];
-		"urllib3" -> "urllib3.connection" [style="dotted"];
-		"urllib3" -> "urllib3.packages" [style="dotted"];
-		"urllib3" -> "urllib3.request" [style="dotted"];
-		"urllib3" -> "urllib3.fields" [style="dotted"];
-		"urllib3" -> "urllib3.contrib" [style="dotted"];
-	}
-	subgraph "cluster_win32com.server" {
-		label="win32com.server";
-		"win32com.server" -> "win32com.server.policy" [style="dotted"];
-		"win32com.server" -> "win32com.server.util" [style="dotted"];
-		"win32com.server" -> "win32com.server.exception" [style="dotted"];
-		"win32com.server" -> "win32com.server.dispatcher" [style="dotted"];
+	subgraph "cluster_importlib.metadata" {
+		label="importlib.metadata";
+		"importlib.metadata" -> "importlib.metadata._adapters" [style="dotted"];
+		"importlib.metadata" -> "importlib.metadata._meta" [style="dotted"];
+		"importlib.metadata" -> "importlib.metadata._collections" [style="dotted"];
+		"importlib.metadata" -> "importlib.metadata._functools" [style="dotted"];
+		"importlib.metadata" -> "importlib.metadata._itertools" [style="dotted"];
+		"importlib.metadata" -> "importlib.metadata._text" [style="dotted"];
 	}
 	"<PyiModuleGraph>" -> "posix" [];
 	"<PyiModuleGraph>" -> "ntpath" [];
@@ -1564,37 +1647,37 @@ charset="UTF-8";
 	"<PyiModuleGraph>" -> "_ssl" [];
 	"<PyiModuleGraph>" -> "_elementtree" [];
 	"<PyiModuleGraph>" -> "functools" [];
-	"<PyiModuleGraph>" -> "io" [];
 	"<PyiModuleGraph>" -> "posixpath" [];
-	"<PyiModuleGraph>" -> "genericpath" [];
-	"<PyiModuleGraph>" -> "collections" [];
-	"<PyiModuleGraph>" -> "tokenize" [];
-	"<PyiModuleGraph>" -> "sre_parse" [];
-	"<PyiModuleGraph>" -> "fnmatch" [];
-	"<PyiModuleGraph>" -> "sre_constants" [];
-	"<PyiModuleGraph>" -> "stat" [];
-	"<PyiModuleGraph>" -> "copyreg" [];
-	"<PyiModuleGraph>" -> "traceback" [];
-	"<PyiModuleGraph>" -> "urllib" [];
-	"<PyiModuleGraph>" -> "operator" [];
-	"<PyiModuleGraph>" -> "token" [];
-	"<PyiModuleGraph>" -> "encodings" [];
 	"<PyiModuleGraph>" -> "pathlib" [];
-	"<PyiModuleGraph>" -> "_collections_abc" [];
-	"<PyiModuleGraph>" -> "os" [];
-	"<PyiModuleGraph>" -> "types" [];
-	"<PyiModuleGraph>" -> "_weakrefset" [];
-	"<PyiModuleGraph>" -> "reprlib" [];
-	"<PyiModuleGraph>" -> "heapq" [];
 	"<PyiModuleGraph>" -> "sre_compile" [];
+	"<PyiModuleGraph>" -> "tokenize" [];
+	"<PyiModuleGraph>" -> "collections" [];
+	"<PyiModuleGraph>" -> "token" [];
+	"<PyiModuleGraph>" -> "io" [];
+	"<PyiModuleGraph>" -> "os" [];
+	"<PyiModuleGraph>" -> "copyreg" [];
+	"<PyiModuleGraph>" -> "stat" [];
+	"<PyiModuleGraph>" -> "operator" [];
+	"<PyiModuleGraph>" -> "linecache" [];
 	"<PyiModuleGraph>" -> "abc" [];
-	"<PyiModuleGraph>" -> "weakref" [];
-	"<PyiModuleGraph>" -> "keyword" [];
+	"<PyiModuleGraph>" -> "warnings" [];
+	"<PyiModuleGraph>" -> "fnmatch" [];
+	"<PyiModuleGraph>" -> "_collections_abc" [];
 	"<PyiModuleGraph>" -> "locale" [];
 	"<PyiModuleGraph>" -> "enum" [];
-	"<PyiModuleGraph>" -> "warnings" [];
+	"<PyiModuleGraph>" -> "sre_parse" [];
 	"<PyiModuleGraph>" -> "re" [];
-	"<PyiModuleGraph>" -> "linecache" [];
+	"<PyiModuleGraph>" -> "heapq" [];
+	"<PyiModuleGraph>" -> "urllib" [];
+	"<PyiModuleGraph>" -> "types" [];
+	"<PyiModuleGraph>" -> "sre_constants" [];
+	"<PyiModuleGraph>" -> "_weakrefset" [];
+	"<PyiModuleGraph>" -> "encodings" [];
+	"<PyiModuleGraph>" -> "keyword" [];
+	"<PyiModuleGraph>" -> "genericpath" [];
+	"<PyiModuleGraph>" -> "weakref" [];
+	"<PyiModuleGraph>" -> "traceback" [];
+	"<PyiModuleGraph>" -> "reprlib" [];
 	"<PyiModuleGraph>" -> "D:\Documents\code\Spotify_automatization\app.py" [];
 	"<PyiModuleGraph>" -> "_json" [];
 	"<PyiModuleGraph>" -> "queue" [];
@@ -2077,38 +2160,38 @@ charset="UTF-8";
 	"D:\Documents\code\Spotify_automatization\app.py" -> "pickle" [];
 	"D:\Documents\code\Spotify_automatization\app.py" -> "os" [];
 	"D:\Documents\code\Spotify_automatization\app.py" -> "functools" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "io" [];
 	"D:\Documents\code\Spotify_automatization\app.py" -> "posixpath" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "ntpath" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "genericpath" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "collections" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "tokenize" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "sre_parse" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "fnmatch" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "sre_constants" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "codecs" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "stat" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "copyreg" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "traceback" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "urllib" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "operator" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "token" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "encodings" [];
 	"D:\Documents\code\Spotify_automatization\app.py" -> "pathlib" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "_collections_abc" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "types" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "_weakrefset" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "reprlib" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "heapq" [];
 	"D:\Documents\code\Spotify_automatization\app.py" -> "sre_compile" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "tokenize" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "collections" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "codecs" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "token" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "io" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "copyreg" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "stat" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "operator" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "linecache" [];
 	"D:\Documents\code\Spotify_automatization\app.py" -> "abc" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "weakref" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "keyword" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "warnings" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "fnmatch" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "_collections_abc" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "ntpath" [];
 	"D:\Documents\code\Spotify_automatization\app.py" -> "locale" [];
 	"D:\Documents\code\Spotify_automatization\app.py" -> "enum" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "warnings" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "sre_parse" [];
 	"D:\Documents\code\Spotify_automatization\app.py" -> "re" [];
-	"D:\Documents\code\Spotify_automatization\app.py" -> "linecache" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "heapq" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "urllib" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "types" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "sre_constants" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "_weakrefset" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "encodings" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "keyword" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "genericpath" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "weakref" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "traceback" [];
+	"D:\Documents\code\Spotify_automatization\app.py" -> "reprlib" [];
 	"D:\Documents\code\Spotify_automatization\app.py" -> "C:\Users\Mitja\AppData\Local\Programs\Python\Python310\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_subprocess.py" [];
 	"D:\Documents\code\Spotify_automatization\app.py" -> "C:\Users\Mitja\AppData\Local\Programs\Python\Python310\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_inspect.py" [];
 	"D:\Documents\code\Spotify_automatization\app.py" -> "C:\Users\Mitja\AppData\Local\Programs\Python\Python310\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_pkgutil.py" [];
@@ -2367,6 +2450,7 @@ charset="UTF-8";
 	"jinja2.ext" -> "pprint" [];
 	"jinja2.ext" -> "re" [];
 	"jinja2.ext" -> "typing" [];
+	"jinja2.ext" -> "warnings" [];
 	"jinja2.ext" -> "markupsafe" [];
 	"jinja2.ext" -> "typing_extensions" [];
 	"jinja2.ext" -> "gettext" [];
@@ -2379,31 +2463,21 @@ charset="UTF-8";
 	"jinja2.lexer" -> "sys" [];
 	"jinja2.lexer" -> "typing_extensions" [];
 	"jinja2._identifier" -> "re" [];
+	"typing_extensions" -> "abc" [];
+	"typing_extensions" -> "collections" [];
+	"typing_extensions" -> "functools" [];
+	"typing_extensions" -> "inspect" [];
+	"typing_extensions" -> "operator" [];
+	"typing_extensions" -> "sys" [];
+	"typing_extensions" -> "types" [];
+	"typing_extensions" -> "typing" [];
+	"typing_extensions" -> "warnings" [];
 	"jinja2.defaults" -> "typing" [];
 	"jinja2.defaults" -> "typing_extensions" [];
 	"jinja2.tests" -> "operator" [];
 	"jinja2.tests" -> "typing" [];
 	"jinja2.tests" -> "collections" [];
 	"jinja2.tests" -> "numbers" [];
-	"jinja2.filters" -> "math" [];
-	"jinja2.filters" -> "random" [];
-	"jinja2.filters" -> "re" [];
-	"jinja2.filters" -> "typing" [];
-	"jinja2.filters" -> "collections" [];
-	"jinja2.filters" -> "itertools" [];
-	"jinja2.filters" -> "markupsafe" [];
-	"jinja2.filters" -> "typing_extensions" [];
-	"jinja2.filters" -> "textwrap" [];
-	"jinja2.sandbox" -> "operator" [];
-	"jinja2.sandbox" -> "types" [];
-	"jinja2.sandbox" -> "typing" [];
-	"jinja2.sandbox" -> "_string" [];
-	"jinja2.sandbox" -> "collections" [];
-	"jinja2.sandbox" -> "string" [];
-	"jinja2.sandbox" -> "markupsafe" [];
-	"jinja2.async_utils" -> "inspect" [];
-	"jinja2.async_utils" -> "typing" [];
-	"jinja2.async_utils" -> "functools" [];
 	"markupsafe" -> "functools" [];
 	"markupsafe" -> "re" [];
 	"markupsafe" -> "string" [];
@@ -2411,11 +2485,13 @@ charset="UTF-8";
 	"markupsafe" -> "typing_extensions" [];
 	"markupsafe" -> "html" [];
 	"markupsafe._native" -> "typing" [];
+	"markupsafe._native" -> "warnings" [];
 	"jinja2.utils" -> "enum" [];
 	"jinja2.utils" -> "json" [];
 	"jinja2.utils" -> "os" [];
 	"jinja2.utils" -> "re" [];
 	"jinja2.utils" -> "typing" [];
+	"jinja2.utils" -> "warnings" [];
 	"jinja2.utils" -> "collections" [];
 	"jinja2.utils" -> "random" [];
 	"jinja2.utils" -> "threading" [];
@@ -2431,8 +2507,11 @@ charset="UTF-8";
 	"jinja2.runtime" -> "markupsafe" [];
 	"jinja2.runtime" -> "logging" [];
 	"jinja2.runtime" -> "typing_extensions" [];
+	"jinja2.runtime" -> "warnings" [];
+	"jinja2.async_utils" -> "inspect" [];
+	"jinja2.async_utils" -> "typing" [];
+	"jinja2.async_utils" -> "functools" [];
 	"jinja2.loaders" -> "os" [];
-	"jinja2.loaders" -> "posixpath" [];
 	"jinja2.loaders" -> "sys" [];
 	"jinja2.loaders" -> "typing" [];
 	"jinja2.loaders" -> "weakref" [];
@@ -2441,8 +2520,26 @@ charset="UTF-8";
 	"jinja2.loaders" -> "hashlib" [];
 	"jinja2.loaders" -> "importlib" [];
 	"jinja2.loaders" -> "types" [];
+	"jinja2.filters" -> "math" [];
+	"jinja2.filters" -> "random" [];
+	"jinja2.filters" -> "re" [];
+	"jinja2.filters" -> "typing" [];
+	"jinja2.filters" -> "warnings" [];
+	"jinja2.filters" -> "collections" [];
+	"jinja2.filters" -> "itertools" [];
+	"jinja2.filters" -> "markupsafe" [];
+	"jinja2.filters" -> "typing_extensions" [];
+	"jinja2.filters" -> "textwrap" [];
+	"jinja2.sandbox" -> "operator" [];
+	"jinja2.sandbox" -> "types" [];
+	"jinja2.sandbox" -> "typing" [];
+	"jinja2.sandbox" -> "_string" [];
+	"jinja2.sandbox" -> "collections" [];
+	"jinja2.sandbox" -> "string" [];
+	"jinja2.sandbox" -> "markupsafe" [];
 	"jinja2.exceptions" -> "typing" [];
 	"jinja2.environment" -> "os" [];
+	"jinja2.environment" -> "sys" [];
 	"jinja2.environment" -> "typing" [];
 	"jinja2.environment" -> "weakref" [];
 	"jinja2.environment" -> "collections" [];
@@ -2781,9 +2878,12 @@ charset="UTF-8";
 	"asyncio.format_helpers" -> "sys" [];
 	"asyncio.format_helpers" -> "traceback" [];
 	"asyncio.constants" -> "enum" [];
+	"jinja2.debug" -> "platform" [];
 	"jinja2.debug" -> "sys" [];
 	"jinja2.debug" -> "typing" [];
 	"jinja2.debug" -> "types" [];
+	"jinja2.debug" -> "tputil" [];
+	"jinja2.debug" -> "ctypes" [];
 	"jinja2.compiler" -> "typing" [];
 	"jinja2.compiler" -> "contextlib" [];
 	"jinja2.compiler" -> "functools" [];
@@ -3226,8 +3326,145 @@ charset="UTF-8";
 	"requests.sessions" -> "os" [];
 	"requests.sessions" -> "sys" [];
 	"requests.sessions" -> "time" [];
-	"requests.sessions" -> "collections" [];
 	"requests.sessions" -> "datetime" [];
+	"requests.sessions" -> "collections" [];
+	"requests.adapters" -> "os.path" [];
+	"requests.adapters" -> "socket" [];
+	"urllib3.contrib.socks" -> "__future__" [];
+	"urllib3.contrib.socks" -> "socks" [];
+	"urllib3.contrib.socks" -> "warnings" [];
+	"urllib3.contrib.socks" -> "socket" [];
+	"urllib3.contrib.socks" -> "ssl" [];
+	"urllib3.contrib.pyopenssl" -> "__future__" [];
+	"urllib3.contrib.pyopenssl" -> "'OpenSSL.SSL'" [];
+	"urllib3.contrib.pyopenssl" -> "cryptography" [];
+	"urllib3.contrib.pyopenssl" -> "'cryptography.hazmat'" [];
+	"urllib3.contrib.pyopenssl" -> "'cryptography.x509'" [];
+	"urllib3.contrib.pyopenssl" -> "io" [];
+	"urllib3.contrib.pyopenssl" -> "socket" [];
+	"urllib3.contrib.pyopenssl" -> "logging" [];
+	"urllib3.contrib.pyopenssl" -> "ssl" [];
+	"urllib3.contrib.pyopenssl" -> "sys" [];
+	"urllib3.contrib.pyopenssl" -> "'OpenSSL.crypto'" [];
+	"urllib3.contrib.pyopenssl" -> "idna" [];
+	"idna.core" -> "bisect" [];
+	"idna.core" -> "unicodedata" [];
+	"idna.core" -> "re" [];
+	"idna.core" -> "sys" [];
+	"idna.intranges" -> "bisect" [];
+	"urllib3.util.ssl_" -> "__future__" [];
+	"urllib3.util.ssl_" -> "hmac" [];
+	"urllib3.util.ssl_" -> "os" [];
+	"urllib3.util.ssl_" -> "sys" [];
+	"urllib3.util.ssl_" -> "warnings" [];
+	"urllib3.util.ssl_" -> "binascii" [];
+	"urllib3.util.ssl_" -> "hashlib" [];
+	"urllib3.util.ssl_" -> "ssl" [];
+	"urllib3.util.ssltransport" -> "io" [];
+	"urllib3.util.ssltransport" -> "socket" [];
+	"urllib3.util.ssltransport" -> "ssl" [];
+	"urllib3.packages.six" -> "__future__" [];
+	"urllib3.packages.six" -> "functools" [];
+	"urllib3.packages.six" -> "itertools" [];
+	"urllib3.packages.six" -> "operator" [];
+	"urllib3.packages.six" -> "sys" [];
+	"urllib3.packages.six" -> "types" [];
+	"urllib3.packages.six" -> "struct" [];
+	"urllib3.packages.six" -> "io" [];
+	"urllib3.packages.six" -> "StringIO" [];
+	"urllib3.packages" -> "__future__" [];
+	"urllib3.packages.ssl_match_hostname" -> "sys" [];
+	"urllib3.packages.ssl_match_hostname" -> "ssl" [];
+	"urllib3.packages.ssl_match_hostname" -> "backports" [];
+	"urllib3.packages.ssl_match_hostname._implementation" -> "re" [];
+	"urllib3.packages.ssl_match_hostname._implementation" -> "sys" [];
+	"urllib3.packages.ssl_match_hostname._implementation" -> "ipaddress" [];
+	"ipaddress" -> "functools" [];
+	"ipaddress" -> "re" [];
+	"urllib3.packages.backports.makefile" -> "io" [];
+	"urllib3.packages.backports.makefile" -> "socket" [];
+	"urllib3.contrib._appengine_environ" -> "os" [];
+	"urllib3" -> "__future__" [];
+	"urllib3" -> "logging" [];
+	"urllib3" -> "warnings" [];
+	"urllib3.util.timeout" -> "__future__" [];
+	"urllib3.util.timeout" -> "time" [];
+	"urllib3.util.timeout" -> "socket" [];
+	"urllib3.util.request" -> "__future__" [];
+	"urllib3.util.request" -> "base64" [];
+	"urllib3.util.request" -> "brotli" [];
+	"urllib3.filepost" -> "__future__" [];
+	"urllib3.filepost" -> "binascii" [];
+	"urllib3.filepost" -> "codecs" [];
+	"urllib3.filepost" -> "os" [];
+	"urllib3.filepost" -> "io" [];
+	"urllib3.fields" -> "__future__" [];
+	"urllib3.fields" -> "mimetypes" [];
+	"urllib3.fields" -> "re" [];
+	"urllib3.util.url" -> "__future__" [];
+	"urllib3.util.url" -> "re" [];
+	"urllib3.util.url" -> "collections" [];
+	"urllib3.util.url" -> "idna" [];
+	"urllib3.connectionpool" -> "__future__" [];
+	"urllib3.connectionpool" -> "errno" [];
+	"urllib3.connectionpool" -> "logging" [];
+	"urllib3.connectionpool" -> "socket" [];
+	"urllib3.connectionpool" -> "sys" [];
+	"urllib3.connectionpool" -> "warnings" [];
+	"urllib3.connectionpool" -> "urllib3.packages.six.moves" [];
+	"urllib3.connectionpool" -> "urllib3.packages.six.moves.queue" [];
+	"urllib3.util.response" -> "__future__" [];
+	"urllib3.util.response" -> "urllib3.packages.six.moves" [];
+	"urllib3.packages.six.moves.http_client" -> "urllib3.packages.six.moves" [];
+	"urllib3.util.queue" -> "collections" [];
+	"urllib3.util.queue" -> "urllib3.packages.six.moves" [];
+	"urllib3.util.queue" -> "urllib3.packages.six.moves.queue" [];
+	"urllib3.util.queue" -> "Queue" [];
+	"urllib3.util.connection" -> "__future__" [];
+	"urllib3.util.connection" -> "socket" [];
+	"urllib3.util.wait" -> "errno" [];
+	"urllib3.util.wait" -> "select" [];
+	"urllib3.util.wait" -> "sys" [];
+	"urllib3.util.wait" -> "functools" [];
+	"urllib3.util.wait" -> "time" [];
+	"urllib3.request" -> "__future__" [];
+	"urllib3.request" -> ""'urllib3.packages.six.moves.urllib'.parse"" [];
+	"urllib3.packages.six.moves.queue" -> "queue" [];
+	"urllib3.packages.six.moves" -> "urllib3.packages.six.moves.queue" [];
+	"urllib3.connection" -> "__future__" [];
+	"urllib3.connection" -> "datetime" [];
+	"urllib3.connection" -> "logging" [];
+	"urllib3.connection" -> "os" [];
+	"urllib3.connection" -> "re" [];
+	"urllib3.connection" -> "socket" [];
+	"urllib3.connection" -> "warnings" [];
+	"urllib3.connection" -> "ssl" [];
+	"urllib3._collections" -> "__future__" [];
+	"urllib3._collections" -> "collections" [];
+	"urllib3._collections" -> "threading" [];
+	"urllib3.exceptions" -> "__future__" [];
+	"urllib3.util.retry" -> "__future__" [];
+	"urllib3.util.retry" -> "email" [];
+	"urllib3.util.retry" -> "logging" [];
+	"urllib3.util.retry" -> "re" [];
+	"urllib3.util.retry" -> "time" [];
+	"urllib3.util.retry" -> "warnings" [];
+	"urllib3.util.retry" -> "collections" [];
+	"urllib3.util.retry" -> "itertools" [];
+	"urllib3.util" -> "__future__" [];
+	"urllib3.response" -> "__future__" [];
+	"urllib3.response" -> "io" [];
+	"urllib3.response" -> "logging" [];
+	"urllib3.response" -> "zlib" [];
+	"urllib3.response" -> "contextlib" [];
+	"urllib3.response" -> "socket" [];
+	"urllib3.response" -> "brotli" [];
+	"urllib3.poolmanager" -> "__future__" [];
+	"urllib3.poolmanager" -> "collections" [];
+	"urllib3.poolmanager" -> "functools" [];
+	"urllib3.poolmanager" -> "logging" [];
+	"urllib3.poolmanager" -> ""'urllib3.packages.six.moves.urllib'.parse"" [];
+	"requests.structures" -> "collections" [];
 	"requests.utils" -> "codecs" [];
 	"requests.utils" -> "contextlib" [];
 	"requests.utils" -> "io" [];
@@ -3241,6 +3478,7 @@ charset="UTF-8";
 	"requests.utils" -> "zipfile" [];
 	"requests.utils" -> "collections" [];
 	"requests.utils" -> "winreg" [];
+	"requests.utils" -> "_winreg" [];
 	"requests.utils" -> "netrc" [];
 	"netrc" -> "os" [];
 	"netrc" -> "shlex" [];
@@ -3248,153 +3486,24 @@ charset="UTF-8";
 	"netrc" -> "pwd" [];
 	"requests.certs" -> "certifi" [];
 	"certifi.core" -> "os" [];
-	"certifi.core" -> "types" [];
-	"certifi.core" -> "typing" [];
-	"urllib3.util" -> "__future__" [];
-	"urllib3" -> "__future__" [];
-	"urllib3" -> "logging" [];
-	"urllib3" -> "warnings" [];
-	"urllib3.response" -> "__future__" [];
-	"urllib3.response" -> "io" [];
-	"urllib3.response" -> "logging" [];
-	"urllib3.response" -> "sys" [];
-	"urllib3.response" -> "zlib" [];
-	"urllib3.response" -> "contextlib" [];
-	"urllib3.response" -> "socket" [];
-	"urllib3.response" -> "brotlicffi" [];
-	"urllib3.response" -> "brotli" [];
-	"urllib3.packages.six" -> "__future__" [];
-	"urllib3.packages.six" -> "functools" [];
-	"urllib3.packages.six" -> "itertools" [];
-	"urllib3.packages.six" -> "operator" [];
-	"urllib3.packages.six" -> "sys" [];
-	"urllib3.packages.six" -> "types" [];
-	"urllib3.packages.six" -> "struct" [];
-	"urllib3.packages.six" -> "io" [];
-	"urllib3.packages.six" -> "StringIO" [];
-	"urllib3.connection" -> "__future__" [];
-	"urllib3.connection" -> "datetime" [];
-	"urllib3.connection" -> "logging" [];
-	"urllib3.connection" -> "os" [];
-	"urllib3.connection" -> "re" [];
-	"urllib3.connection" -> "socket" [];
-	"urllib3.connection" -> "warnings" [];
-	"urllib3.connection" -> "ssl" [];
-	"urllib3.util.ssl_match_hostname" -> "re" [];
-	"urllib3.util.ssl_match_hostname" -> "sys" [];
-	"urllib3.util.ssl_match_hostname" -> "ipaddress" [];
-	"ipaddress" -> "functools" [];
-	"ipaddress" -> "re" [];
-	"urllib3.packages.six.moves.http_client" -> "urllib3.packages.six.moves" [];
-	"urllib3.packages.six.moves" -> "urllib3.packages.six.moves.queue" [];
-	"urllib3.packages.six.moves.queue" -> "queue" [];
-	"urllib3._collections" -> "__future__" [];
-	"urllib3._collections" -> "collections" [];
-	"urllib3._collections" -> "threading" [];
-	"urllib3.poolmanager" -> "__future__" [];
-	"urllib3.poolmanager" -> "collections" [];
-	"urllib3.poolmanager" -> "functools" [];
-	"urllib3.poolmanager" -> "logging" [];
-	"urllib3.poolmanager" -> ""'urllib3.packages.six.moves.urllib'.parse"" [];
-	"urllib3.request" -> "__future__" [];
-	"urllib3.request" -> ""'urllib3.packages.six.moves.urllib'.parse"" [];
-	"urllib3.filepost" -> "__future__" [];
-	"urllib3.filepost" -> "binascii" [];
-	"urllib3.filepost" -> "codecs" [];
-	"urllib3.filepost" -> "os" [];
-	"urllib3.filepost" -> "io" [];
-	"urllib3.fields" -> "__future__" [];
-	"urllib3.fields" -> "mimetypes" [];
-	"urllib3.fields" -> "re" [];
-	"urllib3.connectionpool" -> "__future__" [];
-	"urllib3.connectionpool" -> "errno" [];
-	"urllib3.connectionpool" -> "logging" [];
-	"urllib3.connectionpool" -> "re" [];
-	"urllib3.connectionpool" -> "socket" [];
-	"urllib3.connectionpool" -> "sys" [];
-	"urllib3.connectionpool" -> "warnings" [];
-	"urllib3.connectionpool" -> "urllib3.packages.six.moves" [];
-	"urllib3.connectionpool" -> "urllib3.packages.six.moves.queue" [];
-	"urllib3.util.queue" -> "collections" [];
-	"urllib3.util.queue" -> "urllib3.packages.six.moves" [];
-	"urllib3.util.queue" -> "urllib3.packages.six.moves.queue" [];
-	"urllib3.util.queue" -> "Queue" [];
-	"urllib3.exceptions" -> "__future__" [];
-	"urllib3.util.wait" -> "errno" [];
-	"urllib3.util.wait" -> "select" [];
-	"urllib3.util.wait" -> "sys" [];
-	"urllib3.util.wait" -> "functools" [];
-	"urllib3.util.wait" -> "time" [];
-	"urllib3.util.url" -> "__future__" [];
-	"urllib3.util.url" -> "re" [];
-	"urllib3.util.url" -> "collections" [];
-	"urllib3.util.url" -> "idna" [];
-	"idna.intranges" -> "bisect" [];
-	"idna.intranges" -> "typing" [];
-	"idna.core" -> "bisect" [];
-	"idna.core" -> "unicodedata" [];
-	"idna.core" -> "re" [];
-	"idna.core" -> "typing" [];
-	"idna.uts46data" -> "typing" [];
-	"urllib3.util.timeout" -> "__future__" [];
-	"urllib3.util.timeout" -> "time" [];
-	"urllib3.util.timeout" -> "socket" [];
-	"urllib3.util.ssl_" -> "__future__" [];
-	"urllib3.util.ssl_" -> "hmac" [];
-	"urllib3.util.ssl_" -> "os" [];
-	"urllib3.util.ssl_" -> "sys" [];
-	"urllib3.util.ssl_" -> "warnings" [];
-	"urllib3.util.ssl_" -> "binascii" [];
-	"urllib3.util.ssl_" -> "hashlib" [];
-	"urllib3.util.ssl_" -> "ssl" [];
-	"urllib3.util.ssltransport" -> "io" [];
-	"urllib3.util.ssltransport" -> "socket" [];
-	"urllib3.util.ssltransport" -> "ssl" [];
-	"urllib3.util.retry" -> "__future__" [];
-	"urllib3.util.retry" -> "email" [];
-	"urllib3.util.retry" -> "logging" [];
-	"urllib3.util.retry" -> "re" [];
-	"urllib3.util.retry" -> "time" [];
-	"urllib3.util.retry" -> "warnings" [];
-	"urllib3.util.retry" -> "collections" [];
-	"urllib3.util.retry" -> "itertools" [];
-	"urllib3.util.response" -> "__future__" [];
-	"urllib3.util.response" -> "urllib3.packages.six.moves" [];
-	"urllib3.util.request" -> "__future__" [];
-	"urllib3.util.request" -> "base64" [];
-	"urllib3.util.request" -> "brotlicffi" [];
-	"urllib3.util.request" -> "brotli" [];
-	"urllib3.util.connection" -> "__future__" [];
-	"urllib3.util.connection" -> "socket" [];
-	"urllib3.contrib._appengine_environ" -> "os" [];
-	"urllib3.contrib.pyopenssl" -> "__future__" [];
-	"urllib3.contrib.pyopenssl" -> "'OpenSSL.SSL'" [];
-	"urllib3.contrib.pyopenssl" -> "cryptography" [];
-	"urllib3.contrib.pyopenssl" -> "'cryptography.hazmat'" [];
-	"urllib3.contrib.pyopenssl" -> "'cryptography.x509'" [];
-	"urllib3.contrib.pyopenssl" -> "io" [];
-	"urllib3.contrib.pyopenssl" -> "socket" [];
-	"urllib3.contrib.pyopenssl" -> "logging" [];
-	"urllib3.contrib.pyopenssl" -> "ssl" [];
-	"urllib3.contrib.pyopenssl" -> "sys" [];
-	"urllib3.contrib.pyopenssl" -> "'OpenSSL.crypto'" [];
-	"urllib3.contrib.pyopenssl" -> "idna" [];
-	"urllib3.packages.backports.makefile" -> "io" [];
-	"urllib3.packages.backports.makefile" -> "socket" [];
-	"requests.structures" -> "collections" [];
 	"requests.models" -> "datetime" [];
+	"requests.models" -> "sys" [];
 	"requests.models" -> "io" [];
 	"requests.models" -> "idna" [];
-	"requests.cookies" -> "calendar" [];
 	"requests.cookies" -> "copy" [];
 	"requests.cookies" -> "time" [];
+	"requests.cookies" -> "calendar" [];
 	"requests.cookies" -> "threading" [];
 	"requests.cookies" -> "dummy_threading" [];
 	"requests.compat" -> "chardet" [];
-	"requests.compat" -> "charset_normalizer" [];
 	"requests.compat" -> "sys" [];
 	"requests.compat" -> "simplejson" [];
 	"requests.compat" -> "json" [];
+	"requests.compat" -> "urllib" [];
+	"requests.compat" -> "urlparse" [];
+	"requests.compat" -> "cookielib" [];
+	"requests.compat" -> "Cookie" [];
+	"requests.compat" -> "StringIO" [];
 	"requests.compat" -> "collections" [];
 	"requests.compat" -> "http" [];
 	"requests.compat" -> "io" [];
@@ -3413,54 +3522,20 @@ charset="UTF-8";
 	"http.cookiejar" -> "io" [];
 	"http.cookiejar" -> "warnings" [];
 	"http.cookiejar" -> "traceback" [];
-	"charset_normalizer" -> "logging" [];
-	"charset_normalizer.utils" -> "unicodedata2" [];
-	"charset_normalizer.utils" -> "unicodedata" [];
-	"charset_normalizer.utils" -> "importlib" [];
-	"charset_normalizer.utils" -> "logging" [];
-	"charset_normalizer.utils" -> "codecs" [];
-	"charset_normalizer.utils" -> "functools" [];
-	"charset_normalizer.utils" -> "re" [];
-	"charset_normalizer.utils" -> "typing" [];
-	"charset_normalizer.utils" -> "_multibytecodec" [];
-	"charset_normalizer.constant" -> "codecs" [];
-	"charset_normalizer.constant" -> "re" [];
-	"charset_normalizer.constant" -> "typing" [];
-	"charset_normalizer.assets" -> "typing" [];
-	"charset_normalizer.models" -> "warnings" [];
-	"charset_normalizer.models" -> "collections" [];
-	"charset_normalizer.models" -> "hashlib" [];
-	"charset_normalizer.models" -> "json" [];
-	"charset_normalizer.models" -> "re" [];
-	"charset_normalizer.models" -> "typing" [];
-	"charset_normalizer.cd" -> "importlib" [];
-	"charset_normalizer.cd" -> "codecs" [];
-	"charset_normalizer.cd" -> "collections" [];
-	"charset_normalizer.cd" -> "functools" [];
-	"charset_normalizer.cd" -> "typing" [];
-	"charset_normalizer.md" -> "functools" [];
-	"charset_normalizer.md" -> "typing" [];
-	"charset_normalizer.legacy" -> "warnings" [];
-	"charset_normalizer.legacy" -> "typing" [];
-	"charset_normalizer.api" -> "logging" [];
-	"charset_normalizer.api" -> "os" [];
-	"charset_normalizer.api" -> "os.path" [];
-	"charset_normalizer.api" -> "typing" [];
-	"requests.auth" -> "hashlib" [];
+	"chardet.universaldetector" -> "codecs" [];
+	"chardet.universaldetector" -> "logging" [];
+	"chardet.universaldetector" -> "re" [];
+	"chardet.sbcharsetprober" -> "collections" [];
+	"chardet.charsetprober" -> "logging" [];
+	"chardet.charsetprober" -> "re" [];
+	"chardet.codingstatemachine" -> "logging" [];
 	"requests.auth" -> "os" [];
 	"requests.auth" -> "re" [];
-	"requests.auth" -> "threading" [];
 	"requests.auth" -> "time" [];
+	"requests.auth" -> "hashlib" [];
+	"requests.auth" -> "threading" [];
 	"requests.auth" -> "warnings" [];
 	"requests.auth" -> "base64" [];
-	"requests.adapters" -> "os.path" [];
-	"requests.adapters" -> "socket" [];
-	"urllib3.contrib.socks" -> "__future__" [];
-	"urllib3.contrib.socks" -> "socks" [];
-	"urllib3.contrib.socks" -> "warnings" [];
-	"urllib3.contrib.socks" -> "socket" [];
-	"urllib3.contrib.socks" -> "ssl" [];
-	"requests._internal_utils" -> "re" [];
 	"spotipy.util" -> "logging" [];
 	"spotipy.util" -> "os" [];
 	"spotipy.util" -> "warnings" [];
@@ -3691,16 +3766,12 @@ charset="UTF-8";
 	"six" -> "struct" [];
 	"six" -> "io" [];
 	"six" -> "StringIO" [];
-	"requests" -> "warnings" [];
-	"requests" -> "charset_normalizer" [];
 	"requests" -> "chardet" [];
+	"requests" -> "warnings" [];
 	"requests" -> "ssl" [];
 	"requests" -> "cryptography" [];
 	"requests" -> "logging" [];
 	"requests.packages" -> "sys" [];
-	"requests.packages" -> "chardet" [];
-	"requests.packages" -> "warnings" [];
-	"requests.packages" -> "charset_normalizer" [];
 	"spotipy.client" -> "json" [];
 	"spotipy.client" -> "logging" [];
 	"spotipy.client" -> "warnings" [];
@@ -3713,42 +3784,13 @@ charset="UTF-8";
 	"tkinter" -> "re" [];
 	"tkinter" -> "os" [];
 	"tkinter" -> "traceback" [];
-	"linecache" -> "functools" [];
-	"linecache" -> "sys" [];
-	"linecache" -> "os" [];
-	"linecache" -> "tokenize" [];
-	"re" -> "enum" [];
-	"re" -> "sre_compile" [];
-	"re" -> "sre_parse" [];
-	"re" -> "functools" [];
-	"re" -> "_locale" [];
-	"re" -> "copyreg" [];
-	"re" -> "sre_constants" [];
-	"warnings" -> "sys" [];
-	"warnings" -> "linecache" [];
-	"warnings" -> "tracemalloc" [];
-	"warnings" -> "re" [];
-	"warnings" -> "builtins" [];
-	"warnings" -> "traceback" [];
-	"warnings" -> "_warnings" [];
-	"tracemalloc" -> "functools" [];
-	"tracemalloc" -> "fnmatch" [];
-	"tracemalloc" -> "linecache" [];
-	"tracemalloc" -> "os.path" [];
-	"tracemalloc" -> "pickle" [];
-	"tracemalloc" -> "_tracemalloc" [];
-	"enum" -> "sys" [];
-	"enum" -> "types" [];
-	"enum" -> "warnings" [];
-	"locale" -> "sys" [];
-	"locale" -> "encodings" [];
-	"locale" -> "re" [];
-	"locale" -> "_collections_abc" [];
-	"locale" -> "builtins" [];
-	"locale" -> "functools" [];
-	"locale" -> "_locale" [];
-	"locale" -> "warnings" [];
-	"locale" -> "os" [];
+	"reprlib" -> "builtins" [];
+	"reprlib" -> "itertools" [];
+	"reprlib" -> "_thread" [];
+	"traceback" -> "collections" [];
+	"traceback" -> "itertools" [];
+	"traceback" -> "linecache" [];
+	"traceback" -> "sys" [];
 	"weakref" -> "_weakref" [];
 	"weakref" -> "_weakrefset" [];
 	"weakref" -> "_collections_abc" [];
@@ -3757,51 +3799,8 @@ charset="UTF-8";
 	"weakref" -> "copy" [];
 	"weakref" -> "atexit" [];
 	"weakref" -> "gc" [];
-	"abc" -> "_abc" [];
-	"abc" -> "_py_abc" [];
-	"_py_abc" -> "_weakrefset" [];
-	"sre_compile" -> "_sre" [];
-	"sre_compile" -> "sre_parse" [];
-	"sre_compile" -> "sre_constants" [];
-	"sre_compile" -> "sys" [];
-	"heapq" -> "_heapq" [];
-	"reprlib" -> "builtins" [];
-	"reprlib" -> "itertools" [];
-	"reprlib" -> "_thread" [];
-	"_weakrefset" -> "_weakref" [];
-	"_weakrefset" -> "types" [];
-	"types" -> "sys" [];
-	"types" -> "functools" [];
-	"types" -> "_collections_abc" [];
-	"os" -> "abc" [];
-	"os" -> "sys" [];
-	"os" -> "stat" [];
-	"os" -> "_collections_abc" [];
-	"os" -> "posix" [];
-	"os" -> "posixpath" [];
-	"os" -> "nt" [];
-	"os" -> "ntpath" [];
-	"os" -> "os.path" [];
-	"os" -> "warnings" [];
-	"os" -> "subprocess" [];
-	"os" -> "io" [];
-	"_collections_abc" -> "abc" [];
-	"_collections_abc" -> "sys" [];
-	"pathlib" -> "fnmatch" [];
-	"pathlib" -> "functools" [];
-	"pathlib" -> "io" [];
-	"pathlib" -> "ntpath" [];
-	"pathlib" -> "os" [];
-	"pathlib" -> "posixpath" [];
-	"pathlib" -> "re" [];
-	"pathlib" -> "sys" [];
-	"pathlib" -> "warnings" [];
-	"pathlib" -> "_collections_abc" [];
-	"pathlib" -> "errno" [];
-	"pathlib" -> "operator" [];
-	"pathlib" -> "stat" [];
-	"pathlib" -> "pwd" [];
-	"pathlib" -> "grp" [];
+	"genericpath" -> "os" [];
+	"genericpath" -> "stat" [];
 	"encodings.zlib_codec" -> "codecs" [];
 	"encodings.zlib_codec" -> "zlib" [];
 	"encodings.uu_codec" -> "codecs" [];
@@ -3988,9 +3987,12 @@ charset="UTF-8";
 	"encodings" -> "codecs" [];
 	"encodings" -> "sys" [];
 	"encodings" -> "_winapi" [];
-	"operator" -> "builtins" [];
-	"operator" -> "functools" [];
-	"operator" -> "_operator" [];
+	"_weakrefset" -> "_weakref" [];
+	"_weakrefset" -> "types" [];
+	"sre_constants" -> "_sre" [];
+	"types" -> "sys" [];
+	"types" -> "functools" [];
+	"types" -> "_collections_abc" [];
 	"urllib.robotparser" -> "collections" [];
 	"urllib.robotparser" -> "time" [];
 	"urllib.response" -> "tempfile" [];
@@ -4038,32 +4040,77 @@ charset="UTF-8";
 	"urllib.parse" -> "collections" [];
 	"urllib.parse" -> "warnings" [];
 	"urllib.parse" -> "unicodedata" [];
-	"traceback" -> "collections" [];
-	"traceback" -> "itertools" [];
-	"traceback" -> "linecache" [];
-	"traceback" -> "sys" [];
-	"copyreg" -> "functools" [];
-	"copyreg" -> "operator" [];
-	"stat" -> "_stat" [];
-	"sre_constants" -> "_sre" [];
+	"heapq" -> "_heapq" [];
+	"re" -> "enum" [];
+	"re" -> "sre_compile" [];
+	"re" -> "sre_parse" [];
+	"re" -> "functools" [];
+	"re" -> "_locale" [];
+	"re" -> "copyreg" [];
+	"re" -> "sre_constants" [];
+	"sre_parse" -> "sre_constants" [];
+	"sre_parse" -> "unicodedata" [];
+	"sre_parse" -> "warnings" [];
+	"enum" -> "sys" [];
+	"enum" -> "types" [];
+	"enum" -> "warnings" [];
+	"locale" -> "sys" [];
+	"locale" -> "encodings" [];
+	"locale" -> "re" [];
+	"locale" -> "_collections_abc" [];
+	"locale" -> "builtins" [];
+	"locale" -> "functools" [];
+	"locale" -> "_locale" [];
+	"locale" -> "warnings" [];
+	"locale" -> "os" [];
+	"_collections_abc" -> "abc" [];
+	"_collections_abc" -> "sys" [];
 	"fnmatch" -> "os" [];
 	"fnmatch" -> "posixpath" [];
 	"fnmatch" -> "re" [];
 	"fnmatch" -> "functools" [];
 	"fnmatch" -> "itertools" [];
-	"sre_parse" -> "sre_constants" [];
-	"sre_parse" -> "unicodedata" [];
-	"sre_parse" -> "warnings" [];
-	"tokenize" -> "builtins" [];
-	"tokenize" -> "codecs" [];
-	"tokenize" -> "collections" [];
-	"tokenize" -> "functools" [];
-	"tokenize" -> "io" [];
-	"tokenize" -> "itertools" [];
-	"tokenize" -> "re" [];
-	"tokenize" -> "sys" [];
-	"tokenize" -> "token" [];
-	"tokenize" -> "argparse" [];
+	"warnings" -> "sys" [];
+	"warnings" -> "linecache" [];
+	"warnings" -> "tracemalloc" [];
+	"warnings" -> "re" [];
+	"warnings" -> "builtins" [];
+	"warnings" -> "traceback" [];
+	"warnings" -> "_warnings" [];
+	"tracemalloc" -> "functools" [];
+	"tracemalloc" -> "fnmatch" [];
+	"tracemalloc" -> "linecache" [];
+	"tracemalloc" -> "os.path" [];
+	"tracemalloc" -> "pickle" [];
+	"tracemalloc" -> "_tracemalloc" [];
+	"abc" -> "_abc" [];
+	"abc" -> "_py_abc" [];
+	"_py_abc" -> "_weakrefset" [];
+	"linecache" -> "functools" [];
+	"linecache" -> "sys" [];
+	"linecache" -> "os" [];
+	"linecache" -> "tokenize" [];
+	"operator" -> "builtins" [];
+	"operator" -> "functools" [];
+	"operator" -> "_operator" [];
+	"stat" -> "_stat" [];
+	"copyreg" -> "functools" [];
+	"copyreg" -> "operator" [];
+	"os" -> "abc" [];
+	"os" -> "sys" [];
+	"os" -> "stat" [];
+	"os" -> "_collections_abc" [];
+	"os" -> "posix" [];
+	"os" -> "posixpath" [];
+	"os" -> "nt" [];
+	"os" -> "ntpath" [];
+	"os" -> "os.path" [];
+	"os" -> "warnings" [];
+	"os" -> "subprocess" [];
+	"os" -> "io" [];
+	"io" -> "_io" [];
+	"io" -> "abc" [];
+	"io" -> "warnings" [];
 	"collections.abc" -> "_collections_abc" [];
 	"collections" -> "_collections_abc" [];
 	"collections" -> "sys" [];
@@ -4075,17 +4122,41 @@ charset="UTF-8";
 	"collections" -> "_collections" [];
 	"collections" -> "heapq" [];
 	"collections" -> "copy" [];
-	"genericpath" -> "os" [];
-	"genericpath" -> "stat" [];
+	"tokenize" -> "builtins" [];
+	"tokenize" -> "codecs" [];
+	"tokenize" -> "collections" [];
+	"tokenize" -> "functools" [];
+	"tokenize" -> "io" [];
+	"tokenize" -> "itertools" [];
+	"tokenize" -> "re" [];
+	"tokenize" -> "sys" [];
+	"tokenize" -> "token" [];
+	"tokenize" -> "argparse" [];
+	"sre_compile" -> "_sre" [];
+	"sre_compile" -> "sre_parse" [];
+	"sre_compile" -> "sre_constants" [];
+	"sre_compile" -> "sys" [];
+	"pathlib" -> "fnmatch" [];
+	"pathlib" -> "functools" [];
+	"pathlib" -> "io" [];
+	"pathlib" -> "ntpath" [];
+	"pathlib" -> "os" [];
+	"pathlib" -> "posixpath" [];
+	"pathlib" -> "re" [];
+	"pathlib" -> "sys" [];
+	"pathlib" -> "warnings" [];
+	"pathlib" -> "_collections_abc" [];
+	"pathlib" -> "errno" [];
+	"pathlib" -> "operator" [];
+	"pathlib" -> "stat" [];
+	"pathlib" -> "pwd" [];
+	"pathlib" -> "grp" [];
 	"posixpath" -> "os" [];
 	"posixpath" -> "sys" [];
 	"posixpath" -> "stat" [];
 	"posixpath" -> "genericpath" [];
 	"posixpath" -> "pwd" [];
 	"posixpath" -> "re" [];
-	"io" -> "_io" [];
-	"io" -> "abc" [];
-	"io" -> "warnings" [];
 	"functools" -> "abc" [];
 	"functools" -> "collections" [];
 	"functools" -> "reprlib" [];
@@ -4199,20 +4270,16 @@ charset="UTF-8";
 	"pkg_resources._vendor.appdirs" -> "win32com" [];
 	"pkg_resources.extern" -> "importlib" [];
 	"spotipy.oauth2" -> "urllib" [];
-	"certifi.core" -> "importlib" [];
+	"urllib3.contrib.pyopenssl" -> "urllib" [];
 	"urllib3.packages.six" -> "importlib" [];
-	"urllib3.connection" -> "http" [];
 	"urllib3.fields" -> "email" [];
-	"urllib3.exceptions" -> "http" [];
 	"urllib3.util.response" -> "email" [];
 	"urllib3.util.response" -> "http" [];
-	"urllib3.contrib.pyopenssl" -> "urllib" [];
+	"urllib3.connection" -> "http" [];
+	"urllib3.exceptions" -> "http" [];
+	"certifi.core" -> "importlib" [];
 	"requests.models" -> "encodings" [];
-	"requests.compat" -> "urllib" [];
 	"http.cookiejar" -> "urllib" [];
-	"charset_normalizer.utils" -> "encodings" [];
-	"charset_normalizer.constant" -> "encodings" [];
-	"charset_normalizer.models" -> "encodings" [];
 	"importlib_metadata._adapters" -> "email" [];
 	"redis.commands.bf" -> "redis" [];
 	"redis.commands.bf.commands" -> "redis" [];
@@ -4238,30 +4305,29 @@ charset="UTF-8";
 	"six" -> "importlib" [];
 	"requests" -> "urllib" [];
 	"spotipy.client" -> "urllib" [];
-	"tracemalloc" -> "collections" [];
-	"pathlib" -> "urllib" [];
 	"urllib.request" -> "http" [];
 	"nturl2path" -> "urllib" [];
+	"tracemalloc" -> "collections" [];
+	"pathlib" -> "urllib" [];
 	"xml.etree.ElementTree" -> "xml" [];
 	"xml.etree.ElementInclude" -> "urllib" [];
 	"zipimport" -> "importlib" [];
 	"win32com.client.selecttlb" -> "pywin" [];
 	"pkg_resources._vendor.importlib_resources._compat" -> "pkg_resources" [];
 	"plistlib" -> "xml" [];
-	"requests.utils" -> "urllib" [];
-	"urllib3.util.queue" -> "urllib" [];
-	"urllib3.util.url" -> "urllib" [];
-	"urllib3.util.timeout" -> "urllib" [];
-	"urllib3.util.ssl_" -> "urllib" [];
-	"urllib3.util.ssltransport" -> "urllib" [];
-	"urllib3.util.retry" -> "urllib" [];
-	"urllib3.util.response" -> "urllib" [];
-	"urllib3.util.request" -> "urllib" [];
-	"urllib3.util.connection" -> "urllib" [];
-	"requests.models" -> "urllib" [];
-	"requests.exceptions" -> "urllib" [];
 	"requests.adapters" -> "urllib" [];
 	"urllib3.contrib.socks" -> "urllib" [];
+	"urllib3.util.ssl_" -> "urllib" [];
+	"urllib3.util.ssltransport" -> "urllib" [];
+	"urllib3.util.timeout" -> "urllib" [];
+	"urllib3.util.request" -> "urllib" [];
+	"urllib3.util.url" -> "urllib" [];
+	"urllib3.util.response" -> "urllib" [];
+	"urllib3.util.queue" -> "urllib" [];
+	"urllib3.util.connection" -> "urllib" [];
+	"urllib3.util.retry" -> "urllib" [];
+	"requests.exceptions" -> "urllib" [];
+	"requests.models" -> "urllib" [];
 	"redis.commands.graph.node" -> "redis" [];
 	"redis.commands.graph.edge" -> "redis" [];
 	"redis.commands.bf.info" -> "redis" [];

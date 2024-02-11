@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>modulegraph cross reference for pyi_rth_inspect.py, pyi_rth_subprocess.py, windows_service.py</title>
+    <title>modulegraph cross reference for pyi_rth_inspect.py, pyi_rth_subprocess.py, pyi_rth_win32api.py, windows_service.py</title>
     <style>
       .node { padding: 0.5em 0 0.5em; border-top: thin grey dotted; }
       .moduletype { font: smaller italic }
@@ -11,7 +11,7 @@
     </style>
   </head>
   <body>
-    <h1>modulegraph cross reference for pyi_rth_inspect.py, pyi_rth_subprocess.py, windows_service.py</h1>
+    <h1>modulegraph cross reference for pyi_rth_inspect.py, pyi_rth_subprocess.py, pyi_rth_win32api.py, windows_service.py</h1>
 
 <div class="node">
   <a name="pyi_rth_inspect.py"></a>
@@ -39,6 +39,22 @@ imports:
     <a href="#io">io</a>
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#windows_service.py">windows_service.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pyi_rth_win32api.py"></a>
+  <a target="code" href="///C:/Users/Mitja/AppData/Local/Programs/Python/Python310/Lib/site-packages/PyInstaller/hooks/rthooks/pyi_rth_win32api.py" type="text/plain"><tt>pyi_rth_win32api.py</tt></a>
+<span class="moduletype">Script</span>  <div class="import">
+imports:
+    <a href="#pywintypes">pywintypes</a>
 
   </div>
   <div class="import">
@@ -199,8 +215,10 @@ imports:
  &#8226;   <a href="#posixpath">posixpath</a>
  &#8226;   <a href="#pyi_rth_inspect.py">pyi_rth_inspect.py</a>
  &#8226;   <a href="#pyi_rth_subprocess.py">pyi_rth_subprocess.py</a>
+ &#8226;   <a href="#pyi_rth_win32api.py">pyi_rth_win32api.py</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#reprlib">reprlib</a>
+ &#8226;   <a href="#servicemanager">servicemanager</a>
  &#8226;   <a href="#sre_compile">sre_compile</a>
  &#8226;   <a href="#sre_constants">sre_constants</a>
  &#8226;   <a href="#sre_parse">sre_parse</a>
@@ -218,6 +236,9 @@ imports:
  &#8226;   <a href="#urllib.robotparser">urllib.robotparser</a>
  &#8226;   <a href="#warnings">warnings</a>
  &#8226;   <a href="#weakref">weakref</a>
+ &#8226;   <a href="#win32event">win32event</a>
+ &#8226;   <a href="#win32service">win32service</a>
+ &#8226;   <a href="#win32serviceutil">win32serviceutil</a>
 
   </div>
 
@@ -258,6 +279,26 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="_aix_support"></a>
+  <a target="code" href="///C:/Users/Mitja/AppData/Local/Programs/Python/Python310/lib/_aix_support.py" type="text/plain"><tt>_aix_support</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_bootsubprocess">_bootsubprocess</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#sysconfig">sysconfig</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#distutils.util">distutils.util</a>
+ &#8226;   <a href="#sysconfig">sysconfig</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="_ast"></a>
   <tt>_ast</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
@@ -282,6 +323,22 @@ imported by:
   <tt>_blake2</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
     <a href="#hashlib">hashlib</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="_bootsubprocess"></a>
+  <a target="code" href="///C:/Users/Mitja/AppData/Local/Programs/Python/Python310/lib/_bootsubprocess.py" type="text/plain"><tt>_bootsubprocess</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#os">os</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#_aix_support">_aix_support</a>
 
   </div>
 
@@ -1023,6 +1080,16 @@ imported by:
  &#8226;   <a href="#threading">threading</a>
  &#8226;   <a href="#weakref">weakref</a>
  &#8226;   <a href="#windows_service.py">windows_service.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="_win32sysloader"></a>
+  <tt>_win32sysloader</tt> <span class="moduletype"><tt>C:\Users\Mitja\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\_win32sysloader.pyd</tt></span>  <div class="import">
+imported by:
+    <a href="#pywintypes">pywintypes</a>
 
   </div>
 
@@ -5007,6 +5074,7 @@ imported by:
  &#8226;   <a href="#pydoc">pydoc</a>
  &#8226;   <a href="#quopri">quopri</a>
  &#8226;   <a href="#webbrowser">webbrowser</a>
+ &#8226;   <a href="#win32serviceutil">win32serviceutil</a>
 
   </div>
 
@@ -5259,6 +5327,7 @@ imported by:
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#test.support.import_helper">test.support.import_helper</a>
+ &#8226;   <a href="#win32serviceutil">win32serviceutil</a>
 
   </div>
 
@@ -5382,6 +5451,7 @@ imported by:
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#py_compile">py_compile</a>
  &#8226;   <a href="#pydoc">pydoc</a>
+ &#8226;   <a href="#pywintypes">pywintypes</a>
  &#8226;   <a href="#runpy">runpy</a>
 
   </div>
@@ -5588,6 +5658,7 @@ imported by:
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#py_compile">py_compile</a>
  &#8226;   <a href="#pydoc">pydoc</a>
+ &#8226;   <a href="#pywintypes">pywintypes</a>
  &#8226;   <a href="#runpy">runpy</a>
  &#8226;   <a href="#test.support.import_helper">test.support.import_helper</a>
  &#8226;   <a href="#zipfile">zipfile</a>
@@ -6020,6 +6091,9 @@ imported by:
 <span class="moduletype">AliasNode</span>  <div class="import">
 imports:
     <a href="#ntpath">ntpath</a>
+ &#8226;   <a href="#ntpath.commonprefix">ntpath.commonprefix</a>
+ &#8226;   <a href="#ntpath.exists">ntpath.exists</a>
+ &#8226;   <a href="#ntpath.isfile">ntpath.isfile</a>
  &#8226;   <a href="#os">os</a>
 
   </div>
@@ -6033,6 +6107,42 @@ imported by:
  &#8226;   <a href="#tracemalloc">tracemalloc</a>
  &#8226;   <a href="#unittest">unittest</a>
  &#8226;   <a href="#unittest.util">unittest.util</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ntpath.commonprefix"></a>
+  <a target="code" href="" type="text/plain"><tt>ntpath.commonprefix</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#ntpath">ntpath</a>
+ &#8226;   <a href="#unittest.util">unittest.util</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ntpath.exists"></a>
+  <a target="code" href="" type="text/plain"><tt>ntpath.exists</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#distutils.file_util">distutils.file_util</a>
+ &#8226;   <a href="#ntpath">ntpath</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ntpath.isfile"></a>
+  <a target="code" href="" type="text/plain"><tt>ntpath.isfile</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#distutils.file_util">distutils.file_util</a>
+ &#8226;   <a href="#ntpath">ntpath</a>
 
   </div>
 
@@ -6248,6 +6358,7 @@ imported by:
  &#8226;   <a href="#py_compile">py_compile</a>
  &#8226;   <a href="#pydoc">pydoc</a>
  &#8226;   <a href="#pyi_rth_inspect.py">pyi_rth_inspect.py</a>
+ &#8226;   <a href="#pywintypes">pywintypes</a>
  &#8226;   <a href="#random">random</a>
  &#8226;   <a href="#runpy">runpy</a>
  &#8226;   <a href="#shlex">shlex</a>
@@ -6269,6 +6380,7 @@ imported by:
  &#8226;   <a href="#urllib.request">urllib.request</a>
  &#8226;   <a href="#uu">uu</a>
  &#8226;   <a href="#webbrowser">webbrowser</a>
+ &#8226;   <a href="#win32serviceutil">win32serviceutil</a>
  &#8226;   <a href="#windows_service.py">windows_service.py</a>
  &#8226;   <a href="#xml.sax">xml.sax</a>
  &#8226;   <a href="#xml.sax.saxutils">xml.sax.saxutils</a>
@@ -6325,6 +6437,16 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="perfmon"></a>
+  <tt>perfmon</tt> <span class="moduletype"><tt>C:\Users\Mitja\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\perfmon.pyd</tt></span>  <div class="import">
+imported by:
+    <a href="#win32serviceutil">win32serviceutil</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="pickle"></a>
   <a target="code" href="///C:/Users/Mitja/AppData/Local/Programs/Python/Python310/lib/pickle.py" type="text/plain"><tt>pickle</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -6350,6 +6472,7 @@ imported by:
  &#8226;   <a href="#logging">logging</a>
  &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
  &#8226;   <a href="#tracemalloc">tracemalloc</a>
+ &#8226;   <a href="#win32serviceutil">win32serviceutil</a>
 
   </div>
 
@@ -6480,6 +6603,29 @@ imported by:
     <a href="#_elementtree">_elementtree</a>
  &#8226;   <a href="#xml.etree.ElementTree">xml.etree.ElementTree</a>
  &#8226;   <a href="#xml.parsers.expat">xml.parsers.expat</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pywintypes"></a>
+  <a target="code" href="///C:/Users/Mitja/AppData/Local/Programs/Python/Python310/lib/site-packages/win32/lib/pywintypes.py" type="text/plain"><tt>pywintypes</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_win32sysloader">_win32sysloader</a>
+ &#8226;   <a href="#importlib.machinery">importlib.machinery</a>
+ &#8226;   <a href="#importlib.util">importlib.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#site">site</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#sysconfig">sysconfig</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#pyi_rth_win32api.py">pyi_rth_win32api.py</a>
+ &#8226;   <a href="#win32serviceutil">win32serviceutil</a>
 
   </div>
 
@@ -6707,6 +6853,17 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="servicemanager"></a>
+  <tt>servicemanager</tt> <span class="moduletype"><tt>C:\Users\Mitja\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\servicemanager.pyd</tt></span>  <div class="import">
+imported by:
+    <a href="#win32serviceutil">win32serviceutil</a>
+ &#8226;   <a href="#windows_service.py">windows_service.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="shlex"></a>
   <a target="code" href="///C:/Users/Mitja/AppData/Local/Programs/Python/Python310/lib/shlex.py" type="text/plain"><tt>shlex</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -6793,6 +6950,17 @@ imported by:
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#test.support">test.support</a>
  &#8226;   <a href="#unittest.signals">unittest.signals</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="site"></a>
+  <a target="code" href="///C:/Users/Mitja/AppData/Local/Programs/Python/Python310/lib/site-packages/PyInstaller/fake-modules/site.py" type="text/plain"><tt>site</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imported by:
+    <a href="#pywintypes">pywintypes</a>
 
   </div>
 
@@ -7223,6 +7391,7 @@ imported by:
  &#8226;   <a href="#pydoc">pydoc</a>
  &#8226;   <a href="#pyi_rth_inspect.py">pyi_rth_inspect.py</a>
  &#8226;   <a href="#pyi_rth_subprocess.py">pyi_rth_subprocess.py</a>
+ &#8226;   <a href="#pywintypes">pywintypes</a>
  &#8226;   <a href="#quopri">quopri</a>
  &#8226;   <a href="#runpy">runpy</a>
  &#8226;   <a href="#selectors">selectors</a>
@@ -7258,6 +7427,7 @@ imported by:
  &#8226;   <a href="#warnings">warnings</a>
  &#8226;   <a href="#weakref">weakref</a>
  &#8226;   <a href="#webbrowser">webbrowser</a>
+ &#8226;   <a href="#win32serviceutil">win32serviceutil</a>
  &#8226;   <a href="#xml.etree.ElementTree">xml.etree.ElementTree</a>
  &#8226;   <a href="#xml.parsers.expat">xml.parsers.expat</a>
  &#8226;   <a href="#xml.sax">xml.sax</a>
@@ -7267,6 +7437,34 @@ imported by:
  &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
  &#8226;   <a href="#zipfile">zipfile</a>
  &#8226;   <a href="#zipimport">zipimport</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="sysconfig"></a>
+  <a target="code" href="///C:/Users/Mitja/AppData/Local/Programs/Python/Python310/lib/sysconfig.py" type="text/plain"><tt>sysconfig</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_aix_support">_aix_support</a>
+ &#8226;   <a href="#_imp">_imp</a>
+ &#8226;   <a href="#ntpath">ntpath</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#pprint">pprint</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#types">types</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#_aix_support">_aix_support</a>
+ &#8226;   <a href="#distutils.sysconfig">distutils.sysconfig</a>
+ &#8226;   <a href="#pydoc">pydoc</a>
+ &#8226;   <a href="#pywintypes">pywintypes</a>
+ &#8226;   <a href="#test.support">test.support</a>
 
   </div>
 
@@ -7945,6 +8143,7 @@ imported by:
  &#8226;   <a href="#unittest.runner">unittest.runner</a>
  &#8226;   <a href="#urllib.parse">urllib.parse</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
+ &#8226;   <a href="#win32serviceutil">win32serviceutil</a>
  &#8226;   <a href="#windows_service.py">windows_service.py</a>
  &#8226;   <a href="#xml.etree.ElementTree">xml.etree.ElementTree</a>
  &#8226;   <a href="#zipfile">zipfile</a>
@@ -7989,6 +8188,120 @@ imported by:
  &#8226;   <a href="#unittest.signals">unittest.signals</a>
  &#8226;   <a href="#windows_service.py">windows_service.py</a>
  &#8226;   <a href="#xml.sax.expatreader">xml.sax.expatreader</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="win32api"></a>
+  <tt>win32api</tt> <span class="moduletype"><tt>C:\Users\Mitja\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\win32api.pyd</tt></span>  <div class="import">
+imported by:
+    <a href="#win32evtlogutil">win32evtlogutil</a>
+ &#8226;   <a href="#win32serviceutil">win32serviceutil</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="win32con"></a>
+  <a target="code" href="///C:/Users/Mitja/AppData/Local/Programs/Python/Python310/lib/site-packages/win32/lib/win32con.py" type="text/plain"><tt>win32con</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imported by:
+    <a href="#win32evtlogutil">win32evtlogutil</a>
+ &#8226;   <a href="#win32serviceutil">win32serviceutil</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="win32event"></a>
+  <tt>win32event</tt> <span class="moduletype"><tt>C:\Users\Mitja\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\win32event.pyd</tt></span>  <div class="import">
+imported by:
+    <a href="#windows_service.py">windows_service.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="win32evtlog"></a>
+  <tt>win32evtlog</tt> <span class="moduletype"><tt>C:\Users\Mitja\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\win32evtlog.pyd</tt></span>  <div class="import">
+imported by:
+    <a href="#win32evtlogutil">win32evtlogutil</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="win32evtlogutil"></a>
+  <a target="code" href="///C:/Users/Mitja/AppData/Local/Programs/Python/Python310/lib/site-packages/win32/lib/win32evtlogutil.py" type="text/plain"><tt>win32evtlogutil</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#win32api">win32api</a>
+ &#8226;   <a href="#win32con">win32con</a>
+ &#8226;   <a href="#win32evtlog">win32evtlog</a>
+ &#8226;   <a href="#winerror">winerror</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#win32serviceutil">win32serviceutil</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="win32service"></a>
+  <tt>win32service</tt> <span class="moduletype"><tt>C:\Users\Mitja\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\win32service.pyd</tt></span>  <div class="import">
+imported by:
+    <a href="#win32serviceutil">win32serviceutil</a>
+ &#8226;   <a href="#windows_service.py">windows_service.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="win32serviceutil"></a>
+  <a target="code" href="///C:/Users/Mitja/AppData/Local/Programs/Python/Python310/lib/site-packages/win32/lib/win32serviceutil.py" type="text/plain"><tt>win32serviceutil</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#getopt">getopt</a>
+ &#8226;   <a href="#importlib">importlib</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#perfmon">perfmon</a>
+ &#8226;   <a href="#pickle">pickle</a>
+ &#8226;   <a href="#pywintypes">pywintypes</a>
+ &#8226;   <a href="#servicemanager">servicemanager</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#warnings">warnings</a>
+ &#8226;   <a href="#win32api">win32api</a>
+ &#8226;   <a href="#win32con">win32con</a>
+ &#8226;   <a href="#win32evtlogutil">win32evtlogutil</a>
+ &#8226;   <a href="#win32service">win32service</a>
+ &#8226;   <a href="#winerror">winerror</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#windows_service.py">windows_service.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="winerror"></a>
+  <a target="code" href="///C:/Users/Mitja/AppData/Local/Programs/Python/Python310/lib/site-packages/win32/lib/winerror.py" type="text/plain"><tt>winerror</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imported by:
+    <a href="#win32evtlogutil">win32evtlogutil</a>
+ &#8226;   <a href="#win32serviceutil">win32serviceutil</a>
 
   </div>
 

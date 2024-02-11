@@ -27,7 +27,7 @@ namespace Spotify_automatization
 
         public MyService()
         {
-            ServiceName = "SpotifyKeyboard";
+            ServiceName = "FlowPlaylist";
         }
 
         protected override void OnStart(string[] args)

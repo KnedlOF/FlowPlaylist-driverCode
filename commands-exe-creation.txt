@@ -1,0 +1,4 @@
+pyinstaller --log-level=DEBUG --icon=C:\Users\Mitja\Pictures\spotify_keyboard_logo.ico --onefile hid_control.py
+pyinstaller --log-level=DEBUG --noconsole --onefile --icon=C:\Users\Mitja\Pictures\spotify_keyboard_logo.ico app.py
+pyinstaller --log-level=DEBUG --onefile windows_service.py ---> ne rabs
+ csc /t:exe /out:StartService.exe startservice.cs

@@ -6,6 +6,7 @@ from client_secrets import client_id, client_secret
 import pickle
 import os
 import tkinter as tk
+from tkinter.colorchooser import askcolor
 from urllib.parse import urlparse, parse_qs
 from functools import partial
 
@@ -63,7 +64,7 @@ class SpotifyOAuth(OriginalSpotifyOAuth):
 
 
 # make folder for cache
-programdata_folder = os.environ["PROGRAMDATA"]+'\Spotify Keyboard'
+programdata_folder = os.environ["PROGRAMDATA"]+'\FlowPlaylist'
 appdata = os.environ["APPDATA"]
 
 if not os.path.exists(programdata_folder):
@@ -84,8 +85,8 @@ root = Tk()
 # changes logo
 photo = PhotoImage(file="pic.png")
 root.iconphoto(False, photo)
-root.title('Spotify keyboard')
-root.geometry('500x450')
+root.title('FlowPlaylist')
+root.geometry('550x370')
 
 part_text = StringVar()
 part_label = Label(
@@ -95,6 +96,15 @@ part_text2 = StringVar()
 part_label2 = Label(
     root, text='Select playlists you want to be able to play:', font=('bold', 10), pady=10)
 part_label2.grid(row=2, column=0)
+
+
+part_label2 = Label(
+    root, text='Select lights mode:', font=('bold', 10), pady=10)
+part_label2.grid(row=2, column=3)
+
+part_label2 = Label(
+    root, text='    Brightness:', font=('bold', 10), pady=10)
+part_label2.grid(row=2, column=4)
 
 part_text3 = StringVar()
 part_label3 = Label(
@@ -188,27 +198,6 @@ def multi(selected):
     pickle.dump(dict, file)
     file.close()
 
-
-try:
-    with open(programdata_folder+"\playlist_config.txt", "rb") as f:
-        dict = pickle.load(f)
-
-except:
-    dict = {'id': playlists_ids[0], 'name': playlists_names[0],
-            'appdata': appdata, 'premium_volume': False, 'playlists_ids': playlists_ids,
-            'playlists_names': playlists_names, 'play_playlists_names': [], 'play_playlists_ids': [], 'selected_play': all_playlsts_ids[0], 'multi': 'Recommendations'}
-    file = open(programdata_folder+"\playlist_config.txt", "wb")
-    pickle.dump(dict, file)
-    file.close()
-
-if 'play_playlists_ids' not in dict:
-    file = open(programdata_folder+"\playlist_config.txt", "wb")
-    pickle.dump({'id': playlists_ids[0], 'name': playlists_names[0],
-                 'appdata': appdata, 'premium_volume': False, 'playlists_ids': playlists_ids,
-                'playlists_names': playlists_names, 'play_playlists_names': [], 'play_playlists_ids': [], 'selected_play': all_playlsts_ids[0], 'multi': 'Recommendations'}, file)
-    file.close()
-
-
 def exit_program():
     with open(programdata_folder+"\playlist_config.txt", "rb") as f:
         data = pickle.load(f)
@@ -218,11 +207,57 @@ def exit_program():
     pickle.dump(data, file)
     file.close()
     root.destroy()
+
+def change_color():
+    with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+        data = pickle.load(f)
+    color = askcolor(color=data['leds'], title="Choose color of lights")
+    if color[1] is not None:
+        file = open(programdata_folder+"\playlist_config.txt", "wb")
+        data['leds']=color[1]
+        print(data['leds'])
+        pickle.dump(data, file)
+        file.close()
+def color_mode(selected):
+    try:
+        with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+            dict = pickle.load(f)
+    except:
+        dict = {}
+    dict['led_mode'] = selected
+    file = open(programdata_folder+"\playlist_config.txt", "wb")
+    pickle.dump(dict, file)
+    file.close()
+    if selected != "Static color":
+        rgb_leds.grid_remove()
+    else: 
+        rgb_leds.grid(row=3, column=3)
+try:
+    with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+        dict = pickle.load(f)
+
+except:
+    dict = {'id': playlists_ids[0], 'name': playlists_names[0],
+            'appdata': appdata, 'premium_volume': False, 'playlists_ids': playlists_ids,
+            'playlists_names': playlists_names, 'play_playlists_names': [], 'play_playlists_ids': [], 'selected_play': all_playlsts_ids[0], 'multi': 'Recommendations', 'leds': '#1DB954', 'led_mode':'Rainbow', 'brightness': '50'}
+    file = open(programdata_folder+"\playlist_config.txt", "wb")
+    pickle.dump(dict, file)
+    file.close()
+
+if ('play_playlists_ids' or 'leds' or 'led_mode' or 'brightness') not in dict:
+    file = open(programdata_folder+"\playlist_config.txt", "wb")
+    pickle.dump({'id': playlists_ids[0], 'name': playlists_names[0],
+                 'appdata': appdata, 'premium_volume': False, 'playlists_ids': playlists_ids,
+                'playlists_names': playlists_names, 'play_playlists_names': [], 'play_playlists_ids': [], 'selected_play': all_playlsts_ids[0], 'multi': 'Recommendations', 'leds': '#1DB954','led_mode':'Rainbow', 'brightness': '50'}, file)
+    file.close()
+
+
 # app
 
 
 menu = StringVar()
 menu_multi = StringVar()
+menu_modes = StringVar()
 premiumvolume = IntVar()
 menu.set(dict['name'])
 
@@ -266,12 +301,12 @@ drop.config(justify='left', width=15)
 
 # menu for play playlist
 
-canvas = Canvas(root, width=50, bg='white')
+canvas = Canvas(root, width=50, height=200, bg='white')
 canvas.grid(row=3, column=0, sticky='nsew')
 
 
 scrollbar = Scrollbar(root, orient=VERTICAL, command=canvas.yview)
-scrollbar.grid(row=3, column=2, sticky='ns')
+scrollbar.grid(row=3, column=1, sticky='ns')
 canvas.config(yscrollcommand=scrollbar.set)
 canvas.bind('<Configure>', lambda e: canvas.configure(
     scrollregion=canvas.bbox('all')))
@@ -308,7 +343,16 @@ def choose(index, task):
         file = open(programdata_folder+"\playlist_config.txt", "wb")
         pickle.dump(dict, file)
         file.close()
-
+def slider(input):
+    try:
+        with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+            dict = pickle.load(f)
+    except:
+        dict = {}
+    dict['brightness'] = input
+    file = open(programdata_folder+"\playlist_config.txt", "wb")
+    pickle.dump(dict, file)
+    file.close()
 
 for index, task in enumerate(all_playlists_names):
     var_list.append(IntVar(value=0))
@@ -322,7 +366,25 @@ frame.bind('<Configure>', lambda e: canvas.configure(
     scrollregion=canvas.bbox('all')))
 canvas.create_window((0, 0), window=canvas_frame, anchor='nw')
 
+# menu rgb modes
+modes = list
+modes = ['Rainbow', 'Static color']
+try:
+    menu_modes.set(dict['led_mode'])
+except:
+    menu_modes.set(modes[0])
 
+mode = OptionMenu(root, menu_modes, *modes, command=color_mode)
+mode.grid(row=3, column=3,sticky='n')
+mode.config(justify='left', width=15)
+rgb_leds = Button(root, text="Choose color", command=change_color)
+if menu_modes.get()=='Static color':
+    rgb_leds.grid(row=3, column=3)
+
+#brightness slider
+brightness_slider = tk.Scale(root, from_=100, to=0, orient=tk.VERTICAL, command=slider)
+brightness_slider.set(dict['brightness'])
+brightness_slider.grid(row=3, column=4,sticky='n')
 # exit button
 exit_button = Button(root, text="Save & Exit", command=exit_program)
 exit_button.grid(row=4, column=3)
@@ -331,5 +393,4 @@ exit_button.config(justify='left', width=10)
 checkbox = Checkbutton(root, text="Change desktop volume instead of Spotify",
                        variable=premiumvolume, command=outputcheckbox)
 checkbox.grid(row=4, column=0)
-
 root.mainloop()

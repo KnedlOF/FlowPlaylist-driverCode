@@ -5,7 +5,7 @@ import logging
 import os
 
 # finds path to roaming and sets spotify path
-programdata_folder = os.environ["PROGRAMDATA"]+'\Spotify Keyboard'
+programdata_folder = os.environ["PROGRAMDATA"]+'\FlowPlaylist'
 
 # starts logging
 logging.basicConfig(
@@ -16,7 +16,7 @@ if not os.path.exists(programdata_folder):
     os.makedirs(programdata_folder)
 
 
-# cache_folder = "A:\\Users\\Mitja\\AppData\\Roaming\\Spotify Keyboard\\.cache"
+# cache_folder = "A:\\Users\\Mitja\\AppData\\Roaming\\FlowPlaylist\\.cache"
 cache_path = programdata_folder+'\.cache'
 logging.info(cache_path)
 print(cache_path)

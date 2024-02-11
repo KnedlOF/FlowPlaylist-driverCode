@@ -23,8 +23,8 @@ prev_play_playlist = False
 hotkey = False
 hotkey2 = False
 recomm_btn = 0
-play_playlist_btn = 0
-
+play_playlist_btn = 0 
+last_modified = os.path.getmtime(programdata_folder+"\playlist_config.txt")
 # default is TinyUSB (0xcafe), Adafruit (0x239a), RaspberryPi (0x2e8a), Espressif (0x303a) VID
 USB_VID = [0x2e8a, 0x239a]
 
@@ -40,9 +40,18 @@ def device_is_connected(vendor_id, product_id):
 
 
 def get_song_info():
+    global last_modified
     # gets info about song
     while True:
-        song_info_once(delay=2)
+        song_info_once(delay=2)  
+         #checks for changes in settings, for updating LEDs     
+        try:   
+            current_modified = os.path.getmtime(programdata_folder+"\playlist_config.txt")
+        except Exception as e: 
+            print("Error:", e)
+        if current_modified != last_modified:
+            send_color()
+            last_modified = current_modified  
 
 # gets info about song, just once, for when you skip songs
 
@@ -110,6 +119,25 @@ def clear():
     dev.write(str_out)
 
 
+def send_color():
+    with open(programdata_folder+"\playlist_config.txt", "rb") as f:
+        data = pickle.load(f)
+    led_mode=data['led_mode']
+    brightness=data['brightness']
+    if led_mode=="Static color":
+        led_color=data['leds']
+    else: 
+        led_color=led_mode
+    print("Color changed to:", led_color, "Brightness to:", brightness)
+    #send color
+    str_out=b'\x005'
+    str_out +=led_color.encode('utf-8')
+    dev.write(str_out)
+    #send brightness
+    str_out=b'\x006'
+    str_out +=brightness.encode('utf-8')
+    dev.write(str_out)
+
 # parallel loop
 thread = threading.Thread(target=get_song_info)
 thread.start()
@@ -126,12 +154,11 @@ while True:
             # make device object
             dev = hid.Device(vendor_id, product_id)
             if dev:
-                new_volume = 0
-                request_in_progress = False
-                previous_volume = 0
                 str_out = b'\x001'
                 dev.write(str_out)
+                new_volume=0
                 song_info_once()
+                send_color()
                 while True:
 
                     # Get input from console and encode to UTF8 for array of chars.//
@@ -140,9 +167,10 @@ while True:
                     # str_out = b'\x00'
                     # str_out += input("Send text to HID Device : ").encode('utf-8')
                     # dev.write(str_out)
-
                     # reading input
+                    
                     try:
+                        
                         str_in = dev.read(8)
                         like_btn = str_in[0]
                         multi_btn = str_in[1]
@@ -151,9 +179,11 @@ while True:
                         play_btn = str_in[4]
                         next_btn = str_in[5]
                         volume = str_in[6]
-                        volume_change = str_in[7]
+                        #volume_change = str_in[7]
                         print("Received from HID Device:",
                               struct.unpack('<8B', str_in), '\n')
+                        
+
 
                         if multi_btn == 1:
                             with open(programdata_folder+"\playlist_config.txt", "rb") as f:
@@ -287,6 +317,7 @@ while True:
 
                         except:
                             dict = {}
+
                         premiumvolume = dict['premium_volume']
 
                         # non premium volume, changes desktop volume
@@ -301,41 +332,28 @@ while True:
 
                         # premium volume, changes volume in spotify
                         else:
-
-                            # # for big volume changes it sends volume by at least 5
-                            # if volume_change == 1 and abs(volume-new_volume) >= 5:
-                            #     new_volume = volume
-                            #     if not request_in_progress:
-                            #         request_in_progress = True
-                            #         try:
-                            #             volume_set = sp.volume(new_volume)
-                            #         except spotipy.SpotifyException as e:
-                            #             if e.http_status == 404:
-                            #                 print('Skipping volume')
-                            #         except (spotipy.SpotifyException, TimeoutError) as e:
-                            #             print(str(e))
-                            #             time.sleep(3)
-                            #         print("Volume changed on: ", new_volume)
-                            #         previous_volume = volume
-                            #         request_in_progress = False
-                            # for small changes it sends volume by 1
-
-                            if new_volume != volume:
-                                new_volume = volume
-                                if not request_in_progress:
-                                    request_in_progress = True
-                                    try:
-                                        volume_set = sp.volume(new_volume)
-                                    except spotipy.SpotifyException as e:
-                                        if e.http_status == 404:
-                                            print('Skipping volume')
-                                    except (spotipy.SpotifyException, TimeoutError) as e:
-                                        print(str(e))
-                                        time.sleep(3)
+                            if (new_volume!=volume):
+                                new_volume=volume
+                                try:
+                                    volume_set = sp.volume(new_volume)
                                     print("Volume changed on: ", new_volume)
-                                    previous_volume = volume
-                                    request_in_progress = False
+                                except spotipy.SpotifyException as e:
+                                    if e.http_status == 404:
+                                        print('Skipping volume')
+                                    if e.http_status == 403:
+                                        print("Too many requests!!")
+                                        str_out = b'\x004'
+                                        str_out += "STOP! wait 30s".encode('utf-8')
+                                        dev.write(str_out)
+                                        time.sleep(31)
 
+                                except Exception as e:
+                                    print(e) 
+                        str_out = b'\x007'
+                        str_out += "request finnished".encode('utf-8')
+                        dev.write(str_out)
+
+                            
                     # if device disconnects, it will try again once a second
                     except hid.HIDException as e:
                         if "The device is not connected" in str(e):
@@ -347,3 +365,5 @@ while True:
                         else:
                             print(str(e))
                             break
+                    except Exception as e:
+                        print(e)        
