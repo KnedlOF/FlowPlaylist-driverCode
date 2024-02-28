@@ -60,7 +60,7 @@ def next():
 
 
 def forceplay(message="Playing"):
-    device_name = socket.gethostname()
+    device_name = socket.gethostname()[:15]
     desired_device_id = None
     devices = sp.devices()
     for device in devices['devices']:

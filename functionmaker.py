@@ -10,7 +10,7 @@ y_data = np.array([1, 10, 20, 30, 40, 50, 55, 53])
 #y_data = np.array([ 60, 70, 80, 90, 100, 55])
 
 # Define the degree of the polynomial (adjust as needed)
-degree = 4
+degree = 3
 
 # Fit the data with a polynomial of the specified degree
 coefficients = np.polyfit(x_data, y_data, degree)
