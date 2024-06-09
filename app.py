@@ -1,8 +1,8 @@
 from tkinter import *
+from tkinter import messagebox
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth as OriginalSpotifyOAuth
 from spotipy.oauth2 import SpotifyStateError
-from client_secrets import client_id, client_secret
 import pickle
 import os
 import tkinter as tk
@@ -42,10 +42,42 @@ class MyGUI:
 
     def show(self):
         self.window.mainloop()
+class secrets:
+    def __init__(self, state=None):
+        self.state = state
+        self.client_id = None
+        self.client_secret = None
+        self.window = tk.Tk()
+        #self.photo = PhotoImage(file="pic.png")
+        #self.window.iconphoto(False, self.photo)
+        self.window.title("Enter your API secrets")
 
+        self.label_id = tk.Label(self.window, text="Please enter your Spotify Client ID:")
+        self.label_id.pack(pady=10)
+        self.entry_id = tk.Entry(self.window)
+        self.entry_id.pack(pady=10)
+
+        self.label_secret = tk.Label(self.window, text="Please enter your Spotify Client Secret:")
+        self.label_secret.pack(pady=10)
+        self.entry_secret = tk.Entry(self.window)
+        self.entry_secret.pack(pady=10)
+
+        self.button = tk.Button(self.window, text="Submit", command=self.submit)
+        self.button.pack(pady=10)
+
+    def submit(self):
+        self.client_id = self.entry_id.get()
+        self.client_secret = self.entry_secret.get()
+        secretsdict['client_id']=self.client_id
+        secretsdict['client_secret']=self.client_secret
+        secretsfile = open(programdata_folder+"\secrets.txt", "wb")
+        pickle.dump(secretsdict, secretsfile)
+        secretsfile.close()
+        self.window.destroy()
+    def get_credentials(self):
+        self.window.mainloop()
+        return self.client_id, self.client_secret
 # modify library, so instead of pasting url in console, you need to paste it in tinker
-
-
 class SpotifyOAuth(OriginalSpotifyOAuth):
     def _get_auth_response_interactive(self, open_browser=False):
         if open_browser:
@@ -70,16 +102,42 @@ appdata = os.environ["APPDATA"]
 if not os.path.exists(programdata_folder):
     os.makedirs(programdata_folder)
 
-cache_path = programdata_folder+'\.cache'
+#make file if it doesn't exist yet
+try:
+    with open(programdata_folder+"\secrets.txt", "rb") as f:
+        secretsdict = pickle.load(f)
+except:
+    secretsdict = {'client_id': "x", 'client_secret': "x"}
+    secretsfile = open(programdata_folder+"\secrets.txt", "wb")
+    pickle.dump(secretsdict, secretsfile)
+    secretsfile.close()
+client_id=secretsdict['client_id']
+client_secret=secretsdict['client_secret']
 
+#if no secrets then user needs to enter it
+if (client_id=="x")or(client_secret=="x"):
+    gui = secrets()
+    client_id, client_secret = gui.get_credentials()
+
+cache_path = programdata_folder+'\.cache'
 redirect_uri = 'https://example.org/callback'
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
+
+while TRUE:
+    try: 
+        sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
                                                client_secret=client_secret,
                                                redirect_uri=redirect_uri,
                                                cache_path=cache_path,
                                                scope="playlist-read-collaborative playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing playlist-read-private user-modify-playback-state user-library-modify user-read-playback-state"))
-
-user_id = sp.current_user()['id']
+        print(client_id)
+        user_id = sp.current_user()['id']
+        break
+    except spotipy.oauth2.SpotifyOauthError as e:
+        print(f"Spotify OAuth error: {e}")
+        if not messagebox.askretrycancel("Error", "You entered wrong credentials. Try again."):
+            exit()
+        gui = secrets()
+        client_id, client_secret = gui.get_credentials()
 
 root = Tk()
 # changes logo
@@ -131,7 +189,6 @@ playlists_list = [p for p in playlists_list if p['owner']['id'] == user_id]
 
 playlists_names = [track['name'] for track in playlists_list]
 playlists_ids = [track['id'] for track in playlists_list]
-
 
 def output(options):
     try:
@@ -232,6 +289,7 @@ def color_mode(selected):
         rgb_leds.grid_remove()
     else: 
         rgb_leds.grid(row=3, column=3)
+
 try:
     with open(programdata_folder+"\playlist_config.txt", "rb") as f:
         dict = pickle.load(f)

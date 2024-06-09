@@ -1,6 +1,6 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-from client_secrets import client_id, client_secret
+import pickle
 import logging
 import os
 
@@ -22,15 +22,25 @@ logging.info(cache_path)
 print(cache_path)
 
 x = True
-while not os.path.exists(cache_path):
+while not os.path.exists(cache_path): 
     if x:
         logging.info('No cache file found')
-        x = False
 
+        x = False
 # authorization
 redirect_uri = 'https://example.org/callback'
 
+try:
+    with open(programdata_folder+"\secrets.txt", "rb") as f:
+        secretsdict = pickle.load(f)
+except:
+    secretsdict = {'client_id': "x", 'client_secret': "x"}
+    secretsfile = open(programdata_folder+"\secrets.txt", "wb")
+    pickle.dump(secretsdict, secretsfile)
+    secretsfile.close()
 
+client_id=secretsdict['client_id']
+client_secret=secretsdict['client_secret']
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
                                                client_secret=client_secret,
                                                redirect_uri=redirect_uri,
